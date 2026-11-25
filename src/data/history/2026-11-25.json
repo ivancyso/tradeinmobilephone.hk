@@ -83,6 +83,12 @@
           ],
           "tags": [
             "熱門"
+          ],
+          "faqs": [
+            {
+              "q": "iPhone 17 Pro Max 炒價與回收價有甚麼分別？",
+              "a": "炒價是指新機推出初期，未開封全新機在水貨市場的轉售價，通常高於官價；回收價是用過的二手機賣給回收店的價錢。全新未開封機的回收價會較本頁二手參考價高，請另行查詢。"
+            }
           ]
         },
         {
@@ -469,6 +475,30 @@
               "label": "256GB",
               "price": 1500,
               "note": "紅色 $1,300"
+            },
+            {
+              "label": "512GB",
+              "price": null
+            }
+          ]
+        },
+        {
+          "slug": "iphone-13-mini",
+          "name": "iPhone 13 mini",
+          "year": 2021,
+          "series": "iPhone 13 系列",
+          "variants": [
+            {
+              "label": "128GB",
+              "price": null
+            },
+            {
+              "label": "256GB",
+              "price": null
+            },
+            {
+              "label": "512GB",
+              "price": null
             }
           ]
         },
@@ -512,8 +542,76 @@
           "series": "iPhone 12 系列",
           "variants": [
             {
+              "label": "64GB",
+              "price": null
+            },
+            {
               "label": "128GB",
               "price": 800
+            },
+            {
+              "label": "256GB",
+              "price": null
+            }
+          ]
+        },
+        {
+          "slug": "iphone-12-mini",
+          "name": "iPhone 12 mini",
+          "year": 2020,
+          "series": "iPhone 12 系列",
+          "variants": [
+            {
+              "label": "64GB",
+              "price": null
+            },
+            {
+              "label": "128GB",
+              "price": null
+            },
+            {
+              "label": "256GB",
+              "price": null
+            }
+          ]
+        },
+        {
+          "slug": "iphone-11-pro-max",
+          "name": "iPhone 11 Pro Max",
+          "year": 2019,
+          "series": "iPhone 11 / XS / XR 系列",
+          "variants": [
+            {
+              "label": "64GB",
+              "price": null
+            },
+            {
+              "label": "256GB",
+              "price": null
+            },
+            {
+              "label": "512GB",
+              "price": null
+            }
+          ]
+        },
+        {
+          "slug": "iphone-11-pro",
+          "name": "iPhone 11 Pro",
+          "year": 2019,
+          "series": "iPhone 11 / XS / XR 系列",
+          "variants": [
+            {
+              "label": "64GB",
+              "price": null
+            },
+            {
+              "label": "256GB",
+              "price": null
+            },
+            {
+              "label": "512GB",
+              "price": null
             }
           ]
         },
@@ -521,7 +619,7 @@
           "slug": "iphone-11",
           "name": "iPhone 11",
           "year": 2019,
-          "series": "iPhone 11 或更舊",
+          "series": "iPhone 11 / XS / XR 系列",
           "variants": [
             {
               "label": "64GB",
@@ -538,10 +636,30 @@
           ]
         },
         {
+          "slug": "iphone-xs",
+          "name": "iPhone XS",
+          "year": 2018,
+          "series": "iPhone 11 / XS / XR 系列",
+          "variants": [
+            {
+              "label": "64GB",
+              "price": null
+            },
+            {
+              "label": "256GB",
+              "price": null
+            },
+            {
+              "label": "512GB",
+              "price": null
+            }
+          ]
+        },
+        {
           "slug": "iphone-xs-max",
           "name": "iPhone XS Max",
           "year": 2018,
-          "series": "iPhone 11 或更舊",
+          "series": "iPhone 11 / XS / XR 系列",
           "variants": [
             {
               "label": "64GB",
@@ -557,7 +675,7 @@
           "slug": "iphone-xr",
           "name": "iPhone XR",
           "year": 2018,
-          "series": "iPhone 11 或更舊",
+          "series": "iPhone 11 / XS / XR 系列",
           "variants": [
             {
               "label": "64GB",
@@ -569,6 +687,182 @@
             },
             {
               "label": "256GB",
+              "price": null
+            }
+          ]
+        },
+        {
+          "slug": "iphone-se-3",
+          "name": "iPhone SE（第3代）",
+          "year": 2022,
+          "series": "iPhone SE、X、8 及更舊",
+          "variants": [
+            {
+              "label": "64GB",
+              "price": null
+            },
+            {
+              "label": "128GB",
+              "price": null
+            },
+            {
+              "label": "256GB",
+              "price": null
+            }
+          ]
+        },
+        {
+          "slug": "iphone-se-2",
+          "name": "iPhone SE（第2代）",
+          "year": 2020,
+          "series": "iPhone SE、X、8 及更舊",
+          "variants": [
+            {
+              "label": "64GB",
+              "price": null
+            },
+            {
+              "label": "128GB",
+              "price": null
+            },
+            {
+              "label": "256GB",
+              "price": null
+            }
+          ]
+        },
+        {
+          "slug": "iphone-x",
+          "name": "iPhone X",
+          "year": 2017,
+          "series": "iPhone SE、X、8 及更舊",
+          "variants": [
+            {
+              "label": "64GB",
+              "price": null
+            },
+            {
+              "label": "256GB",
+              "price": null
+            }
+          ]
+        },
+        {
+          "slug": "iphone-8-plus",
+          "name": "iPhone 8 Plus",
+          "year": 2017,
+          "series": "iPhone SE、X、8 及更舊",
+          "variants": [
+            {
+              "label": "64GB",
+              "price": null
+            },
+            {
+              "label": "128GB",
+              "price": null
+            },
+            {
+              "label": "256GB",
+              "price": null
+            }
+          ]
+        },
+        {
+          "slug": "iphone-8",
+          "name": "iPhone 8",
+          "year": 2017,
+          "series": "iPhone SE、X、8 及更舊",
+          "variants": [
+            {
+              "label": "64GB",
+              "price": null
+            },
+            {
+              "label": "128GB",
+              "price": null
+            },
+            {
+              "label": "256GB",
+              "price": null
+            }
+          ]
+        },
+        {
+          "slug": "iphone-7-plus",
+          "name": "iPhone 7 Plus",
+          "year": 2016,
+          "series": "iPhone SE、X、8 及更舊",
+          "variants": [
+            {
+              "label": "32GB",
+              "price": null
+            },
+            {
+              "label": "128GB",
+              "price": null
+            },
+            {
+              "label": "256GB",
+              "price": null
+            }
+          ]
+        },
+        {
+          "slug": "iphone-7",
+          "name": "iPhone 7",
+          "year": 2016,
+          "series": "iPhone SE、X、8 及更舊",
+          "variants": [
+            {
+              "label": "32GB",
+              "price": null
+            },
+            {
+              "label": "128GB",
+              "price": null
+            },
+            {
+              "label": "256GB",
+              "price": null
+            }
+          ]
+        },
+        {
+          "slug": "iphone-6s",
+          "name": "iPhone 6s / 6s Plus",
+          "year": 2015,
+          "series": "iPhone SE、X、8 及更舊",
+          "variants": [
+            {
+              "label": "32GB",
+              "price": null
+            },
+            {
+              "label": "64GB",
+              "price": null
+            },
+            {
+              "label": "128GB",
+              "price": null
+            }
+          ]
+        },
+        {
+          "slug": "iphone-6",
+          "name": "iPhone 6 / 6 Plus",
+          "year": 2014,
+          "series": "iPhone SE、X、8 及更舊",
+          "variants": [
+            {
+              "label": "16GB",
+              "price": null
+            },
+            {
+              "label": "64GB",
+              "price": null
+            },
+            {
+              "label": "128GB",
               "price": null
             }
           ]

@@ -20,7 +20,7 @@ const lo = minPrice(model);
 const priced = model.variants.filter((v) => v.price != null);
 const isMac = cat.slug === 'macbook';
 
-const title = `${model.name} 回收價 ${year}｜最新二手回收價格${hi ? ` 最高 ${fmt(hi)}` : ''}`;
+const title = `${model.name} 回收價 ${year}｜二手收機價${hi ? ` 最高 ${fmt(hi)}` : ' 即時報價'}`;
 const description = hi
   ? `${model.name} 回收價（${formatDateZh(updatedAt)}更新）：${priced.map((v) => `${v.label} ${fmt(v.price)}`).join('、')}。即時估價，提交資料後約定交收，驗機後即場付款。`
   : `${model.name} 回收價按當日市價報價（${formatDateZh(updatedAt)}）。提交${isMac ? '配置' : '容量'}及成色，免費取得 ${model.name} 最新回收價。`;
@@ -33,6 +33,7 @@ const related = [...cat.models.filter((m) => m.series === model.series && m.slug
 const guides = (await getCollection('guides')).filter((g) => g.data.category === cat.slug || g.data.category === 'general').slice(0, 3);
 
 const faqs = [
+  ...(model.faqs ?? []),
   hi
     ? { q: `${model.name} 回收價是多少？`, a: `按 ${formatDateZh(updatedAt)} 參考價，${model.name} 回收價${lo !== hi ? `介乎 ${fmt(lo)} 至 ${fmt(hi)}` : `約 ${fmt(hi)}`}：${priced.map((v) => `${v.label} ${fmt(v.price)}`).join('；')}。價格假設功能正常、外觀良好及電池健康度 90% 以上。` }
     : { q: `${model.name} 回收價是多少？`, a: `${model.name} 回收價按當日市場行情逐部報價。請提交${isMac ? '配置' : '容量'}、成色及${isMac ? '電池循環次數' : '電池健康度'}，我們會盡快回覆確實價錢。` },
@@ -70,7 +71,7 @@ const jsonLd = [
     <Breadcrumbs items={crumbs} />
     <div class="two-col" style="margin-top:14px">
       <div>
-        <h1>{model.name} 回收價 {year}</h1>
+        <h1>{model.name} 回收價 {year}<span class="muted" style="display:block;font-size:0.55em;font-weight:600">二手收機價・{isMac ? '按配置' : '按容量'}一覽</span></h1>
         <p class="muted">價格更新：{formatDateZh(updatedAt)}{previousDate ? `（與 ${formatDateZh(previousDate)} 比較）` : ''}</p>
 
         <div class="answer-box">

@@ -2,8 +2,8 @@
 export const categoryCopy: Record<string, { h1: string; title: string; intro: string; faqs: { q: string; a: string }[] }> = {
   iphone: {
     h1: 'iPhone 回收價格表',
-    title: 'iPhone 回收價 {year}｜iPhone 17／16／15 二手回收價格表',
-    intro: '全系列 iPhone 二手回收價，由最新 iPhone 17 Pro Max 到 iPhone 11 都有。價格按容量列出，按型號可看詳細價錢、升跌及估價。',
+    title: 'iPhone 回收價 {year}｜iPhone 17／16／15／14／13／12 二手收機價格表',
+    intro: '全系列 iPhone 二手回收價，由最新 iPhone 17 Pro Max 到 iPhone 6、SE 都有。價格按容量列出，按型號可看詳細價錢、升跌及估價。',
     faqs: [
       { q: '哪款 iPhone 最保值？', a: 'Pro Max 型號最保值。以現時參考價計，iPhone 16 Pro Max 256GB 推出約兩年後仍可回收 $5,800 左右，而同期標準版 iPhone 16 跌幅較大。' },
       { q: '新 iPhone 發佈後舊機會跌價多少？', a: '每年 9 月新機發佈後，上一代 iPhone 回收價通常在一至兩星期內下跌約一成至兩成。想賣舊機，最好在發佈會前出手。' },

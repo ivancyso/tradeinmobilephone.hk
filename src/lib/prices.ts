@@ -2,7 +2,7 @@ import data from '../data/prices.json';
 import site from '../data/site.json';
 
 export type Variant = { label: string; price: number | null; note?: string };
-export type Model = { slug: string; name: string; year: number; series: string; tags?: string[]; variants: Variant[] };
+export type Model = { slug: string; name: string; year: number; series: string; tags?: string[]; faqs?: { q: string; a: string }[]; variants: Variant[] };
 export type Category = { slug: string; name: string; label: string; models: Model[] };
 
 export const updatedAt: string = data.updatedAt;

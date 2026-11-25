@@ -11,7 +11,7 @@ import { homeFaqs } from '../lib/faq';
 
 const iphone = getCategory('iphone')!;
 const year = updatedAt.slice(0, 4);
-const title = `iPhone 回收價 ${year}｜手機回收價格表 每日更新｜${site.shortName}`;
+const title = `iPhone 回收價 ${year}｜手機回收價格表・收機價 每日更新｜${site.shortName}`;
 const description = `最新 iPhone 回收價及手機回收價格表（${formatDateZh(updatedAt)}更新）：iPhone 17 Pro Max 最高 ${fmt(maxPrice(iphone.models.find((m) => m.slug === 'iphone-17-pro-max')!))}。即時搜尋 iPhone、Samsung、iPad、MacBook 二手回收價，香港交收即場付款。`;
 const popular = categories.flatMap((c) => c.models.filter((m) => m.tags?.includes('熱門')).map((m) => ({ c, m })));
 const guides = (await getCollection('guides')).sort((a, b) => (a.data.updatedAt < b.data.updatedAt ? 1 : -1)).slice(0, 3);
@@ -35,7 +35,7 @@ const jsonLd = [
     <div class="container">
       <span class="updated"><span class="dot"></span>價格更新：{formatDateZh(updatedAt)}</span>
       <h1>iPhone 回收價 {year}｜手機回收價格表</h1>
-      <p>一頁看清 iPhone、Samsung、iPad 及 MacBook 最新二手回收價。輸入型號即時查價，提交報價後約定交收，驗機後即場付款。</p>
+      <p>一頁看清 iPhone、Samsung、iPad 及 MacBook 最新二手回收價（收機價）。輸入型號即時查價，提交報價後約定交收，驗機後即場付款。</p>
       <Search />
       <div class="chips">
         {popular.map(({ c, m }) => <a class="chip" href={modelUrl(c.slug, m)}>{m.name}</a>)}
