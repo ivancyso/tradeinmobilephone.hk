@@ -14,7 +14,7 @@ export const homeFaqs = [
   },
   {
     q: '回收手機前要做甚麼準備？',
-    a: '先備份資料，然後登出 Apple 帳户（前稱 Apple ID）或 Google／Samsung 帳戶；iPhone 登出 Apple 帳户時會一併關閉「尋找」。最後選擇「抹掉所有內容和設定」。記得取出 SIM 卡及記憶卡。未登出帳戶的手機無法回收。',
+    a: '先備份資料，然後登出 Apple 帳户（前稱 Apple ID）或 Google／Samsung 帳戶；iPhone 登出 Apple 帳户時會一併關閉「尋找」。最後選擇「清除所有內容和設定」。記得取出 SIM 卡及記憶卡。未登出帳戶的手機無法回收。',
   },
   {
     q: '網上報價與最終成交價會否不同？',

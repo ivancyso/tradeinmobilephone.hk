@@ -26,7 +26,7 @@ export const categoryCopy: Record<string, { h1: string; title: string; intro: st
     intro: 'iPad Pro、iPad Air、iPad mini 及標準版 iPad 回收報價。Wi-Fi + Cellular 版本一般較 Wi-Fi 版本高；連 Apple Pencil 或鍵盤一併回收可另議價。',
     faqs: [
       { q: 'iPad 回收價是怎樣計算的？', a: '主要看晶片世代（M4 > M3 > M2 > M1）、儲存容量、外觀成色、是否 Cellular 版本，以及有否原裝配件。' },
-      { q: 'iPad 回收前要做甚麼？', a: '備份後到「設定」登出 Apple 帳户（前稱 Apple ID），登出時會一併關閉「尋找」，再到「一般」>「傳輸或重置 iPad」>「抹掉所有內容和設定」。' },
+      { q: 'iPad 回收前要做甚麼？', a: '備份後到「設定」登出 Apple 帳户（前稱 Apple ID），登出時會一併關閉「尋找」，再到「一般」>「轉移或重設 iPad」>「清除所有內容和設定」。' },
     ],
   },
   macbook: {
@@ -35,7 +35,7 @@ export const categoryCopy: Record<string, { h1: string; title: string; intro: st
     intro: 'MacBook Pro 及 MacBook Air 回收報價，涵蓋 M5、M4、M3、M2、M1 晶片及 Intel 舊款。價格按晶片、記憶體及儲存配置列出。',
     faqs: [
       { q: 'MacBook 回收價受甚麼影響？', a: '晶片世代（M3 > M2 > M1 > Intel）、記憶體（16GB 高於 8GB）、儲存容量、電池循環次數及外觀。附原裝火牛可取較高價。' },
-      { q: 'MacBook 回收前要做甚麼？', a: '用 Time Machine 備份，登出 Apple 帳户（會一併關閉「尋找」），然後在「系統設定」>「一般」>「傳輸或重置」>「清除所有內容和設定」。' },
+      { q: 'MacBook 回收前要做甚麼？', a: '用 Time Machine 備份，登出 Apple 帳户（會一併關閉「尋找」），然後在「系統設定」>「一般」>「轉移或重設」>「清除所有內容和設定」。' },
     ],
   },
 };
