@@ -40,3 +40,11 @@ Sources:
 | 25 | MacBook Air 13 M2 price placeholder | correct | Variant exists and is non-null | prices.json |
 
 Apple 帳户 naming: this post doesn't mention the account, so nothing to change.
+
+## Final resolution (main session, 2026-11-26)
+
+| Claim | Verdict | Source |
+|---|---|---|
+| Battery menu: iPhone 15 and later (iOS 17.4+) 「設定」>「電池」>「電池健康度」; iPhone 11–14 「設定」>「電池」>「電池健康與充電」 | corrected (model-dependent; replaces the single-path wording) | https://support.apple.com/zh-hk/106348 (發佈日期 2026-10-29) |
+| iPhone 15 and later on iOS 17.4+ show 循環使用次數, 電池製造日期 and 首次使用日期 in 「電池健康度」 | restored (verified) | https://support.apple.com/zh-hk/106348 |
+| iPhone 14 and earlier: cycle count not listed in Settings | softened to "Apple's support article only lists iPhone 15 and later" | https://support.apple.com/zh-hk/106348 |
