@@ -1,0 +1,38 @@
+# Fact-check: samsung-trade-in-vs-recycling
+
+Checked 2026-11-25, `updatedAt` set to 2026-11-26. Price figures come from the owner (`src/data/prices.json`) and were not checked. Claims comparing prices were checked against prices.json.
+
+| # | Claim (where) | Verdict | Source |
+|---|---|---|---|
+| 1 | Samsung Trade in gives value only as a discount, rebate or store credit and does not pay cash (summary, FAQ 1, body, comparison table) | **corrected**: You must buy a new Samsung device. The value is paid to a Hong Kong bank account by bank transfer or FPS within 2–3 working days of the final inspection | https://www.samsung.com/hk_en/shop-faq/service-and-warranty/how-to-participate-in-trade-in-program/ ; https://www.samsung.com/hk_en/shop-faq/payment-and-financing/what-is-trade-in-program/ |
+| 2 | Trade-in steps: buy new device, get an online estimate, hand over the old device, inspection | **corrected**: Now follows the official steps: new device bought from a HK authorised reseller, IMEI/serial used only once, online diagnostic, booked drop-off (e.g. Samsung Experience Store), final inspection | same as #1 |
+| 3 | Eligibility exclusions | **added**: value too low; locks or accounts (Find My Mobile, Google, Samsung, iCloud) not fully removed; old device traded in to Samsung within 12 months before the new purchase date. The HK$ threshold is not quoted | same as #1 |
+| 4 | "Guaranteed trade-in" style campaigns have separate terms | correct, worded generally with no amounts | coordinator-verified Samsung HK FAQ; same as #1 |
+| 5 | Official channel requires data cleared or accounts removed before handover | corrected / reframed: Samsung HK lists accounts or locks that are not removed as ineligible | same as #1 |
+| 6 | Using both routes: put older or damaged phones into official Trade in | **corrected**: one IMEI per new device; damaged phones may not qualify | same as #1 |
+| 7 | Apple and Samsung official trade-in programmes "work in a similar way" | **corrected**: Apple HK gives purchase credit or an Apple Store Gift Card; Samsung HK pays by bank transfer or FPS | https://www.apple.com/hk/shop/trade-in |
+| 8 | Galaxy S launches early in the year; Z Fold/Flip mid-year | correct, examples added (S26: Unpacked 25 Feb 2026; Z Fold8/Flip8: Unpacked 22 Jul 2026) | https://news.samsung.com/us/samsung-unveils-galaxy-s26-series-the-most-intuitive-galaxy-ai-phone-yet/ ; https://news.samsung.com/global/galaxy-unpacked-july-2026-a-first-look-at-galaxy-z-fold8-ultra-galaxy-z-fold8-and-galaxy-z-flip8 |
+| 9 | "Recent Ultra models mostly have a built-in S Pen" | corrected to: S22 Ultra to S26 Ultra all come with a built-in S Pen | https://www.engadget.com/gaming/playstation/everything-announced-at-samsung-unpacked-galaxy-s26-lineup-and-more-180000129.html ; https://sammobile.com/news/samsung-galaxy-s22-series-doesnt-have-microsd-slot (S22 series reference) |
+| 10 | Foldable S Pen | **added**: Z Fold5/Fold6 support a separately sold S Pen (no silo); Z Fold7 dropped S Pen support | https://www.androidcentral.com/phones/samsung-galaxy/samsung-sheds-the-s-pen-on-the-galaxy-z-fold-7-for-super-slim-design ; https://9to5google.com/2025/07/09/samsung-galaxy-z-fold-7-s-pen-support-removed/ |
+| 11 | Inner screen protector is factory-fitted and "part of the screen structure"; do not remove; replace at a service centre | corrected wording: factory-fitted, Samsung advises not to remove it (it protects the inner display through folding), and non-Samsung films may damage the screen. Removed "part of the screen structure" | https://www.samsung.com/levant/support/mobile-devices/screen-protector-for-samsung-galaxy-z-devices-flip-and-fold/ ; https://www.samsung.com/us/support/answer/ANS10001589/ |
+| 12 | A slight crease is normal | correct (general, Samsung foldable care page) | https://www.samsung.com/us/support/answer/ANS10001589/ |
+| 13 | Factory reset path 「一般管理」>「重設」>「原廠資料重設」 | **corrected** to the Samsung HK wording: 「設定」>「一般管理」>「重設」>「重設為原廠設定」>「重設」>「全部刪除」. Samsung account password is needed if still signed in | https://www.samsung.com/hk/support/mobile-devices/how-to-reset-the-factory-settings/ |
+| 14 | Account removal 「設定」>「帳戶與備份」>「管理帳戶」 | softened: path confirmed on Samsung TW (帳號與備份 > 管理帳號); added "menu names vary slightly by version" | https://www.samsung.com/tw/support/mobile-devices/how-to-log-out-to-the-samsung-account-in-galaxy-s24 |
+| 15 | Turn off Find My Mobile "in Samsung account settings" | softened or corrected: the location depends on the One UI version (Samsung account > Devices > Lost device protection on newer versions; Biometrics and security on older ones). Signing out also disables it. Identity check or theft protection can add about a one-hour delay | https://www.samsung.com/hk_en/support/apps-services/how-do-i-deactivate-the-find-my-mobile-service/ ; https://www.samsung.com/uk/support/mobile-devices/how-to-use-security-settings/ |
+| 16 | FRP: triggered if reset without removing the Google account; asks for the Google password | **corrected**: Samsung HK says FRP is triggered by a reset done other than through Settings. You may need to verify the previously synced Google account, or on Android 9+ the old screen lock. FAQ 5 rewritten to match | https://www.samsung.com/hk/support/mobile-devices/how-to-reset-the-factory-settings/ |
+| 17 | Samsung also has an account-linked lock | correct | https://www.samsung.com/hk/support/mobile-devices/how-to-reset-the-factory-settings/ (Samsung account password needed to reset) |
+| 18 | "Some models have a memory card slot" | **corrected**: Galaxy S flagships from the S21 series and recent Z models have no microSD slot | https://sammobile.com/news/samsung-galaxy-s22-series-doesnt-have-microsd-slot ; https://www.xda-developers.com/samsung-galaxy-s22-microsd |
+| 19 | Backup via Samsung Cloud, Google or Smart Switch; WhatsApp backed up separately | correct (general) | general product knowledge; no change |
+| 20 | Samsung phones use OLED, which can burn in | correct (general) | no change |
+| 21 | Official handling of damaged phones follows Samsung HK terms | correct | same as #1 |
+| 22 | 行貨 vs 水貨: warranty or SIM differences; price depends on version | correct (general) | no change |
+| 23 | PRICE: "S Ultra and Z Fold hold value best; standard and Plus drop faster" (summary, H2 opener) | **corrected**. In prices.json, Ultra keeps the most value from one generation to the next. Foldables have the highest prices for new models but drop steeply across generations (Fold5 256 vs Fold8 256; Flip6 vs Flip8). Plus drops the most among S models; standard drops slightly more than Ultra | src/data/prices.json |
+| 24 | PRICE: "Buy Ultra or Z Fold for resale" | corrected to: Ultra; sell foldables before the next generation | src/data/prices.json |
+| 25 | PRICE: "Z Fold higher than Z Flip" | correct (each generation) | src/data/prices.json |
+| 26 | "New Z Flip still has steady demand"; "Standard/Plus have more stock" | removed (unverifiable) | — |
+| 27 | PRICE: larger storage gives a higher price (S25 Ultra example) | correct | src/data/prices.json |
+| 28 | PRICE: S24/S23/S22 Ultra still have meaningful value | correct | src/data/prices.json |
+| 29 | Own service: quote online, MTR or agreed place, 5–10 min inspection, cash/FPS | consistent with Steps.astro and process.astro | src/components/Steps.astro |
+| 30 | Apple Account naming (coordinator instruction) | N/A: this post never mentions an Apple account | — |
+
+Claims checked: 30. Not verified externally and so softened: exact HK Chinese menu labels for Find My Mobile and account removal on current One UI.
