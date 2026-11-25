@@ -185,3 +185,11 @@ table.prices tr:last-child td { border-bottom: 0; }
 .site-footer h3 { color: #fff; font-size: 1rem; }
 .site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
 .site-footer .legal { border-top: 1px solid #24352d; margin-top: 24px; padding-top: 16px; color: #8fa39a; font-size: 0.85rem; }
+
+/* Guides: topic note, table of contents, topic lists */
+.topic-note { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; font-size: 0.92rem; }
+.toc { margin: 16px 0; font-size: 0.95rem; }
+.toc ol { margin: 8px 0 0; padding-left: 1.3em; }
+.toc li { margin-bottom: 2px; }
+.topic-list ul { margin: 8px 0 0; padding-left: 1.2em; }
+.prose h2[id] { scroll-margin-top: 80px; }

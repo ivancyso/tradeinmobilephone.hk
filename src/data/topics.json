@@ -1,0 +1,32 @@
+[
+  {
+    "id": "recycling",
+    "name": "手機回收香港",
+    "pillar": "hong-kong-phone-recycling-guide",
+    "description": "在香港回收手機的方法、地點、流程及揀店貼士。"
+  },
+  {
+    "id": "iphone-price",
+    "name": "iPhone 回收價",
+    "pillar": "iphone-recycle-price-trend",
+    "description": "iPhone 回收價走勢、Apple Trade In 比較及影響價錢的因素。"
+  },
+  {
+    "id": "second-hand",
+    "name": "二手 iPhone",
+    "pillar": "second-hand-iphone-price-guide",
+    "description": "買賣二手 iPhone 的價錢、驗機及平台比較。"
+  },
+  {
+    "id": "samsung",
+    "name": "Samsung 回收",
+    "pillar": "samsung-trade-in-vs-recycling",
+    "description": "Samsung Trade In 與回收比較、三星及摺疊機回收須知。"
+  },
+  {
+    "id": "ipad-mac",
+    "name": "iPad 及 MacBook 回收",
+    "pillar": "ipad-macbook-recycling-guide",
+    "description": "iPad 及 MacBook 回收價因素、準備步驟及注意事項。"
+  }
+]

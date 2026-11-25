@@ -2,23 +2,60 @@
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import site from '../../data/site.json';
+import topics from '../../data/topics.json';
 import { formatDateZh } from '../../lib/prices';
 
-const guides = (await getCollection('guides')).sort((a, b) => (a.data.updatedAt < b.data.updatedAt ? 1 : -1));
+const guides = await getCollection('guides');
+// One section per topic: pillar first, then its cluster posts (newest first).
+const sections = topics
+  .map((t) => ({
+    topic: t,
+    pillar: guides.find((g) => g.id === t.pillar),
+    clusters: guides
+      .filter((g) => g.data.topic === t.id && g.data.role === 'cluster')
+      .sort((a, b) => (a.data.updatedAt < b.data.updatedAt ? 1 : -1)),
+  }))
+  .filter((s) => s.pillar || s.clusters.length);
+
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: '手機回收指南',
+  url: `${site.url}/guides/`,
+  hasPart: sections.flatMap((s) => [s.pillar, ...s.clusters].filter(Boolean).map((g) => ({ '@type': 'Article', headline: g!.data.title, url: `${site.url}/guides/${g!.id}/` }))),
+};
 ---
-<Base title="手機回收指南｜iPhone、Samsung 回收攻略及價格分析" description="手機回收香港攻略：回收價走勢、出售前準備、Samsung trade in 比較、揀選回收店防騙清單。以數據及實際驗機經驗整理。">
+<Base title={`手機回收指南｜iPhone、Samsung、iPad 回收攻略｜${site.shortName}`} description="手機回收香港攻略：iPhone 回收價走勢、Apple Trade In 比較、二手 iPhone 買賣、Samsung 回收及 iPad／MacBook 回收指南，按專題整理。" jsonLd={[ld]}>
   <div class="container">
     <Breadcrumbs items={[{ name: '首頁', href: '/' }, { name: '回收指南', href: '/guides/' }]} />
     <h1 style="margin-top:14px">手機回收指南</h1>
-    <p class="muted">賣機前要知的事：價格走勢、準備步驟及揀店貼士。</p>
-    <div class="grid grid-3">
-      {guides.map((g) => (
-        <a class="card pad" href={`/guides/${g.id}/`} style="color:inherit">
-          <h2 style="margin-top:0;font-size:1.15rem">{g.data.title}</h2>
-          <p class="muted small">{g.data.description}</p>
-          <p class="small muted" style="margin:0">更新：{formatDateZh(g.data.updatedAt)}</p>
-        </a>
-      ))}
-    </div>
+    <p class="muted">按專題整理：先看專題總覽，再按需要閱讀個別文章。</p>
+    <nav class="chips" aria-label="專題" style="margin-bottom:8px">
+      {sections.map((s) => <a class="tab" href={`#${s.topic.id}`}>{s.topic.name}</a>)}
+    </nav>
+    {sections.map((s) => (
+      <section id={s.topic.id} style="padding:18px 0">
+        <h2 style="margin-top:0">{s.topic.name}</h2>
+        <p class="muted">{s.topic.description}</p>
+        <div class="grid grid-3">
+          {s.pillar && (
+            <a class="card pad" href={`/guides/${s.pillar.id}/`} style="color:inherit;border-color:var(--brand)">
+              <span class="tag" style="margin:0 0 6px">專題總覽</span>
+              <h3 style="margin-top:6px">{s.pillar.data.title}</h3>
+              <p class="muted small">{s.pillar.data.description}</p>
+              <p class="small muted" style="margin:0">更新：{formatDateZh(s.pillar.data.updatedAt)}</p>
+            </a>
+          )}
+          {s.clusters.map((g) => (
+            <a class="card pad" href={`/guides/${g.id}/`} style="color:inherit">
+              <h3 style="margin-top:0">{g.data.title}</h3>
+              <p class="muted small">{g.data.description}</p>
+              <p class="small muted" style="margin:0">更新：{formatDateZh(g.data.updatedAt)}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
   </div>
 </Base>

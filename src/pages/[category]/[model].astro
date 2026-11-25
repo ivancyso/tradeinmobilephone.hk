@@ -30,7 +30,11 @@ const idx = cat.models.indexOf(model);
 const related = [...cat.models.filter((m) => m.series === model.series && m.slug !== model.slug), ...cat.models.slice(Math.max(0, idx - 2), idx + 3)]
   .filter((m, i, arr) => m.slug !== model.slug && arr.findIndex((x) => x.slug === m.slug) === i)
   .slice(0, 6);
-const guides = (await getCollection('guides')).filter((g) => g.data.category === cat.slug || g.data.category === 'general').slice(0, 3);
+const topicFor: Record<string, string> = { iphone: 'iphone-price', samsung: 'samsung', ipad: 'ipad-mac', macbook: 'ipad-mac' };
+const guides = (await getCollection('guides'))
+  .filter((g) => g.data.topic === topicFor[cat.slug] || g.data.category === cat.slug)
+  .sort((a, b) => (a.data.role === 'pillar' ? -1 : 0) - (b.data.role === 'pillar' ? -1 : 0))
+  .slice(0, 4);
 
 const faqs = [
   ...(model.faqs ?? []).map((f) => ({ q: f.q, a: fillPrices(f.a) })),

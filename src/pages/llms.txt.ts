@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import site from '../data/site.json';
+import topics from '../data/topics.json';
 import { categories, updatedAt, fmt, modelUrl } from '../lib/prices';
 
 // llms.txt: a plain-text summary of the site for AI assistants (GEO).
@@ -23,8 +24,16 @@ export const GET: APIRoute = async () => {
     }
     lines.push('');
   }
-  lines.push('## 回收指南', '');
-  for (const g of guides) lines.push(`- [${g.data.title}](${site.url}/guides/${g.id}/)：${g.data.description}`);
+  lines.push('## 回收指南（按專題）', '');
+  for (const t of topics) {
+    const inTopic = guides
+      .filter((g) => g.data.topic === t.id)
+      .sort((a, b) => (a.data.role === 'pillar' ? -1 : 1) - (b.data.role === 'pillar' ? -1 : 1));
+    if (!inTopic.length) continue;
+    lines.push(`### ${t.name}`, '');
+    for (const g of inTopic) lines.push(`- [${g.data.title}](${site.url}/guides/${g.id}/)${g.data.role === 'pillar' ? '（專題總覽）' : ''}：${g.data.description}`);
+    lines.push('');
+  }
   lines.push('', '## 其他', '', `- [回收流程](${site.url}/process/)`, `- [聯絡及報價](${site.url}/contact/)`);
   return new Response(lines.join('\n') + '\n', { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
 };

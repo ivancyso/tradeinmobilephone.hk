@@ -6,6 +6,7 @@ import PriceList from '../components/PriceList.astro';
 import Steps from '../components/Steps.astro';
 import Faq from '../components/Faq.astro';
 import site from '../data/site.json';
+import topics from '../data/topics.json';
 import { categories, updatedAt, formatDateZh, fmt, maxPrice, minPrice, modelUrl, getCategory, fillPrices } from '../lib/prices';
 import { homeFaqs as rawFaqs } from '../lib/faq';
 
@@ -15,7 +16,9 @@ const year = updatedAt.slice(0, 4);
 const title = `iPhone 回收價 ${year}｜手機回收價格表・收機價 每日更新｜${site.shortName}`;
 const description = `最新 iPhone 回收價及手機回收價格表（${formatDateZh(updatedAt)}更新）：iPhone 17 Pro Max 最高 ${fmt(maxPrice(iphone.models.find((m) => m.slug === 'iphone-17-pro-max')!))}。即時搜尋 iPhone、Samsung、iPad、MacBook 二手回收價，香港交收即場付款。`;
 const popular = categories.flatMap((c) => c.models.filter((m) => m.tags?.includes('熱門')).map((m) => ({ c, m })));
-const guides = (await getCollection('guides')).sort((a, b) => (a.data.updatedAt < b.data.updatedAt ? 1 : -1)).slice(0, 3);
+// Topic pillars, in the order of src/data/topics.json.
+const allGuides = await getCollection('guides');
+const guides = topics.map((t) => allGuides.find((g) => g.id === t.pillar)).filter((g) => g !== undefined);
 
 const jsonLd = [
   {
