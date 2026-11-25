@@ -1,0 +1,83 @@
+---
+import site from '../data/site.json';
+import { categories, type Model } from '../lib/prices';
+interface Props { cat?: string; model?: Model }
+const { cat, model } = Astro.props;
+const options = categories.flatMap((c) =>
+  c.models.flatMap((m) => m.variants.map((v) => ({ value: `${m.name} ${v.label}`, price: v.price, group: c.name, selected: model?.slug === m.slug }))),
+);
+const firstSelected = options.findIndex((o) => o.selected);
+---
+<form class="quote-form card pad" id="quote-form" data-email={site.email} data-wa={site.whatsapp}>
+  <h2 style="margin-top:0">免費報價</h2>
+  <label>型號及容量
+    <select name="model" required>
+      <option value="">請選擇型號</option>
+      {categories.map((c) => (
+        <optgroup label={c.name}>
+          {options.filter((o) => o.group === c.name).map((o) => (
+            <option value={o.value} data-price={o.price ?? ''} selected={options.indexOf(o) === firstSelected}>{o.value}</option>
+          ))}
+        </optgroup>
+      ))}
+      <option value="其他型號">其他型號（請在備註註明）</option>
+    </select>
+  </label>
+  <div class="row2">
+    <label>外觀成色
+      <select name="condition">
+        <option value="1">全新未開封</option>
+        <option value="1" selected>95% 新或以上（無花）</option>
+        <option value="0.92">90% 新（輕微使用痕跡）</option>
+        <option value="0.8">80% 新或以下（明顯花痕）</option>
+        <option value="0.5">有損壞／爆屏</option>
+      </select>
+    </label>
+    <label>電池健康度
+      <select name="battery">
+        <option value="1">90% 或以上</option>
+        <option value="0.95">85%–89%</option>
+        <option value="0.9">80%–84%</option>
+        <option value="0.85">80% 以下</option>
+      </select>
+    </label>
+  </div>
+  <label>備註（行貨／水貨、配件、維修紀錄）
+    <textarea name="note" rows="2" placeholder="例：香港行貨，有原裝盒，未維修過"></textarea>
+  </label>
+  <div>
+    <div class="small muted">預計回收價</div>
+    <div class="estimate" id="estimate" aria-live="polite">—</div>
+    <div class="small muted">估算只供參考，最終以驗機為準。</div>
+  </div>
+  <button class="btn btn-primary" type="submit">{site.whatsapp ? '用 WhatsApp 發送報價' : '用電郵發送報價'}</button>
+  <p class="small muted" style="margin:0">或直接電郵：<a href={`mailto:${site.email}`}>{site.email}</a></p>
+</form>
+
+<script>
+  const form = document.getElementById('quote-form') as HTMLFormElement | null;
+  if (form) {
+    const est = document.getElementById('estimate')!;
+    const update = () => {
+      const opt = (form.model as HTMLSelectElement).selectedOptions[0];
+      const base = Number(opt?.dataset.price || 0);
+      if (!base) { est.textContent = opt?.value ? '查詢報價' : '—'; return; }
+      const v = base * Number(form.condition.value) * Number(form.battery.value);
+      est.textContent = '約 $' + (Math.round(v / 50) * 50).toLocaleString('en-US');
+    };
+    form.addEventListener('change', update);
+    update();
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const f = new FormData(form);
+      const cond = (form.condition as HTMLSelectElement).selectedOptions[0].text;
+      const bat = (form.battery as HTMLSelectElement).selectedOptions[0].text;
+      const subject = `回收報價：${f.get('model')}`;
+      const body = `型號：${f.get('model')}\n成色：${cond}\n電池：${bat}\n備註：${f.get('note') || '-'}\n網上估價：${est.textContent}`;
+      const wa = form.dataset.wa?.replace(/\D/g, '');
+      window.location.href = wa
+        ? `https://wa.me/${wa}?text=${encodeURIComponent(subject + '\n' + body)}`
+        : `mailto:${form.dataset.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  }
+</script>

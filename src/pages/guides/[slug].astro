@@ -1,0 +1,77 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import { marked } from 'marked';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import site from '../../data/site.json';
+import { formatDateZh, getCategory, fmt, maxPrice, modelUrl } from '../../lib/prices';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  return guides.map((g) => ({ params: { slug: g.id }, props: { guide: g, all: guides } }));
+}
+const { guide, all } = Astro.props as { guide: CollectionEntry<'guides'>; all: CollectionEntry<'guides'>[] };
+const d = guide.data;
+const html = await marked.parse(d.body);
+const cat = d.category !== 'general' ? getCategory(d.category) : getCategory('iphone');
+const topModels = (cat?.models ?? []).filter((m) => maxPrice(m) != null).slice(0, 5);
+const others = all.filter((g) => g.id !== guide.id).slice(0, 4);
+const url = `${site.url}/guides/${guide.id}/`;
+const crumbs = [{ name: '首頁', href: '/' }, { name: '回收指南', href: '/guides/' }, { name: d.title, href: `/guides/${guide.id}/` }];
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: d.title,
+    description: d.description,
+    datePublished: d.publishedAt,
+    dateModified: d.updatedAt,
+    inLanguage: 'zh-HK',
+    mainEntityOfPage: url,
+    author: { '@id': `${site.url}/#org` },
+    publisher: { '@id': `${site.url}/#org` },
+    about: d.keyword,
+  },
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${site.url}${c.href}` })) },
+  ...(d.faqs.length
+    ? [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: d.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }]
+    : []),
+];
+---
+<Base title={`${d.title}｜${site.shortName}`} description={d.description} jsonLd={jsonLd} ogType="article">
+  <div class="container">
+    <Breadcrumbs items={crumbs} />
+    <div class="two-col" style="margin-top:14px">
+      <article class="prose">
+        <h1>{d.title}</h1>
+        <p class="muted small">發佈：{formatDateZh(d.publishedAt)} ・ 更新：{formatDateZh(d.updatedAt)}</p>
+        {d.summary.length > 0 && (
+          <div class="answer-box">
+            <p><strong>重點摘要</strong></p>
+            <ul>{d.summary.map((s) => <li>{s}</li>)}</ul>
+          </div>
+        )}
+        <Fragment set:html={html} />
+        {d.faqs.length > 0 && (<><h2>常見問題</h2><Faq faqs={d.faqs} /></>)}
+      </article>
+      <aside class="sticky grid">
+        {cat && (
+          <div class="card pad">
+            <h2 style="margin-top:0;font-size:1.1rem">{cat.label}（最高）</h2>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:8px">
+              {topModels.map((m) => <li style="display:flex;justify-content:space-between;gap:8px"><a href={modelUrl(cat.slug, m)}>{m.name}</a><strong>{fmt(maxPrice(m))}</strong></li>)}
+            </ul>
+            <p style="margin:12px 0 0"><a class="btn btn-primary" style="width:100%" href={`/${cat.slug}/`}>查看完整價格表</a></p>
+          </div>
+        )}
+        {others.length > 0 && (
+          <div class="card pad">
+            <h2 style="margin-top:0;font-size:1.1rem">更多指南</h2>
+            <ul style="padding-left:1.1em;margin:0">{others.map((g) => <li><a href={`/guides/${g.id}/`}>{g.data.title}</a></li>)}</ul>
+          </div>
+        )}
+      </aside>
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { formatDateZh } from '../../lib/prices';
+
+const guides = (await getCollection('guides')).sort((a, b) => (a.data.updatedAt < b.data.updatedAt ? 1 : -1));
+---
+<Base title="手機回收指南｜iPhone、Samsung 回收攻略及價格分析" description="手機回收香港攻略：回收價走勢、出售前準備、Samsung trade in 比較、揀選回收店防騙清單。以數據及實際驗機經驗整理。">
+  <div class="container">
+    <Breadcrumbs items={[{ name: '首頁', href: '/' }, { name: '回收指南', href: '/guides/' }]} />
+    <h1 style="margin-top:14px">手機回收指南</h1>
+    <p class="muted">賣機前要知的事：價格走勢、準備步驟及揀店貼士。</p>
+    <div class="grid grid-3">
+      {guides.map((g) => (
+        <a class="card pad" href={`/guides/${g.id}/`} style="color:inherit">
+          <h2 style="margin-top:0;font-size:1.15rem">{g.data.title}</h2>
+          <p class="muted small">{g.data.description}</p>
+          <p class="small muted" style="margin:0">更新：{formatDateZh(g.data.updatedAt)}</p>
+        </a>
+      ))}
+    </div>
+  </div>
+</Base>

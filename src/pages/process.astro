@@ -1,0 +1,54 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import Steps from '../components/Steps.astro';
+import Faq from '../components/Faq.astro';
+import site from '../data/site.json';
+
+const faqs = [
+  { q: '驗機要多久？', a: '一般 5 至 10 分鐘，會檢查屏幕、Face ID／指紋、相機、喇叭、充電、網絡及電池健康度。' },
+  { q: '如何付款？', a: '驗機確認後即場付款，可選現金或 FPS 轉數快。你接受最終報價才會成交。' },
+  { q: '需要帶甚麼？', a: '手機本身（已登出帳戶及重置），如有原裝盒、充電線及單據可一併帶來，有助提高報價。' },
+];
+const howTo = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: '如何在香港回收手機',
+  totalTime: 'PT30M',
+  step: [
+    { '@type': 'HowToStep', name: '網上查價', text: '在網站搜尋型號及容量，查看最新回收參考價。' },
+    { '@type': 'HowToStep', name: '提交資料', text: '提交型號、容量、成色及電池健康度，取得確認報價。' },
+    { '@type': 'HowToStep', name: '準備手機', text: '備份資料、登出 Apple ID 或 Google 帳戶，並重置手機。' },
+    { '@type': 'HowToStep', name: '約定交收', text: '約定港鐵站或地點及時間，即場驗機。' },
+    { '@type': 'HowToStep', name: '收款', text: '驗機無誤後即場以現金或 FPS 付款。' },
+  ],
+};
+const faqLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+---
+<Base title={`手機回收流程｜香港交收、即場驗機付款｜${site.shortName}`} description="手機回收流程：網上查價、提交資料、約定交收、即場驗機付款。附出售前準備清單及驗機項目。" jsonLd={[howTo, faqLd]}>
+  <div class="container narrow">
+    <Breadcrumbs items={[{ name: '首頁', href: '/' }, { name: '回收流程', href: '/process/' }]} />
+    <h1 style="margin-top:14px">手機回收流程</h1>
+    <div class="answer-box"><p>回收手機只需 4 步：網上查價 → 提交資料取得報價 → 約定交收地點 → 即場驗機付款。整個交收過程約 15 分鐘，接受報價才成交。</p></div>
+    <Steps />
+    <h2>出售前準備清單</h2>
+    <ol>
+      <li>備份相片及資料（iCloud、Google 相簿或電腦）。</li>
+      <li>如有 Apple Watch，先在 Watch App 解除配對。</li>
+      <li>登出 Apple ID／Google／Samsung 帳戶，關閉「尋找我的 iPhone」。</li>
+      <li>「設定」>「一般」>「傳輸或重置 iPhone」>「抹掉所有內容和設定」。</li>
+      <li>取出 SIM 卡及記憶卡，準備原裝盒及配件。</li>
+    </ol>
+    <h2>驗機會檢查甚麼？</h2>
+    <ul>
+      <li>屏幕顯示、觸控及有否壓痕、烙印</li>
+      <li>Face ID／Touch ID、前後鏡頭、閃光燈</li>
+      <li>喇叭、咪高峰、震動、按鍵</li>
+      <li>充電、Wi-Fi、藍牙及流動網絡</li>
+      <li>電池健康度及零件紀錄（是否曾更換非原廠零件）</li>
+    </ul>
+    <h2>常見問題</h2>
+    <Faq faqs={faqs} />
+    <p style="margin-top:20px"><a class="btn btn-primary" href="/contact/">立即取得報價</a></p>
+  </div>
+</Base>

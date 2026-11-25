@@ -1,0 +1,142 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import QuoteForm from '../../components/QuoteForm.astro';
+import site from '../../data/site.json';
+import {
+  categories, updatedAt, previousDate, formatDateZh, fmt, maxPrice, minPrice, priceChange, modelUrl, quoteHref, contactLabel,
+  type Category, type Model,
+} from '../../lib/prices';
+
+export function getStaticPaths() {
+  return categories.flatMap((c) => c.models.map((m) => ({ params: { category: c.slug, model: m.slug }, props: { cat: c, model: m } })));
+}
+const { cat, model } = Astro.props as { cat: Category; model: Model };
+const year = updatedAt.slice(0, 4);
+const hi = maxPrice(model);
+const lo = minPrice(model);
+const priced = model.variants.filter((v) => v.price != null);
+const isMac = cat.slug === 'macbook';
+
+const title = `${model.name} 回收價 ${year}｜最新二手回收價格${hi ? ` 最高 ${fmt(hi)}` : ''}`;
+const description = hi
+  ? `${model.name} 回收價（${formatDateZh(updatedAt)}更新）：${priced.map((v) => `${v.label} ${fmt(v.price)}`).join('、')}。即時估價，提交資料後約定交收，驗機後即場付款。`
+  : `${model.name} 回收價按當日市價報價（${formatDateZh(updatedAt)}）。提交${isMac ? '配置' : '容量'}及成色，免費取得 ${model.name} 最新回收價。`;
+
+// Siblings in the same series, plus neighbours in the category list, for internal links.
+const idx = cat.models.indexOf(model);
+const related = [...cat.models.filter((m) => m.series === model.series && m.slug !== model.slug), ...cat.models.slice(Math.max(0, idx - 2), idx + 3)]
+  .filter((m, i, arr) => m.slug !== model.slug && arr.findIndex((x) => x.slug === m.slug) === i)
+  .slice(0, 6);
+const guides = (await getCollection('guides')).filter((g) => g.data.category === cat.slug || g.data.category === 'general').slice(0, 3);
+
+const faqs = [
+  hi
+    ? { q: `${model.name} 回收價是多少？`, a: `按 ${formatDateZh(updatedAt)} 參考價，${model.name} 回收價${lo !== hi ? `介乎 ${fmt(lo)} 至 ${fmt(hi)}` : `約 ${fmt(hi)}`}：${priced.map((v) => `${v.label} ${fmt(v.price)}`).join('；')}。價格假設功能正常、外觀良好及電池健康度 90% 以上。` }
+    : { q: `${model.name} 回收價是多少？`, a: `${model.name} 回收價按當日市場行情逐部報價。請提交${isMac ? '配置' : '容量'}、成色及${isMac ? '電池循環次數' : '電池健康度'}，我們會盡快回覆確實價錢。` },
+  { q: `${model.name} 回收會扣價的情況有哪些？`, a: isMac
+      ? '常見扣價原因：屏幕有壓痕或塗層脫落、鍵盤或觸控板失靈、電池循環次數高或顯示「建議維修」、機身凹痕，以及沒有原裝火牛。'
+      : '常見扣價原因：屏幕或背玻璃有花痕／裂痕、電池健康度低於 85%、Face ID 或相機失靈、曾更換非原廠零件，以及屬於水貨或有網絡鎖。' },
+  { q: `出售 ${model.name} 前要做甚麼？`, a: cat.slug === 'samsung'
+      ? '備份資料至 Samsung Cloud 或 Google 帳戶，登出 Samsung 及 Google 帳戶，取出 SIM 卡及記憶卡，然後到「一般管理」>「重設」>「原廠資料重設」。'
+      : '先備份至 iCloud 或電腦，登出 Apple ID，關閉「尋找」功能，然後選擇「抹掉所有內容和設定」。未登出 Apple ID 的裝置無法回收。' },
+];
+
+const crumbs = [
+  { name: '首頁', href: '/' },
+  { name: cat.label, href: `/${cat.slug}/` },
+  { name: `${model.name} 回收價`, href: modelUrl(cat.slug, model) },
+];
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${site.url}${c.href}` })) },
+  { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: `${model.name} 回收價 ${year}`,
+    description,
+    dateModified: updatedAt,
+    inLanguage: 'zh-HK',
+    url: `${site.url}${modelUrl(cat.slug, model)}`,
+    creator: { '@id': `${site.url}/#org` },
+    distribution: { '@type': 'DataDownload', encodingFormat: 'application/json', contentUrl: `${site.url}/prices.json` },
+  },
+];
+---
+<Base title={title} description={description} jsonLd={jsonLd} ctaHref="#quote-form">
+  <div class="container">
+    <Breadcrumbs items={crumbs} />
+    <div class="two-col" style="margin-top:14px">
+      <div>
+        <h1>{model.name} 回收價 {year}</h1>
+        <p class="muted">價格更新：{formatDateZh(updatedAt)}{previousDate ? `（與 ${formatDateZh(previousDate)} 比較）` : ''}</p>
+
+        <div class="answer-box">
+          {hi ? (
+            <p><strong>{model.name} 最新回收價：</strong>{priced.map((v) => `${v.label} ${fmt(v.price)}`).join('；')}。{lo !== hi ? `最低 ${fmt(lo)}，最高 ${fmt(hi)}。` : ''}</p>
+          ) : (
+            <p><strong>{model.name}</strong> 回收價按當日市價個別報價，提交資料後我們會盡快回覆。</p>
+          )}
+        </div>
+
+        <div class="card table-wrap">
+          <table class="prices">
+            <thead><tr><th>{isMac ? '配置' : '容量'}</th><th>回收參考價</th><th>升跌</th><th></th></tr></thead>
+            <tbody>
+              {model.variants.map((v) => {
+                const chg = priceChange(cat.slug, model.slug, v);
+                return (
+                  <tr>
+                    <td>{v.label}{v.note && <div class="small muted">{v.note}</div>}</td>
+                    <td class="amt">{fmt(v.price)}</td>
+                    <td>{chg ? <span class:list={['chg', chg > 0 ? 'up' : 'down']}>{chg > 0 ? '▲' : '▼'} ${Math.abs(chg)}</span> : <span class="muted small">—</span>}</td>
+                    <td><a class="small" href={quoteHref(`回收報價：${model.name} ${v.label}`)}>{contactLabel}</a></td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+        <p class="small muted" style="margin-top:8px">以上為功能正常、外觀良好、{isMac ? '電池狀況正常' : '電池健康度 90% 以上'}的參考價，所有顏色同價（另有註明除外）。</p>
+
+        <h2>{model.name} 回收價怎樣計算？</h2>
+        <p>{model.name} 於 {model.year} 年推出。回收價由{isMac ? '晶片、記憶體及儲存配置' : '儲存容量'}決定基本價，再按以下情況調整：</p>
+        <ul>
+          <li><strong>外觀：</strong>95% 新或以上取全數；輕微使用痕跡約扣 5%–10%；明顯花痕約扣 15%–20%。</li>
+          <li><strong>電池：</strong>{isMac ? '循環次數高或顯示「建議維修」會扣價。' : '健康度 85%–89% 約扣 5%；80% 以下扣價較多。'}</li>
+          <li><strong>功能：</strong>{isMac ? '屏幕、鍵盤、觸控板、相機及喇叭需正常。' : 'Face ID、相機、喇叭、充電及網絡需正常；曾換屏或非原廠零件會另行報價。'}</li>
+          <li><strong>來源：</strong>香港行貨價最高，水貨一般稍低；有原裝盒及配件可加分。</li>
+        </ul>
+
+        <h2>常見問題</h2>
+        <Faq faqs={faqs} open />
+
+        {related.length > 0 && (
+          <>
+            <h2>相關型號回收價</h2>
+            <div class="grid grid-3">
+              {related.map((m) => (
+                <a class="card pad" href={modelUrl(cat.slug, m)} style="color:inherit">
+                  <strong>{m.name} 回收價</strong>
+                  <div class="muted small">{maxPrice(m) ? `最高 ${fmt(maxPrice(m))}` : '查詢報價'}</div>
+                </a>
+              ))}
+            </div>
+          </>
+        )}
+
+        {guides.length > 0 && (
+          <>
+            <h2>延伸閱讀</h2>
+            <ul>{guides.map((g) => <li><a href={`/guides/${g.id}/`}>{g.data.title}</a></li>)}</ul>
+          </>
+        )}
+      </div>
+      <aside class="sticky">
+        <QuoteForm cat={cat.slug} model={model} />
+      </aside>
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,39 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import site from '../data/site.json';
+
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: '聯絡及報價',
+  url: `${site.url}/contact/`,
+  mainEntity: { '@id': `${site.url}/#org` },
+};
+---
+<Base title={`即時報價｜聯絡我們｜${site.shortName}`} description={`提交手機型號、容量及成色，免費取得最新回收報價。電郵：${site.email}`} jsonLd={[ld]}>
+  <div class="container">
+    <Breadcrumbs items={[{ name: '首頁', href: '/' }, { name: '聯絡及報價', href: '/contact/' }]} />
+    <div class="two-col" style="margin-top:14px">
+      <div>
+        <h1>即時報價</h1>
+        <p>選擇型號及成色，系統會即時估算回收價。按「發送」後會開啟{site.whatsapp ? ' WhatsApp' : '電郵'}，資料已自動填好，確認後發送即可。</p>
+        <div class="card pad">
+          <h2 style="margin-top:0">聯絡方法</h2>
+          <p>電郵：<a href={`mailto:${site.email}`}>{site.email}</a></p>
+          {site.whatsapp && <p>WhatsApp：<a href={`https://wa.me/${site.whatsapp.replace(/\D/g, '')}`}>{site.whatsapp}</a></p>}
+          <p class="muted small" style="margin:0">我們只會透過以上渠道報價，不會在二手平台主動私訊你，請小心冒充。</p>
+        </div>
+        <h2>報價時請提供</h2>
+        <ul>
+          <li>型號及容量（例如 iPhone 17 Pro Max 256GB）</li>
+          <li>外觀成色，可附相片</li>
+          <li>電池健康度（「設定」>「電池」>「電池健康度」）</li>
+          <li>香港行貨或水貨、有否維修紀錄</li>
+        </ul>
+      </div>
+      <aside><QuoteForm /></aside>
+    </div>
+  </div>
+</Base>
