@@ -17,6 +17,8 @@ for (const cat of data.categories) {
       if (!v.label) errors.push(`${where}: variant 缺少 label`);
       if (v.price !== null && (!Number.isInteger(v.price) || v.price <= 0))
         errors.push(`${where} ${v.label}: price 必須是正整數或 null`);
+      if (v.source !== undefined && v.source !== 'okhk') errors.push(`${where} ${v.label}: source 只可以是 "okhk"（tradein 價錢不用填 source）`);
+      if (v.source && v.price === null) errors.push(`${where} ${v.label}: 有 source 但沒有 price`);
     }
   }
 }

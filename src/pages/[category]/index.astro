@@ -5,14 +5,15 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import Steps from '../../components/Steps.astro';
 import site from '../../data/site.json';
-import { categories, updatedAt, formatDateZh, fmt, maxPrice, modelUrl, type Category } from '../../lib/prices';
+import { categories, updatedAt, formatDateZh, fmt, maxPrice, modelUrl, fillPrices, type Category } from '../../lib/prices';
 import { categoryCopy } from '../../lib/copy';
 
 export function getStaticPaths() {
   return categories.map((c) => ({ params: { category: c.slug }, props: { cat: c } }));
 }
 const { cat } = Astro.props as { cat: Category };
-const copy = categoryCopy[cat.slug];
+const rawCopy = categoryCopy[cat.slug];
+const copy = { ...rawCopy, faqs: rawCopy.faqs.map((f) => ({ q: f.q, a: fillPrices(f.a) })) };
 const year = updatedAt.slice(0, 4);
 const title = `${copy.title.replace('{year}', year)}`;
 const priced = cat.models.filter((m) => maxPrice(m) != null);

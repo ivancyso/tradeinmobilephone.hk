@@ -2,7 +2,7 @@
 export const homeFaqs = [
   {
     q: 'iPhone 回收價大約是多少？',
-    a: '以 2026 年 11 月參考價計，iPhone 17 Pro Max 256GB 回收價約 $7,300，iPhone 16 Pro Max 256GB 約 $5,800，iPhone 15 Pro Max 256GB 約 $4,000。iPhone 12 至 14 系列一般介乎 $800 至 $3,400。實際價格視乎容量、成色、電池健康度及是否香港行貨。',
+    a: '以 {{date}} 參考價計，iPhone 17 Pro Max 256GB 回收價約 {{price:iphone/iphone-17-pro-max/256GB}}，iPhone 16 Pro Max 256GB 約 {{price:iphone/iphone-16-pro-max/256GB}}，iPhone 15 Pro Max 256GB 約 {{price:iphone/iphone-15-pro-max/256GB}}。iPhone 12 至 14 系列一般介乎 {{price:iphone/iphone-12/128GB}} 至 {{price:iphone/iphone-14-pro-max/512GB}}。實際價格視乎容量、成色、電池健康度及是否香港行貨。',
   },
   {
     q: '手機回收價多久更新一次？',

@@ -74,3 +74,20 @@ export function quoteHref(subject: string, body = '') {
   return `mailto:${site.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
 export const contactLabel = site.whatsapp ? 'WhatsApp 報價' : '電郵報價';
+
+/**
+ * Replace price placeholders in copy so text never drifts from prices.json.
+ *   {{price:iphone/iphone-17-pro-max/256GB}}      -> $6,700
+ *   {{price:iphone/iphone-17-pro-max/256GB*1.2}}  -> $8,000 (rounded to $100; for estimates)
+ *   {{date}}                                      -> 2026年11月26日
+ */
+export function fillPrices(text: string): string {
+  return text
+    .replace(/\{\{date\}\}/g, formatDateZh(updatedAt))
+    .replace(/\{\{price:([a-z0-9-]+)\/([a-z0-9-]+)\/([^}*]+?)(?:\*([\d.]+))?\}\}/g, (all, cat, slug, label, mult) => {
+      const v = getCategory(cat)?.models.find((m) => m.slug === slug)?.variants.find((x) => x.label === label);
+      if (!v) throw new Error(`fillPrices: unknown price placeholder ${all}`);
+      if (v.price == null) return '查詢報價';
+      return fmt(mult ? Math.round((v.price * Number(mult)) / 100) * 100 : v.price);
+    });
+}

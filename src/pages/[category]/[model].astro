@@ -6,7 +6,7 @@ import Faq from '../../components/Faq.astro';
 import QuoteForm from '../../components/QuoteForm.astro';
 import site from '../../data/site.json';
 import {
-  categories, updatedAt, previousDate, formatDateZh, fmt, maxPrice, minPrice, priceChange, modelUrl, quoteHref, contactLabel,
+  categories, updatedAt, previousDate, fillPrices, formatDateZh, fmt, maxPrice, minPrice, priceChange, modelUrl, quoteHref, contactLabel,
   type Category, type Model,
 } from '../../lib/prices';
 
@@ -33,7 +33,7 @@ const related = [...cat.models.filter((m) => m.series === model.series && m.slug
 const guides = (await getCollection('guides')).filter((g) => g.data.category === cat.slug || g.data.category === 'general').slice(0, 3);
 
 const faqs = [
-  ...(model.faqs ?? []),
+  ...(model.faqs ?? []).map((f) => ({ q: f.q, a: fillPrices(f.a) })),
   hi
     ? { q: `${model.name} 回收價是多少？`, a: `按 ${formatDateZh(updatedAt)} 參考價，${model.name} 回收價${lo !== hi ? `介乎 ${fmt(lo)} 至 ${fmt(hi)}` : `約 ${fmt(hi)}`}：${priced.map((v) => `${v.label} ${fmt(v.price)}`).join('；')}。價格假設功能正常、外觀良好及電池健康度 90% 以上。` }
     : { q: `${model.name} 回收價是多少？`, a: `${model.name} 回收價按當日市場行情逐部報價。請提交${isMac ? '配置' : '容量'}、成色及${isMac ? '電池循環次數' : '電池健康度'}，我們會盡快回覆確實價錢。` },

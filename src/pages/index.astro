@@ -6,10 +6,11 @@ import PriceList from '../components/PriceList.astro';
 import Steps from '../components/Steps.astro';
 import Faq from '../components/Faq.astro';
 import site from '../data/site.json';
-import { categories, updatedAt, formatDateZh, fmt, maxPrice, minPrice, modelUrl, getCategory } from '../lib/prices';
-import { homeFaqs } from '../lib/faq';
+import { categories, updatedAt, formatDateZh, fmt, maxPrice, minPrice, modelUrl, getCategory, fillPrices } from '../lib/prices';
+import { homeFaqs as rawFaqs } from '../lib/faq';
 
 const iphone = getCategory('iphone')!;
+const homeFaqs = rawFaqs.map((f) => ({ q: f.q, a: fillPrices(f.a) }));
 const year = updatedAt.slice(0, 4);
 const title = `iPhone 回收價 ${year}｜手機回收價格表・收機價 每日更新｜${site.shortName}`;
 const description = `最新 iPhone 回收價及手機回收價格表（${formatDateZh(updatedAt)}更新）：iPhone 17 Pro Max 最高 ${fmt(maxPrice(iphone.models.find((m) => m.slug === 'iphone-17-pro-max')!))}。即時搜尋 iPhone、Samsung、iPad、MacBook 二手回收價，香港交收即場付款。`;

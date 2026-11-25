@@ -25,6 +25,22 @@ npm run build    # 先檢查 prices.json，再輸出到 dist/
 
 可選欄位：`note`（例如「紫色最高 $3,000」）、`tags`（`["熱門"]` 會在首頁顯示快捷按鈕；`["最新"]`）。
 
+### 價錢來源規則
+
+1. 先用 tradein.com.hk 的價錢（iPhone 以首頁「每日更新」價目表為準，不用型號頁）。同型號不同顏色價錢不同時，取最多顏色的價錢，其餘寫入 `note`。
+2. tradein 沒有報價的，才用 okhk.store 的價錢，並加上 `"source": "okhk"`。
+3. 兩邊都沒有：`price` 設為 `null`，網站顯示「查詢報價」。
+
+### 文案中的價錢
+
+文章（`src/content/guides/*.json`）、FAQ（`src/lib/faq.ts`、`src/lib/copy.ts`）及型號 `faqs` 內不要直接寫價錢，改用佔位符，build 時會自動填入最新價：
+
+- `{{price:iphone/iphone-17-pro-max/256GB}}` → 該容量回收價
+- `{{price:iphone/iphone-17-pro-max/256GB*1.2}}` → 乘 1.2 後取整至百位（用於估算）
+- `{{date}}` → 價格更新日期
+
+佔位符寫錯（型號或容量不存在）會令 build 失敗，不會上線錯價。
+
 ## 新增文章（回收指南）
 
 在 `src/content/guides/` 新增一個 JSON 檔，檔名就是網址（例如 `iphone-17-guide.json` → `/guides/iphone-17-guide/`）。

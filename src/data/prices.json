@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-11-25",
+  "updatedAt": "2026-11-26",
   "currency": "HKD",
-  "_note": "價錢單位為港幣。price 設為 null 即顯示「查詢報價」。更新後執行 npm run prices:snapshot 保存歷史。",
+  "_note": "價錢單位為港幣。先取 tradein.com.hk（iPhone 以首頁每日價目表為準）；tradein 沒有報價的才用 okhk.store，並以 \"source\": \"okhk\" 標示。price 為 null 即顯示「查詢報價」。更新後執行 npm run prices:snapshot。",
   "categories": [
     {
       "slug": "iphone",
@@ -66,19 +66,19 @@
           "variants": [
             {
               "label": "256GB",
-              "price": 7300
+              "price": 6700
             },
             {
               "label": "512GB",
-              "price": 8300
+              "price": 7300
             },
             {
               "label": "1TB",
-              "price": 9200
+              "price": 7800
             },
             {
               "label": "2TB",
-              "price": 10000
+              "price": 8700
             }
           ],
           "tags": [
@@ -99,15 +99,15 @@
           "variants": [
             {
               "label": "256GB",
-              "price": 6300
+              "price": 5800
             },
             {
               "label": "512GB",
-              "price": 7300
+              "price": 6700
             },
             {
               "label": "1TB",
-              "price": 8200
+              "price": 7000
             }
           ],
           "tags": [
@@ -122,11 +122,11 @@
           "variants": [
             {
               "label": "256GB",
-              "price": 4300
+              "price": 4200
             },
             {
               "label": "512GB",
-              "price": 4900
+              "price": 4700
             },
             {
               "label": "1TB",
@@ -142,11 +142,11 @@
           "variants": [
             {
               "label": "256GB",
-              "price": 4300
+              "price": 4200
             },
             {
               "label": "512GB",
-              "price": 4800
+              "price": 4700
             }
           ]
         },
@@ -158,15 +158,15 @@
           "variants": [
             {
               "label": "256GB",
-              "price": 5800
+              "price": 4800
             },
             {
               "label": "512GB",
-              "price": 6400
+              "price": 5200
             },
             {
               "label": "1TB",
-              "price": 6800
+              "price": 5500
             }
           ],
           "tags": [
@@ -181,19 +181,19 @@
           "variants": [
             {
               "label": "128GB",
-              "price": 4100
+              "price": 3400
             },
             {
               "label": "256GB",
-              "price": 5000
+              "price": 4000
             },
             {
               "label": "512GB",
-              "price": 5400
+              "price": 4300
             },
             {
               "label": "1TB",
-              "price": 5600
+              "price": 4700
             }
           ]
         },
@@ -205,15 +205,18 @@
           "variants": [
             {
               "label": "128GB",
-              "price": null
+              "price": 4200,
+              "source": "okhk"
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 4500,
+              "source": "okhk"
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 4800,
+              "source": "okhk"
             }
           ]
         },
@@ -225,15 +228,18 @@
           "variants": [
             {
               "label": "128GB",
-              "price": null
+              "price": 3800,
+              "source": "okhk"
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 4200,
+              "source": "okhk"
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 4600,
+              "source": "okhk"
             }
           ]
         },
@@ -245,15 +251,18 @@
           "variants": [
             {
               "label": "128GB",
-              "price": null
+              "price": 2800,
+              "source": "okhk"
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 3200,
+              "source": "okhk"
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 3800,
+              "source": "okhk"
             }
           ]
         },
@@ -265,15 +274,18 @@
           "variants": [
             {
               "label": "256GB",
-              "price": 4000
+              "price": 4000,
+              "note": "藍色 $3,800"
             },
             {
               "label": "512GB",
-              "price": 4200
+              "price": 4200,
+              "note": "黑色 $4,100、藍色 $4,000"
             },
             {
               "label": "1TB",
-              "price": 4400
+              "price": 4300,
+              "note": "藍色 $4,100"
             }
           ]
         },
@@ -285,19 +297,23 @@
           "variants": [
             {
               "label": "128GB",
-              "price": 3000
+              "price": 2800,
+              "note": "藍色 $2,700"
             },
             {
               "label": "256GB",
-              "price": 3300
+              "price": 3200,
+              "note": "藍色 $3,000"
             },
             {
               "label": "512GB",
-              "price": 3500
+              "price": 3300,
+              "note": "藍色 $3,100"
             },
             {
               "label": "1TB",
-              "price": 3700
+              "price": 3400,
+              "note": "藍色 $3,200"
             }
           ]
         },
@@ -309,15 +325,18 @@
           "variants": [
             {
               "label": "128GB",
-              "price": null
+              "price": 3000,
+              "source": "okhk"
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 3400,
+              "source": "okhk"
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 3800,
+              "source": "okhk"
             }
           ]
         },
@@ -329,15 +348,18 @@
           "variants": [
             {
               "label": "128GB",
-              "price": null
+              "price": 2900,
+              "source": "okhk"
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 3200,
+              "source": "okhk"
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 3500,
+              "source": "okhk"
             }
           ]
         },
@@ -350,15 +372,21 @@
             {
               "label": "128GB",
               "price": 2700,
-              "note": "紫色最高 $3,000"
+              "note": "紫色 $2,800"
             },
             {
               "label": "256GB",
-              "price": 3300
+              "price": 3200
             },
             {
               "label": "512GB",
-              "price": 3400
+              "price": 3300,
+              "note": "黑色 $3,400、白色 $3,400"
+            },
+            {
+              "label": "1TB",
+              "price": 4400,
+              "source": "okhk"
             }
           ]
         },
@@ -379,6 +407,11 @@
             {
               "label": "512GB",
               "price": 2500
+            },
+            {
+              "label": "1TB",
+              "price": 3900,
+              "source": "okhk"
             }
           ]
         },
@@ -390,15 +423,18 @@
           "variants": [
             {
               "label": "128GB",
-              "price": null
+              "price": 2500,
+              "source": "okhk"
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 2700,
+              "source": "okhk"
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 2900,
+              "source": "okhk"
             }
           ]
         },
@@ -410,15 +446,18 @@
           "variants": [
             {
               "label": "128GB",
-              "price": null
+              "price": 2000,
+              "source": "okhk"
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 2300,
+              "source": "okhk"
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 2600,
+              "source": "okhk"
             }
           ]
         },
@@ -431,7 +470,7 @@
             {
               "label": "128GB",
               "price": 2000,
-              "note": "黑色最高 $2,200"
+              "note": "黑色 $2,200"
             },
             {
               "label": "256GB",
@@ -440,6 +479,11 @@
             {
               "label": "512GB",
               "price": 2700
+            },
+            {
+              "label": "1TB",
+              "price": 3400,
+              "source": "okhk"
             }
           ]
         },
@@ -457,6 +501,16 @@
               "label": "256GB",
               "price": 2300,
               "note": "藍色 $2,200"
+            },
+            {
+              "label": "512GB",
+              "price": 2800,
+              "source": "okhk"
+            },
+            {
+              "label": "1TB",
+              "price": 3200,
+              "source": "okhk"
             }
           ]
         },
@@ -478,7 +532,8 @@
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 2100,
+              "source": "okhk"
             }
           ]
         },
@@ -490,15 +545,18 @@
           "variants": [
             {
               "label": "128GB",
-              "price": null
+              "price": 1400,
+              "source": "okhk"
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 1600,
+              "source": "okhk"
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 1900,
+              "source": "okhk"
             }
           ]
         },
@@ -515,6 +573,11 @@
             {
               "label": "256GB",
               "price": 1800
+            },
+            {
+              "label": "512GB",
+              "price": 2000,
+              "source": "okhk"
             }
           ]
         },
@@ -527,11 +590,16 @@
             {
               "label": "128GB",
               "price": 1000,
-              "note": "黑色最高 $1,100"
+              "note": "黑色 $1,100"
             },
             {
               "label": "256GB",
               "price": 1200
+            },
+            {
+              "label": "512GB",
+              "price": 1800,
+              "source": "okhk"
             }
           ]
         },
@@ -543,7 +611,8 @@
           "variants": [
             {
               "label": "64GB",
-              "price": null
+              "price": 1100,
+              "source": "okhk"
             },
             {
               "label": "128GB",
@@ -551,7 +620,8 @@
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 1400,
+              "source": "okhk"
             }
           ]
         },
@@ -563,15 +633,18 @@
           "variants": [
             {
               "label": "64GB",
-              "price": null
+              "price": 1100,
+              "source": "okhk"
             },
             {
               "label": "128GB",
-              "price": null
+              "price": 1300,
+              "source": "okhk"
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 1400,
+              "source": "okhk"
             }
           ]
         },
@@ -643,15 +716,18 @@
           "variants": [
             {
               "label": "64GB",
-              "price": null
+              "price": 700,
+              "source": "okhk"
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 900,
+              "source": "okhk"
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 1100,
+              "source": "okhk"
             }
           ]
         },
@@ -663,11 +739,18 @@
           "variants": [
             {
               "label": "64GB",
-              "price": null
+              "price": 700,
+              "source": "okhk"
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 900,
+              "source": "okhk"
+            },
+            {
+              "label": "512GB",
+              "price": 1100,
+              "source": "okhk"
             }
           ]
         },
@@ -679,15 +762,18 @@
           "variants": [
             {
               "label": "64GB",
-              "price": null
+              "price": 600,
+              "source": "okhk"
             },
             {
               "label": "128GB",
-              "price": null
+              "price": 700,
+              "source": "okhk"
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 800,
+              "source": "okhk"
             }
           ]
         },
@@ -719,15 +805,18 @@
           "variants": [
             {
               "label": "64GB",
-              "price": null
+              "price": 500,
+              "source": "okhk"
             },
             {
               "label": "128GB",
-              "price": null
+              "price": 600,
+              "source": "okhk"
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 700,
+              "source": "okhk"
             }
           ]
         },
@@ -739,11 +828,13 @@
           "variants": [
             {
               "label": "64GB",
-              "price": null
+              "price": 600,
+              "source": "okhk"
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 700,
+              "source": "okhk"
             }
           ]
         },
@@ -755,15 +846,18 @@
           "variants": [
             {
               "label": "64GB",
-              "price": null
+              "price": 500,
+              "source": "okhk"
             },
             {
               "label": "128GB",
-              "price": null
+              "price": 600,
+              "source": "okhk"
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 650,
+              "source": "okhk"
             }
           ]
         },
@@ -775,15 +869,18 @@
           "variants": [
             {
               "label": "64GB",
-              "price": null
+              "price": 400,
+              "source": "okhk"
             },
             {
               "label": "128GB",
-              "price": null
+              "price": 500,
+              "source": "okhk"
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 550,
+              "source": "okhk"
             }
           ]
         },
@@ -795,15 +892,18 @@
           "variants": [
             {
               "label": "32GB",
-              "price": null
+              "price": 300,
+              "source": "okhk"
             },
             {
               "label": "128GB",
-              "price": null
+              "price": 400,
+              "source": "okhk"
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 500,
+              "source": "okhk"
             }
           ]
         },
@@ -815,15 +915,18 @@
           "variants": [
             {
               "label": "32GB",
-              "price": null
+              "price": 250,
+              "source": "okhk"
             },
             {
               "label": "128GB",
-              "price": null
+              "price": 300,
+              "source": "okhk"
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 400,
+              "source": "okhk"
             }
           ]
         },
@@ -875,6 +978,69 @@
       "label": "Samsung 三星回收價",
       "models": [
         {
+          "slug": "galaxy-s26-ultra",
+          "name": "Galaxy S26 Ultra",
+          "year": 2026,
+          "series": "Galaxy S26 系列",
+          "tags": [
+            "最新"
+          ],
+          "variants": [
+            {
+              "label": "256GB",
+              "price": 5500,
+              "source": "okhk"
+            },
+            {
+              "label": "512GB",
+              "price": 6000,
+              "source": "okhk"
+            },
+            {
+              "label": "1TB",
+              "price": 7400,
+              "source": "okhk"
+            }
+          ]
+        },
+        {
+          "slug": "galaxy-s26-plus",
+          "name": "Galaxy S26+",
+          "year": 2026,
+          "series": "Galaxy S26 系列",
+          "tags": [
+            "最新"
+          ],
+          "variants": [
+            {
+              "label": "256GB",
+              "price": 4300,
+              "source": "okhk"
+            },
+            {
+              "label": "512GB",
+              "price": 4550,
+              "source": "okhk"
+            }
+          ]
+        },
+        {
+          "slug": "galaxy-s26",
+          "name": "Galaxy S26",
+          "year": 2026,
+          "series": "Galaxy S26 系列",
+          "tags": [
+            "最新"
+          ],
+          "variants": [
+            {
+              "label": "256GB",
+              "price": 3350,
+              "source": "okhk"
+            }
+          ]
+        },
+        {
           "slug": "galaxy-s25-ultra",
           "name": "Galaxy S25 Ultra",
           "year": 2025,
@@ -882,15 +1048,18 @@
           "variants": [
             {
               "label": "256GB",
-              "price": null
+              "price": 4650,
+              "source": "okhk"
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 5400,
+              "source": "okhk"
             },
             {
               "label": "1TB",
-              "price": null
+              "price": 6250,
+              "source": "okhk"
             }
           ],
           "tags": [
@@ -905,11 +1074,13 @@
           "variants": [
             {
               "label": "256GB",
-              "price": null
+              "price": 3250,
+              "source": "okhk"
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 3600,
+              "source": "okhk"
             }
           ]
         },
@@ -925,7 +1096,60 @@
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 2800,
+              "source": "okhk"
+            },
+            {
+              "label": "512GB",
+              "price": 3150,
+              "source": "okhk"
+            }
+          ]
+        },
+        {
+          "slug": "galaxy-z-fold8",
+          "name": "Galaxy Z Fold8",
+          "year": 2026,
+          "series": "Galaxy Z 摺疊系列",
+          "tags": [
+            "最新"
+          ],
+          "variants": [
+            {
+              "label": "256GB",
+              "price": 10100,
+              "source": "okhk"
+            },
+            {
+              "label": "512GB",
+              "price": 11400,
+              "source": "okhk"
+            },
+            {
+              "label": "1TB",
+              "price": 14000,
+              "source": "okhk"
+            }
+          ]
+        },
+        {
+          "slug": "galaxy-z-flip8",
+          "name": "Galaxy Z Flip8",
+          "year": 2026,
+          "series": "Galaxy Z 摺疊系列",
+          "tags": [
+            "最新"
+          ],
+          "variants": [
+            {
+              "label": "256GB",
+              "price": 7600,
+              "source": "okhk"
+            },
+            {
+              "label": "512GB",
+              "price": 8800,
+              "source": "okhk"
             }
           ]
         },
@@ -937,19 +1161,19 @@
           "variants": [
             {
               "label": "256GB",
-              "price": null
+              "price": 7900,
+              "source": "okhk"
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 8500,
+              "source": "okhk"
             },
             {
               "label": "1TB",
-              "price": null
+              "price": 9300,
+              "source": "okhk"
             }
-          ],
-          "tags": [
-            "最新"
           ]
         },
         {
@@ -960,15 +1184,14 @@
           "variants": [
             {
               "label": "256GB",
-              "price": null
+              "price": 3700,
+              "source": "okhk"
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 4000,
+              "source": "okhk"
             }
-          ],
-          "tags": [
-            "最新"
           ]
         },
         {
@@ -983,11 +1206,13 @@
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 5600,
+              "source": "okhk"
             },
             {
               "label": "1TB",
-              "price": null
+              "price": 6000,
+              "source": "okhk"
             }
           ]
         },
@@ -999,11 +1224,54 @@
           "variants": [
             {
               "label": "256GB",
-              "price": null
+              "price": 2300,
+              "source": "okhk"
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 2600,
+              "source": "okhk"
+            }
+          ]
+        },
+        {
+          "slug": "galaxy-z-fold5",
+          "name": "Galaxy Z Fold5",
+          "year": 2023,
+          "series": "Galaxy Z 摺疊系列",
+          "variants": [
+            {
+              "label": "256GB",
+              "price": 3000,
+              "source": "okhk"
+            },
+            {
+              "label": "512GB",
+              "price": 3200,
+              "source": "okhk"
+            },
+            {
+              "label": "1TB",
+              "price": 3400,
+              "source": "okhk"
+            }
+          ]
+        },
+        {
+          "slug": "galaxy-z-flip5",
+          "name": "Galaxy Z Flip5",
+          "year": 2023,
+          "series": "Galaxy Z 摺疊系列",
+          "variants": [
+            {
+              "label": "256GB",
+              "price": 1350,
+              "source": "okhk"
+            },
+            {
+              "label": "512GB",
+              "price": 1450,
+              "source": "okhk"
             }
           ]
         },
@@ -1015,15 +1283,18 @@
           "variants": [
             {
               "label": "256GB",
-              "price": null
+              "price": 3550,
+              "source": "okhk"
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 3850,
+              "source": "okhk"
             },
             {
               "label": "1TB",
-              "price": null
+              "price": 4250,
+              "source": "okhk"
             }
           ]
         },
@@ -1035,11 +1306,13 @@
           "variants": [
             {
               "label": "256GB",
-              "price": null
+              "price": 2250,
+              "source": "okhk"
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 2550,
+              "source": "okhk"
             }
           ]
         },
@@ -1051,11 +1324,13 @@
           "variants": [
             {
               "label": "256GB",
-              "price": null
+              "price": 2000,
+              "source": "okhk"
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 2400,
+              "source": "okhk"
             }
           ]
         },
@@ -1067,15 +1342,18 @@
           "variants": [
             {
               "label": "256GB",
-              "price": null
+              "price": 2400,
+              "source": "okhk"
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 2700,
+              "source": "okhk"
             },
             {
               "label": "1TB",
-              "price": null
+              "price": 2950,
+              "source": "okhk"
             }
           ]
         },
@@ -1091,11 +1369,18 @@
             },
             {
               "label": "256GB",
-              "price": null
+              "price": 1850,
+              "source": "okhk"
             },
             {
               "label": "512GB",
-              "price": null
+              "price": 1950,
+              "source": "okhk"
+            },
+            {
+              "label": "1TB",
+              "price": 2100,
+              "source": "okhk"
             }
           ]
         }
@@ -1108,106 +1393,339 @@
       "models": [
         {
           "slug": "ipad-pro-13-m4",
-          "name": "iPad Pro 13\" (M4)",
+          "name": "iPad Pro 13\"（M4）",
           "year": 2024,
           "series": "iPad Pro",
-          "variants": [
-            {
-              "label": "256GB",
-              "price": null
-            },
-            {
-              "label": "512GB",
-              "price": null
-            },
-            {
-              "label": "1TB",
-              "price": null
-            },
-            {
-              "label": "2TB",
-              "price": null
-            }
-          ],
           "tags": [
             "熱門"
+          ],
+          "variants": [
+            {
+              "label": "256GB Wi-Fi",
+              "price": null
+            },
+            {
+              "label": "512GB Wi-Fi",
+              "price": null
+            },
+            {
+              "label": "256GB Cellular",
+              "price": null
+            }
           ]
         },
         {
           "slug": "ipad-pro-11-m4",
-          "name": "iPad Pro 11\" (M4)",
+          "name": "iPad Pro 11\"（M4）",
           "year": 2024,
           "series": "iPad Pro",
           "variants": [
             {
-              "label": "256GB",
+              "label": "256GB Wi-Fi",
               "price": null
             },
             {
-              "label": "512GB",
+              "label": "512GB Wi-Fi",
               "price": null
             },
             {
-              "label": "1TB",
-              "price": null
-            },
-            {
-              "label": "2TB",
+              "label": "256GB Cellular",
               "price": null
             }
           ]
         },
         {
           "slug": "ipad-pro-12-9-m2",
-          "name": "iPad Pro 12.9\" (M2)",
+          "name": "iPad Pro 12.9\"（第6代 M2）",
           "year": 2022,
           "series": "iPad Pro",
           "variants": [
             {
-              "label": "128GB",
-              "price": null
+              "label": "128GB Wi-Fi",
+              "price": 4400
             },
             {
-              "label": "256GB",
-              "price": null
+              "label": "256GB Wi-Fi",
+              "price": 4700
             },
             {
-              "label": "512GB",
-              "price": null
+              "label": "512GB Wi-Fi",
+              "price": 5000
             },
             {
-              "label": "1TB",
-              "price": null
+              "label": "1TB Wi-Fi",
+              "price": 5700
+            },
+            {
+              "label": "2TB Wi-Fi",
+              "price": 7300,
+              "source": "okhk"
+            },
+            {
+              "label": "128GB Cellular",
+              "price": 4600
+            },
+            {
+              "label": "256GB Cellular",
+              "price": 4800
+            },
+            {
+              "label": "512GB Cellular",
+              "price": 5200
+            },
+            {
+              "label": "1TB Cellular",
+              "price": 5900
+            },
+            {
+              "label": "2TB Cellular",
+              "price": 7700,
+              "source": "okhk"
+            }
+          ]
+        },
+        {
+          "slug": "ipad-pro-12-9-m1",
+          "name": "iPad Pro 12.9\"（第5代 M1）",
+          "year": 2021,
+          "series": "iPad Pro",
+          "variants": [
+            {
+              "label": "128GB Wi-Fi",
+              "price": 3500
+            },
+            {
+              "label": "256GB Wi-Fi",
+              "price": 4000
+            },
+            {
+              "label": "512GB Wi-Fi",
+              "price": 4100
+            },
+            {
+              "label": "1TB Wi-Fi",
+              "price": 5000,
+              "source": "okhk"
+            },
+            {
+              "label": "2TB Wi-Fi",
+              "price": 5600,
+              "source": "okhk"
+            },
+            {
+              "label": "128GB Cellular",
+              "price": 3700
+            },
+            {
+              "label": "256GB Cellular",
+              "price": 4300
+            },
+            {
+              "label": "512GB Cellular",
+              "price": 4500
+            },
+            {
+              "label": "1TB Cellular",
+              "price": 5300,
+              "source": "okhk"
+            },
+            {
+              "label": "2TB Cellular",
+              "price": 5900,
+              "source": "okhk"
+            }
+          ]
+        },
+        {
+          "slug": "ipad-pro-12-9-2020",
+          "name": "iPad Pro 12.9\"（第4代 2020）",
+          "year": 2020,
+          "series": "iPad Pro",
+          "variants": [
+            {
+              "label": "128GB Wi-Fi",
+              "price": 2600
+            },
+            {
+              "label": "256GB Wi-Fi",
+              "price": 3000
+            },
+            {
+              "label": "512GB Wi-Fi",
+              "price": 3200
+            },
+            {
+              "label": "1TB Wi-Fi",
+              "price": 3900,
+              "source": "okhk"
+            },
+            {
+              "label": "128GB Cellular",
+              "price": 2900
+            },
+            {
+              "label": "256GB Cellular",
+              "price": 3200
+            },
+            {
+              "label": "512GB Cellular",
+              "price": 3400
+            },
+            {
+              "label": "1TB Cellular",
+              "price": 4200,
+              "source": "okhk"
             }
           ]
         },
         {
           "slug": "ipad-pro-11-m2",
-          "name": "iPad Pro 11\" (M2)",
+          "name": "iPad Pro 11\"（第4代 M2）",
           "year": 2022,
           "series": "iPad Pro",
           "variants": [
             {
-              "label": "128GB",
-              "price": null
+              "label": "128GB Wi-Fi",
+              "price": 3700
             },
             {
-              "label": "256GB",
-              "price": null
+              "label": "256GB Wi-Fi",
+              "price": 4000
             },
             {
-              "label": "512GB",
-              "price": null
+              "label": "512GB Wi-Fi",
+              "price": 4300
             },
             {
-              "label": "1TB",
-              "price": null
+              "label": "1TB Wi-Fi",
+              "price": 4500
+            },
+            {
+              "label": "2TB Wi-Fi",
+              "price": 6300,
+              "source": "okhk"
+            },
+            {
+              "label": "128GB Cellular",
+              "price": 4000
+            },
+            {
+              "label": "256GB Cellular",
+              "price": 4300
+            },
+            {
+              "label": "512GB Cellular",
+              "price": 4500
+            },
+            {
+              "label": "1TB Cellular",
+              "price": 5800,
+              "source": "okhk"
+            },
+            {
+              "label": "2TB Cellular",
+              "price": 6500,
+              "source": "okhk"
+            }
+          ]
+        },
+        {
+          "slug": "ipad-pro-11-m1",
+          "name": "iPad Pro 11\"（第3代 M1）",
+          "year": 2021,
+          "series": "iPad Pro",
+          "variants": [
+            {
+              "label": "128GB Wi-Fi",
+              "price": 3000
+            },
+            {
+              "label": "256GB Wi-Fi",
+              "price": 3300
+            },
+            {
+              "label": "512GB Wi-Fi",
+              "price": 3500
+            },
+            {
+              "label": "1TB Wi-Fi",
+              "price": 4300,
+              "source": "okhk"
+            },
+            {
+              "label": "2TB Wi-Fi",
+              "price": 4800,
+              "source": "okhk"
+            },
+            {
+              "label": "128GB Cellular",
+              "price": 3200
+            },
+            {
+              "label": "256GB Cellular",
+              "price": 3500
+            },
+            {
+              "label": "512GB Cellular",
+              "price": 3700
+            },
+            {
+              "label": "1TB Cellular",
+              "price": 4600,
+              "source": "okhk"
+            },
+            {
+              "label": "2TB Cellular",
+              "price": 5100,
+              "source": "okhk"
+            }
+          ]
+        },
+        {
+          "slug": "ipad-pro-11-2020",
+          "name": "iPad Pro 11\"（第2代 2020）",
+          "year": 2020,
+          "series": "iPad Pro",
+          "variants": [
+            {
+              "label": "128GB Wi-Fi",
+              "price": 2200
+            },
+            {
+              "label": "256GB Wi-Fi",
+              "price": 2500
+            },
+            {
+              "label": "512GB Wi-Fi",
+              "price": 2600
+            },
+            {
+              "label": "1TB Wi-Fi",
+              "price": 3000,
+              "source": "okhk"
+            },
+            {
+              "label": "128GB Cellular",
+              "price": 2500
+            },
+            {
+              "label": "256GB Cellular",
+              "price": 2700
+            },
+            {
+              "label": "512GB Cellular",
+              "price": 2800
+            },
+            {
+              "label": "1TB Cellular",
+              "price": 3200,
+              "source": "okhk"
             }
           ]
         },
         {
           "slug": "ipad-air-13-m3",
-          "name": "iPad Air 13\" (M3)",
+          "name": "iPad Air 13\"（M3）",
           "year": 2025,
           "series": "iPad Air",
           "variants": [
@@ -1227,7 +1745,7 @@
         },
         {
           "slug": "ipad-air-11-m3",
-          "name": "iPad Air 11\" (M3)",
+          "name": "iPad Air 11\"（M3）",
           "year": 2025,
           "series": "iPad Air",
           "variants": [
@@ -1246,22 +1764,90 @@
           ]
         },
         {
-          "slug": "ipad-air-m2",
-          "name": "iPad Air (M2)",
+          "slug": "ipad-air-13-m2",
+          "name": "iPad Air 13\"（M2）",
           "year": 2024,
           "series": "iPad Air",
           "variants": [
             {
-              "label": "128GB",
+              "label": "128GB Wi-Fi",
               "price": null
             },
             {
-              "label": "256GB",
+              "label": "256GB Wi-Fi",
               "price": null
             },
             {
-              "label": "512GB",
+              "label": "128GB Cellular",
               "price": null
+            }
+          ]
+        },
+        {
+          "slug": "ipad-air-11-m2",
+          "name": "iPad Air 11\"（M2）",
+          "year": 2024,
+          "series": "iPad Air",
+          "variants": [
+            {
+              "label": "128GB Wi-Fi",
+              "price": null
+            },
+            {
+              "label": "256GB Wi-Fi",
+              "price": null
+            },
+            {
+              "label": "128GB Cellular",
+              "price": null
+            }
+          ]
+        },
+        {
+          "slug": "ipad-air-5",
+          "name": "iPad Air（第5代 M1）",
+          "year": 2022,
+          "series": "iPad Air",
+          "variants": [
+            {
+              "label": "64GB Wi-Fi",
+              "price": 1600
+            },
+            {
+              "label": "256GB Wi-Fi",
+              "price": 2000
+            },
+            {
+              "label": "64GB Cellular",
+              "price": 2000
+            },
+            {
+              "label": "256GB Cellular",
+              "price": 2300
+            }
+          ]
+        },
+        {
+          "slug": "ipad-air-4",
+          "name": "iPad Air（第4代）",
+          "year": 2020,
+          "series": "iPad Air",
+          "variants": [
+            {
+              "label": "64GB Wi-Fi",
+              "price": 1100
+            },
+            {
+              "label": "256GB Wi-Fi",
+              "price": 1500
+            },
+            {
+              "label": "64GB Cellular",
+              "price": 1300
+            },
+            {
+              "label": "256GB Cellular",
+              "price": 1700
             }
           ]
         },
@@ -1292,32 +1878,52 @@
           "series": "iPad mini",
           "variants": [
             {
-              "label": "64GB",
-              "price": null
+              "label": "64GB Wi-Fi",
+              "price": 1800,
+              "source": "okhk"
             },
             {
-              "label": "256GB",
-              "price": null
+              "label": "256GB Wi-Fi",
+              "price": 2400,
+              "source": "okhk"
+            },
+            {
+              "label": "64GB Cellular",
+              "price": 2200,
+              "source": "okhk"
+            },
+            {
+              "label": "256GB Cellular",
+              "price": 2900,
+              "source": "okhk"
             }
           ]
         },
         {
-          "slug": "ipad-a16",
-          "name": "iPad（A16）",
-          "year": 2025,
-          "series": "iPad",
+          "slug": "ipad-mini-5",
+          "name": "iPad mini（第5代）",
+          "year": 2019,
+          "series": "iPad mini",
           "variants": [
             {
-              "label": "128GB",
-              "price": null
+              "label": "64GB Wi-Fi",
+              "price": 600,
+              "source": "okhk"
             },
             {
-              "label": "256GB",
-              "price": null
+              "label": "256GB Wi-Fi",
+              "price": 700,
+              "source": "okhk"
             },
             {
-              "label": "512GB",
-              "price": null
+              "label": "64GB Cellular",
+              "price": 800,
+              "source": "okhk"
+            },
+            {
+              "label": "256GB Cellular",
+              "price": 900,
+              "source": "okhk"
             }
           ]
         },
@@ -1328,12 +1934,68 @@
           "series": "iPad",
           "variants": [
             {
-              "label": "64GB",
-              "price": null
+              "label": "64GB Wi-Fi",
+              "price": 1300
             },
             {
-              "label": "256GB",
-              "price": null
+              "label": "256GB Wi-Fi",
+              "price": 1800
+            },
+            {
+              "label": "64GB Cellular",
+              "price": 1500
+            },
+            {
+              "label": "256GB Cellular",
+              "price": 2100
+            }
+          ]
+        },
+        {
+          "slug": "ipad-9",
+          "name": "iPad（第9代）",
+          "year": 2021,
+          "series": "iPad",
+          "variants": [
+            {
+              "label": "64GB Wi-Fi",
+              "price": 900
+            },
+            {
+              "label": "256GB Wi-Fi",
+              "price": 1200
+            },
+            {
+              "label": "64GB Cellular",
+              "price": 1100
+            },
+            {
+              "label": "256GB Cellular",
+              "price": 1400
+            }
+          ]
+        },
+        {
+          "slug": "ipad-8",
+          "name": "iPad（第8代）",
+          "year": 2020,
+          "series": "iPad",
+          "variants": [
+            {
+              "label": "32GB Wi-Fi",
+              "price": 600
+            },
+            {
+              "label": "128GB Wi-Fi",
+              "price": 800
+            },
+            {
+              "label": "32GB Cellular",
+              "price": 700
+            },
+            {
+              "label": "128GB Cellular",
+              "price": 1000
             }
           ]
         }
@@ -1345,69 +2007,197 @@
       "label": "MacBook 回收價",
       "models": [
         {
-          "slug": "macbook-pro-16-m3",
-          "name": "MacBook Pro 16\" (M3 Pro/Max, 2023)",
+          "slug": "macbook-pro-14-m5-2025",
+          "name": "MacBook Pro 14\" (M5, 2025)",
+          "year": 2025,
+          "series": "MacBook Pro",
+          "variants": [
+            {
+              "label": "M5 / 16 GB / 512 GB",
+              "price": 8300,
+              "source": "okhk"
+            },
+            {
+              "label": "M5 / 16 GB / 1TB",
+              "price": 9400,
+              "source": "okhk"
+            },
+            {
+              "label": "M5 / 24 GB / 1TB",
+              "price": 10800,
+              "source": "okhk"
+            }
+          ],
+          "tags": [
+            "最新"
+          ]
+        },
+        {
+          "slug": "macbook-pro-16-m4-2024",
+          "name": "MacBook Pro 16\" (M4 Pro/Max, 2024)",
+          "year": 2024,
+          "series": "MacBook Pro",
+          "variants": [
+            {
+              "label": "M4 Pro / 24 GB / 512 GB",
+              "price": 11000,
+              "source": "okhk"
+            },
+            {
+              "label": "M4 Pro / 48 GB / 512 GB",
+              "price": 12100,
+              "source": "okhk"
+            },
+            {
+              "label": "M4 Max / 36 GB / 1TB",
+              "price": 13200,
+              "source": "okhk"
+            },
+            {
+              "label": "M4 Max / 48 GB / 1TB",
+              "price": 15800,
+              "source": "okhk"
+            }
+          ]
+        },
+        {
+          "slug": "macbook-pro-14-m4-2024",
+          "name": "MacBook Pro 14\" (M4, 2024)",
+          "year": 2024,
+          "series": "MacBook Pro",
+          "variants": [
+            {
+              "label": "M4 / 16 GB / 512 GB",
+              "price": 7000,
+              "source": "okhk"
+            },
+            {
+              "label": "M4 / 16 GB / 1TB",
+              "price": 7600,
+              "source": "okhk"
+            },
+            {
+              "label": "M4 / 24 GB / 1TB",
+              "price": 8200,
+              "source": "okhk"
+            },
+            {
+              "label": "M4 Pro / 24 GB / 512 GB",
+              "price": 9200,
+              "source": "okhk"
+            },
+            {
+              "label": "M4 Pro / 24 GB / 1TB",
+              "price": 10400,
+              "source": "okhk"
+            },
+            {
+              "label": "M4 Max / 36 GB / 1TB",
+              "price": 12100,
+              "source": "okhk"
+            }
+          ]
+        },
+        {
+          "slug": "macbook-pro-16-m3-2023",
+          "name": "MacBook Pro 16\" (M3, 2023)",
           "year": 2023,
           "series": "MacBook Pro",
           "variants": [
             {
-              "label": "M3 Pro / 18GB / 512GB",
-              "price": null
+              "label": "M3 Pro / 18 GB / 512 GB",
+              "price": 7700,
+              "source": "okhk"
             },
             {
-              "label": "M3 Max / 36GB / 1TB",
+              "label": "M3 Max / 36 GB / 1TB",
+              "price": 10500,
+              "source": "okhk"
+            },
+            {
+              "label": "M3 Max / 128 GB / 1TB",
               "price": null
             }
           ]
         },
         {
-          "slug": "macbook-pro-14-m3",
+          "slug": "macbook-pro-14-m3-2023",
           "name": "MacBook Pro 14\" (M3, 2023)",
           "year": 2023,
           "series": "MacBook Pro",
           "variants": [
             {
-              "label": "M3 / 8GB / 512GB",
+              "label": "M3 / 8 GB / 256 GB",
               "price": null
             },
             {
-              "label": "M3 Pro / 18GB / 512GB",
-              "price": null
+              "label": "M3 / 8 GB / 512 GB",
+              "price": 5200,
+              "source": "okhk"
             },
             {
-              "label": "M3 Pro / 18GB / 1TB",
-              "price": null
+              "label": "M3 Pro / 18 GB / 512 GB",
+              "price": 7400,
+              "source": "okhk"
+            },
+            {
+              "label": "M3 Pro / 18 GB / 1TB",
+              "price": 7900,
+              "source": "okhk"
             }
+          ],
+          "tags": [
+            "熱門"
           ]
         },
         {
-          "slug": "macbook-pro-14-m2-pro",
-          "name": "MacBook Pro 14\" (M2 Pro, 2023)",
-          "year": 2023,
+          "slug": "macbook-pro-16-m2-2022",
+          "name": "MacBook Pro 16\" (M2, 2022)",
+          "year": 2022,
           "series": "MacBook Pro",
           "variants": [
             {
-              "label": "M2 Pro / 16GB / 512GB",
-              "price": null
+              "label": "M2 Pro / 16 GB / 512 GB",
+              "price": 7400,
+              "source": "okhk"
             },
             {
-              "label": "M2 Pro / 16GB / 1TB",
-              "price": null
+              "label": "M2 Max / 32 GB / 1TB",
+              "price": 8700,
+              "source": "okhk"
             }
           ]
         },
         {
-          "slug": "macbook-pro-13-m1",
+          "slug": "macbook-pro-14-m2-2022",
+          "name": "MacBook Pro 14\" (M2, 2022)",
+          "year": 2022,
+          "series": "MacBook Pro",
+          "variants": [
+            {
+              "label": "M2 Pro / 16 GB / 512 GB",
+              "price": 6400,
+              "source": "okhk"
+            },
+            {
+              "label": "M2 Pro / 16 GB / 1TB",
+              "price": 7200,
+              "source": "okhk"
+            }
+          ]
+        },
+        {
+          "slug": "macbook-pro-13-m1-2020",
           "name": "MacBook Pro 13\" (M1, 2020)",
           "year": 2020,
           "series": "MacBook Pro",
           "variants": [
             {
-              "label": "M1 / 8GB / 256GB",
+              "label": "M1 / 8 GB / 256 GB",
               "price": 2100
             },
             {
-              "label": "M1 / 8GB / 512GB",
+              "label": "M1 / 8 GB / 512 GB",
               "price": 2400
             }
           ]
@@ -1419,44 +2209,181 @@
           "series": "MacBook Pro",
           "variants": [
             {
-              "label": "i5 1.4GHz / 8GB / 256GB",
+              "label": "1.4GHz / i5 / 8 GB / 256 GB",
               "price": 1600
             },
             {
-              "label": "i5 2.0GHz / 16GB / 512GB",
+              "label": "1.4GHz / i5 / 8 GB / 512 GB",
+              "price": 1600
+            },
+            {
+              "label": "2.0GHz / i5 / 16 GB / 512 GB",
               "price": 1800
+            },
+            {
+              "label": "2.0GHz / i5 / 16 GB / 1TB",
+              "price": 1600
             }
           ]
         },
         {
-          "slug": "macbook-pro-15-2019",
-          "name": "MacBook Pro 15\" (2019)",
+          "slug": "macbook-pro-13-intel-2019",
+          "name": "MacBook Pro 13\" (Intel, 2019)",
           "year": 2019,
           "series": "MacBook Pro",
           "variants": [
             {
-              "label": "i7 2.6GHz / 16GB / 256GB",
+              "label": "1.4GHz / i5 / 8 GB / 128 GB",
+              "price": 1000
+            },
+            {
+              "label": "1.4GHz / i5 / 8 GB / 256 GB",
+              "price": 1000
+            },
+            {
+              "label": "2.4GHz / i5 / 8 GB / 256 GB",
+              "price": 1500
+            },
+            {
+              "label": "2.4GHz / i5 / 8 GB / 512 GB",
+              "price": 1700
+            }
+          ]
+        },
+        {
+          "slug": "macbook-pro-15-intel-2019",
+          "name": "MacBook Pro 15\" (Intel, 2019)",
+          "year": 2019,
+          "series": "MacBook Pro",
+          "variants": [
+            {
+              "label": "2.6GHz / i7 / 16 GB / 256 GB Touch Bar",
               "price": 3000
             },
             {
-              "label": "i9 2.3GHz / 16GB / 512GB",
+              "label": "2.6GHz / i9 / 16 GB / 512 GB Touch Bar",
               "price": 3100
             }
           ]
         },
         {
-          "slug": "macbook-air-15-m3",
-          "name": "MacBook Air 15\" (M3, 2024)",
-          "year": 2024,
+          "slug": "macbook-pro-16-intel-2019",
+          "name": "MacBook Pro 16\" (Intel, 2019)",
+          "year": 2019,
+          "series": "MacBook Pro",
+          "variants": [
+            {
+              "label": "2.6GHz / i7 / 16 GB / 512 GB Touch Bar",
+              "price": 4000
+            },
+            {
+              "label": "2.6GHz / i9 / 16 GB / 1TB Touch Bar",
+              "price": 4500
+            }
+          ]
+        },
+        {
+          "slug": "macbook-pro-13-intel-2018",
+          "name": "MacBook Pro 13\" (Intel, 2018)",
+          "year": 2018,
+          "series": "MacBook Pro",
+          "variants": [
+            {
+              "label": "2.3GHz / i5 / 8 GB / 256 GB",
+              "price": 1200
+            },
+            {
+              "label": "2.3GHz / i5 / 8 GB / 512 GB",
+              "price": 1200
+            }
+          ]
+        },
+        {
+          "slug": "macbook-pro-15-intel-2018",
+          "name": "MacBook Pro 15\" (Intel, 2018)",
+          "year": 2018,
+          "series": "MacBook Pro",
+          "variants": [
+            {
+              "label": "2.2GHz / i7 / 16 GB / 256 GB Touch Bar",
+              "price": 2000
+            },
+            {
+              "label": "2.6GHz / i7 / 16 GB / 512 GB Touch Bar",
+              "price": 2300
+            }
+          ]
+        },
+        {
+          "slug": "macbook-pro-13-intel-2017",
+          "name": "MacBook Pro 13\" (Intel, 2017)",
+          "year": 2017,
+          "series": "MacBook Pro",
+          "variants": [
+            {
+              "label": "2.3GHz / i5 / 8 GB / 128 GB",
+              "price": 1000
+            },
+            {
+              "label": "2.3GHz / i5 / 8 GB / 256 GB",
+              "price": 1000
+            },
+            {
+              "label": "3.1GHz / i5 / 8 GB / 256 GB Touch Bar",
+              "price": 1000
+            },
+            {
+              "label": "3.1GHz / i5 / 8 GB / 512 GB Touch Bar",
+              "price": 1000
+            }
+          ]
+        },
+        {
+          "slug": "macbook-air-15-m4-2025",
+          "name": "MacBook Air 15\" (M4, 2025)",
+          "year": 2025,
           "series": "MacBook Air",
           "variants": [
             {
-              "label": "M3 / 8GB / 256GB",
-              "price": null
+              "label": "M4 / 16 GB / 256 GB",
+              "price": 5200,
+              "source": "okhk"
             },
             {
-              "label": "M3 / 8GB / 512GB",
-              "price": null
+              "label": "M4 / 16 GB / 512 GB",
+              "price": 6200,
+              "source": "okhk"
+            },
+            {
+              "label": "M4 / 24 GB / 512 GB",
+              "price": 7200,
+              "source": "okhk"
+            }
+          ],
+          "tags": [
+            "最新"
+          ]
+        },
+        {
+          "slug": "macbook-air-13-m4-2025",
+          "name": "MacBook Air 13\" (M4, 2025)",
+          "year": 2025,
+          "series": "MacBook Air",
+          "variants": [
+            {
+              "label": "M4 / 16 GB / 256 GB",
+              "price": 4900,
+              "source": "okhk"
+            },
+            {
+              "label": "M4 / 16 GB / 512 GB",
+              "price": 5800,
+              "source": "okhk"
+            },
+            {
+              "label": "M4 / 24 GB / 512 GB",
+              "price": 6200,
+              "source": "okhk"
             }
           ],
           "tags": [
@@ -1464,38 +2391,143 @@
           ]
         },
         {
-          "slug": "macbook-air-13-m3",
+          "slug": "macbook-air-15-m3-2024",
+          "name": "MacBook Air 15\" (M3, 2024)",
+          "year": 2024,
+          "series": "MacBook Air",
+          "variants": [
+            {
+              "label": "M3 / 8 GB / 256 GB",
+              "price": 4000,
+              "source": "okhk"
+            },
+            {
+              "label": "M3 / 8 GB / 512 GB",
+              "price": 4400,
+              "source": "okhk"
+            }
+          ]
+        },
+        {
+          "slug": "macbook-air-13-m3-2024",
           "name": "MacBook Air 13\" (M3, 2024)",
           "year": 2024,
           "series": "MacBook Air",
           "variants": [
             {
-              "label": "M3 / 8GB / 256GB",
-              "price": null
+              "label": "M3 / 8 GB / 256 GB",
+              "price": 3900,
+              "source": "okhk"
             },
             {
-              "label": "M3 / 8GB / 512GB",
-              "price": null
+              "label": "M3 / 8 GB / 512 GB",
+              "price": 4300,
+              "source": "okhk"
             },
             {
-              "label": "M3 / 16GB / 512GB",
-              "price": null
+              "label": "M3 / 16 GB / 512 GB",
+              "price": 4900,
+              "source": "okhk"
             }
           ]
         },
         {
-          "slug": "macbook-air-13-m2",
+          "slug": "macbook-air-15-m2-2023",
+          "name": "MacBook Air 15\" (M2, 2023)",
+          "year": 2023,
+          "series": "MacBook Air",
+          "variants": [
+            {
+              "label": "M2 / 8 GB / 256 GB",
+              "price": 3800,
+              "source": "okhk"
+            },
+            {
+              "label": "M2 / 8 GB / 512 GB",
+              "price": 4100,
+              "source": "okhk"
+            }
+          ]
+        },
+        {
+          "slug": "macbook-air-13-m2-2022",
           "name": "MacBook Air 13\" (M2, 2022)",
           "year": 2022,
           "series": "MacBook Air",
           "variants": [
             {
-              "label": "M2 / 8GB / 256GB",
+              "label": "M2 / 8 GB / 256 GB",
+              "price": 3300,
+              "source": "okhk"
+            },
+            {
+              "label": "M2 / 8 GB / 512 GB",
+              "price": 3700,
+              "source": "okhk"
+            },
+            {
+              "label": "M2 / 16 GB / 512 GB",
+              "price": null
+            }
+          ]
+        },
+        {
+          "slug": "macbook-air-13-m1-2020",
+          "name": "MacBook Air 13\" (M1, 2020)",
+          "year": 2020,
+          "series": "MacBook Air",
+          "variants": [
+            {
+              "label": "M1 / 8 GB / 256 GB",
+              "price": 2000
+            },
+            {
+              "label": "M1 / 8 GB / 512 GB",
+              "price": 2200
+            }
+          ]
+        },
+        {
+          "slug": "macbook-air-13-intel-2020",
+          "name": "MacBook Air 13\" (Intel, 2020)",
+          "year": 2020,
+          "series": "MacBook Air",
+          "variants": [
+            {
+              "label": "1.1GHz x2 / i3 / 8 GB / 256 GB",
+              "price": 1000
+            },
+            {
+              "label": "1.1GHz x4 / i5 / 8 GB / 512 GB",
+              "price": 1200
+            }
+          ]
+        },
+        {
+          "slug": "macbook-air-13-intel-2019",
+          "name": "MacBook Air 13\" (Intel, 2019)",
+          "year": 2019,
+          "series": "MacBook Air",
+          "variants": [
+            {
+              "label": "1.6GHz x2 / i5 / 8 GB / 128 GB",
               "price": null
             },
             {
-              "label": "M2 / 8GB / 512GB",
-              "price": null
+              "label": "1.8GHz x2 / i5 / 8 GB / 256 GB",
+              "price": 1000
+            }
+          ]
+        },
+        {
+          "slug": "macbook-air-13-intel-2018",
+          "name": "MacBook Air 13\" (Intel, 2018)",
+          "year": 2018,
+          "series": "MacBook Air",
+          "variants": [
+            {
+              "label": "1.6GHz x2 / i5 / 8 GB / 128 GB",
+              "price": 1000
             }
           ]
         }

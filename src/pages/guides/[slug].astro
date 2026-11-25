@@ -5,15 +5,21 @@ import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import Faq from '../../components/Faq.astro';
 import site from '../../data/site.json';
-import { formatDateZh, getCategory, fmt, maxPrice, modelUrl } from '../../lib/prices';
+import { formatDateZh, getCategory, fmt, maxPrice, modelUrl, fillPrices } from '../../lib/prices';
 
 export async function getStaticPaths() {
   const guides = await getCollection('guides');
   return guides.map((g) => ({ params: { slug: g.id }, props: { guide: g, all: guides } }));
 }
 const { guide, all } = Astro.props as { guide: CollectionEntry<'guides'>; all: CollectionEntry<'guides'>[] };
-const d = guide.data;
-const html = await marked.parse(d.body);
+const raw = guide.data;
+// Price placeholders in guide text are filled from prices.json at build time.
+const d = {
+  ...raw,
+  summary: raw.summary.map(fillPrices),
+  faqs: raw.faqs.map((f) => ({ q: f.q, a: fillPrices(f.a) })),
+};
+const html = await marked.parse(fillPrices(raw.body));
 const cat = d.category !== 'general' ? getCategory(d.category) : getCategory('iphone');
 const topModels = (cat?.models ?? []).filter((m) => maxPrice(m) != null).slice(0, 5);
 const others = all.filter((g) => g.id !== guide.id).slice(0, 4);
