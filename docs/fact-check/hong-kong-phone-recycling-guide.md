@@ -13,9 +13,9 @@ Checked 2026-11-25/26. Verdicts: correct / corrected / softened / removed. "Owne
 | 7 | New iPhones launch each September; older models then drop | correct (general tendency) | Kept as 「通常」 | content brief (well-known fact) |
 | 8 | Samsung flagships launch 「年初」 | corrected (made precise) | 「Galaxy S 旗艦系列近年一般在每年 1 至 2 月發布」 (S24 Jan 2024, S25 Jan 2025, S26 25 Feb 2026) | https://www.sammobile.com/news/galaxy-s26-launch-samsung-confirms-february-25-unpacked-event/ |
 | 9 | Model/storage path 「設定」>「一般」>「關於本機」 | correct | — | https://support.apple.com/zh-hk/108044 |
-| 10 | Battery health 「設定」>「電池」 | softened | Now 「電池內的電池健康度頁面（名稱因 iOS 版本略有不同）」. Label differs by version | https://support.apple.com/en-sa/101575 |
+| 10 | Battery health 「設定」>「電池」 | corrected (precise) | Now 「設定」>「電池」>「電池健康度」, which shows 「最大容量」 (HK wording given by the coordinator) | https://support.apple.com/zh-hk/101575 |
 | 11 | Samsung battery check via Samsung Members | correct | Clarified as the Members app diagnostics | https://www.samsung.com/sa_en/support/mobile-devices/how-to-check-the-battery-status-on-your-samsung-galaxy-phone/ |
-| 12 | 「較新的 iOS 會在關於本機顯示零件及維修記錄」 | corrected | Uses the official name 「零件和維修記錄」. It only appears if the iPhone has been repaired (iOS 15.2+) | https://support.apple.com/zh-hk/109511 ; https://support.apple.com/102658 |
+| 12 | 「較新的 iOS 會在關於本機顯示零件及維修記錄」 | corrected | 「設定」>「一般」>「關於本機」>「零件與維修記錄」, shown only if repaired (iOS 15.2+). Article 109511 writes 「零件和維修記錄」, but the HK settings page 102658 uses 「零件與維修記錄」 | https://support.apple.com/zh-hk/102658 ; https://support.apple.com/zh-hk/109511 |
 | 13 | Apple ID naming | corrected | First mention is 「Apple 帳户（前稱 Apple ID）」, then 「Apple 帳户」 | https://support.apple.com/zh-hk/109511 (coordinator: support.apple.com/en-mo/HT201355) |
 | 14 | Erase path 「抹掉所有內容和設定」 | corrected | Now uses the HK term 「清除所有內容和設定」 (Android: 原廠資料重設) | https://support.apple.com/zh-hk/109511 |
 | 15 | Account sign-out releases Activation Lock / FRP (prep table) | correct (reworded) | 「避免啟用鎖或原廠重設保護鎖機」 | https://support.apple.com/zh-hk/109511 ; https://support.google.com/android/answer/9459346?hl=zh-Hant |

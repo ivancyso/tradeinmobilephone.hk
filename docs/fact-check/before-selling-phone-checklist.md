@@ -23,10 +23,10 @@
 | 19 | Mac: erase option only on 「Apple 晶片」 Macs | corrected | Apple silicon **or T2** Macs on Monterey or later; Ventura and later path 「系統設定」>「一般」>「轉移或重設」 | https://support.apple.com/102664 |
 | 20 | Mac erase also signs out Apple ID / Find My | correct (secondary source) | — | https://www.macrumors.com/how-to/erase-all-content-and-settings-mac/ |
 | 21 | Older Intel: sign out, recovery erase and reinstall; deauthorise in Music/TV | correct | Added sign out of 「訊息」 and 「磁碟工具程式」 | https://support.apple.com/102773 |
-| 22 | iPhone battery path 「電池健康與充電」 (or 「電池健康度」) | softened | Name differs by iOS version and model; now generic | https://support.apple.com/en-sa/101575 |
-| 23 | Parts & service history in 「關於本機」 | correct (precise) | Official name 「零件和維修記錄」; shown only if repaired; Unknown parts can affect trade-in value | https://support.apple.com/102658 ; https://support.apple.com/zh-hk/109511 |
+| 22 | iPhone battery path 「電池健康與充電」 (or 「電池健康度」) | corrected | HK UI is 「設定」>「電池」>「電池健康度」, showing 「最大容量」 | https://support.apple.com/zh-hk/101575 |
+| 23 | Parts & service history in 「關於本機」 | corrected (precise) | 「設定」>「一般」>「關於本機」>「零件與維修記錄」 (iOS 15.2+, shown only if repaired); non-genuine parts show 「未知」, which Apple says can affect trade-in value | https://support.apple.com/zh-hk/102658 ; https://support.apple.com/zh-hk/109511 |
 | 24 | Samsung battery: Members diagnostics; some newer phones in Settings > Battery | correct (hedged) | Kept as 「部分新機」 | https://www.samsung.com/sa_en/support/mobile-devices/how-to-check-the-battery-status-on-your-samsung-galaxy-phone/ |
-| 25 | MacBook battery health in System Settings; cycle count in System Information > Power | correct | — | https://support.apple.com/102773 (general) |
+| 25 | MacBook battery health in System Settings; cycle count in System Information > Power | softened | Battery health path kept. The cycle-count menu path was removed (Apple HK gives no path, per the coordinator); now 「循環次數可在驗機時一併檢查」 | https://support.apple.com/zh-hk/101575 (coordinator note) |
 | 26 | MacBook parts record in 「關於本機」及系統報告 | removed | Not verified for Mac. Now 「一般由驗機時檢查，曾送修可提供維修單據」 | — |
 | 27 | Battery 「90% 以上理想；低於 85% 扣價」 | corrected | Deductions start below 90%, matching QuoteForm multipliers | src/components/QuoteForm.astro |
 | 28 | Erase plus encryption means data is generally unrecoverable; memory card excluded | correct | — | https://support.apple.com/zh-hk/109511 ; Apple 109511 Android section (remove memory cards) |
@@ -35,3 +35,4 @@
 | 31 | Remove the old device from the account's device list after the sale | correct | Apple: remove from the trusted device list | https://support.apple.com/zh-hk/109511 |
 | 32 | WhatsApp 「已連結的裝置」 check | correct (general) | — | — |
 | 33 | Inspection 5–10 min, accept the price before the deal, FPS | owner | Kept | src/components/Steps.astro ; src/pages/process.astro |
+| 34 | Sign-out wording | corrected | 「設定」>「你的姓名」> 向下捲動並點一下「登出」 (Apple HK wording) | https://support.apple.com/zh-hk/109511 |

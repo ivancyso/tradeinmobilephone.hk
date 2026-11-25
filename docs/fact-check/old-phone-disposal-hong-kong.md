@@ -28,3 +28,4 @@
 | 24 | Lithium battery fire risk; metals recovered | correct (general) | — | same |
 | 25 | Prices fall over time | softened (tendency) | Kept with 「一般」 | — |
 | 26 | Handover at an MTR station, on-the-spot inspection | owner | Kept | src/components/Steps.astro |
+| 27 | Sign-out wording 「你的名稱」 | corrected | 「你的姓名」 (Apple HK wording) | https://support.apple.com/zh-hk/109511 |
