@@ -60,6 +60,7 @@ Our own recycling prices are placeholders only. Official third-party fees (Apple
 - Parts history: 「設定」>「一般」>「關於本機」>「零件與維修記錄」; non-genuine parts show 「未知」.
 - Sign out: 「設定」> [你的姓名] >「登出」.
 - Apple Watch: 「取消配對 Apple Watch」.
+- Setup screen after erase (device ready for new owner): 「哈囉」 (not 「你好」).
 
 ## Fact-checking while writing
 

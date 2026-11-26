@@ -32,3 +32,10 @@ Checked 2026-11-25. Prices come from `src/data/prices.json` and were not checked
 | 26 | Platform scams: fake low prices with a deposit request; insist on meeting in person and inspecting before paying | correct as advice; consistent with ADCC warnings on Carousell scams | https://www.hk01.com/突發/1085412/carousell騙案3月內330宗-釣魚連結套資料盜存款-會計師失-90萬 |
 | 27 | Carrier-locked foreign versions | correct (general) | general knowledge, US carrier-locked units |
 | 28 | Selling: online quote, MTR handover, 5–10 min inspection, cash/FPS | owner claim, consistent | src/components/Steps.astro |
+
+
+## Correction (main session, 2026-11-26)
+
+| Claim | Verdict | Source |
+|---|---|---|
+| Setup screen after erase / unlocked device is 「你好」 | corrected → 「哈囉」 (Apple zh-HK: 「當你看到「哈囉」畫面，即表示裝置可供你使用。」) | https://support.apple.com/zh-hk/108794 |
