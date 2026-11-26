@@ -12,7 +12,7 @@ const guides = defineCollection({
     updatedAt: z.string(),
     category: z.enum(['iphone', 'samsung', 'ipad', 'macbook', 'general']).default('general'),
     // Topic cluster (src/data/topics.json) and whether this post is the topic's pillar.
-    topic: z.enum(['recycling', 'iphone-price', 'second-hand', 'samsung', 'ipad-mac']),
+    topic: z.enum(['recycling', 'switching', 'iphone-price', 'second-hand', 'samsung', 'ipad-mac']),
     role: z.enum(['pillar', 'cluster']),
     summary: z.array(z.string()).default([]),
     faqs: z.array(z.object({ q: z.string(), a: z.string() })).default([]),

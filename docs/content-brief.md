@@ -61,6 +61,7 @@ Our own recycling prices are placeholders only. Official third-party fees (Apple
 - Sign out: 「設定」> [你的姓名] >「登出」.
 - Apple Watch: 「取消配對 Apple Watch」.
 - Setup screen after erase (device ready for new owner): 「哈囉」 (not 「你好」).
+- Android to iPhone app: 「轉移至 iOS」 (not 「移轉至 iOS」); on the new iPhone 「轉移 App 與資料」>「來自 Android」>「透過 App 轉移」.
 
 ## Fact-checking while writing
 
