@@ -9,6 +9,33 @@
       "label": "iPhone 回收價",
       "models": [
         {
+          "slug": "iphone-duo",
+          "name": "iPhone Duo",
+          "year": 2026,
+          "series": "iPhone 18 系列",
+          "tags": [
+            "最新"
+          ],
+          "variants": [
+            {
+              "label": "256GB",
+              "price": null
+            },
+            {
+              "label": "512GB",
+              "price": null
+            },
+            {
+              "label": "1TB",
+              "price": null
+            },
+            {
+              "label": "2TB",
+              "price": null
+            }
+          ]
+        },
+        {
           "slug": "iphone-18-pro-max",
           "name": "iPhone 18 Pro Max",
           "year": 2026,
@@ -51,6 +78,10 @@
             },
             {
               "label": "1TB",
+              "price": null
+            },
+            {
+              "label": "2TB",
               "price": null
             }
           ],
@@ -147,6 +178,22 @@
             {
               "label": "512GB",
               "price": 4700
+            }
+          ]
+        },
+        {
+          "slug": "iphone-17e",
+          "name": "iPhone 17e",
+          "year": 2026,
+          "series": "iPhone 17 系列",
+          "variants": [
+            {
+              "label": "256GB",
+              "price": null
+            },
+            {
+              "label": "512GB",
+              "price": null
             }
           ]
         },

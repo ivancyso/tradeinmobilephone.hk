@@ -48,6 +48,24 @@ Never type a recycling price. Use placeholders filled at build time from `src/da
 
 Labels must match `prices.json` exactly (e.g. `256GB`, `128GB Wi-Fi`, `M3 / 8 GB / 256 GB`). A wrong placeholder fails the build. Only use variants whose price is not null.
 
+## Official fees (e.g. Apple repair prices)
+
+Our own recycling prices are placeholders only. Official third-party fees (Apple battery or screen repair, AppleCare+) may be typed, but only as `HK$1,234`, with the date checked and a source URL in `docs/fact-check/<slug>.md`, plus a sentence telling readers to check the official page because fees change.
+
+## Apple Hong Kong wording (verified on support.apple.com/zh-hk)
+
+- Account: first mention 「Apple 帳户（前稱 Apple ID）」, then 「Apple 帳户」.
+- Erase: 「設定」>「一般」>「轉移或重設 iPhone」>「清除所有內容和設定」.
+- Battery: iPhone 15 and later (iOS 17.4+) 「設定」>「電池」>「電池健康度」 (also shows 循環使用次數, manufacture and first-use dates); iPhone 11–14 「設定」>「電池」>「電池健康與充電」.
+- Parts history: 「設定」>「一般」>「關於本機」>「零件與維修記錄」; non-genuine parts show 「未知」.
+- Sign out: 「設定」> [你的姓名] >「登出」.
+- Apple Watch: 「取消配對 Apple Watch」.
+- Setup screen after erase (device ready for new owner): 「哈囉」 (not 「你好」).
+
+## Fact-checking while writing
+
+Every factual claim (specs, menu paths, programme rules, fees, dates, legal or safety statements) must be verified with WebSearch against official sources first (support.apple.com/zh-hk, apple.com/hk, samsung.com/hk, gov.hk, police.gov.hk, consumer.org.hk), and logged in `docs/fact-check/<slug>.md` as a table: claim → verdict → source URL. Anything you cannot verify is written as a general tendency or left out. Claims about prices must match `src/data/prices.json`.
+
 ## Links
 
 Internal links (Markdown) are required:

@@ -1,0 +1,40 @@
+{
+  "title": "iPhone 換電池價錢 2026：Apple 收費及賣機前應否換",
+  "description": "iPhone 換電池要幾錢？整理 Apple 香港各型號官方換電池費用、AppleCare+ 免費更換條件、預約方法、原廠與第三方電池分別，並用回收價計算賣機前是否值得先換電池。",
+  "keyword": "iphone 換電池",
+  "topic": "iphone-price",
+  "role": "cluster",
+  "category": "iphone",
+  "publishedAt": "2026-11-26",
+  "updatedAt": "2026-11-26",
+  "summary": [
+    "Apple 香港過了保養期的 iPhone 換電池預計費用由 HK$549（iPhone SE）至 HK$999（iPhone 18 Pro 系列），2026 年 11 月 26 日查閱，費用以 Apple 官方頁面為準。",
+    "有 AppleCare+ 而電池容量低於 80%，Apple 會免費更換電池；一般保養不包括正常耗損的電池。",
+    "可到 Apple Store 或 Apple 授權維修中心換電池；授權維修中心可自行訂立收費。",
+    "第三方電池一般會在「零件與維修記錄」顯示「未知」，Apple 指出可能影響換購價值。",
+    "以 {{date}} 參考價計，iPhone 15 Pro Max 256GB 由電池 80% 以下換到新電池，最多只多收約 {{price:iphone/iphone-15-pro-max/256GB*0.15}}，低於 HK$779 的官方費用。"
+  ],
+  "faqs": [
+    {
+      "q": "Apple 香港 iPhone 換電池要幾錢？",
+      "a": "2026 年 11 月 26 日查閱時，過了保養期的預計費用由 HK$549（iPhone SE）至 HK$999（iPhone 18 Pro 系列）；iPhone 15 及 14 系列為 HK$779，iPhone 16 Pro 及 17 Pro 系列為 HK$928。費用會調整，請以 Apple 官方頁面為準。"
+    },
+    {
+      "q": "AppleCare+ 換電池要錢嗎？",
+      "a": "如果電池容量降至 80% 以下，AppleCare+ 會免費更換電池。電池仍在 80% 或以上，一般不符合免費更換條件。"
+    },
+    {
+      "q": "賣 iPhone 前值得先換電池嗎？",
+      "a": "大多不值得。按本網站估算，電池 80% 以下約扣 15%，以 {{date}} 參考價計，多數型號的差額低於或接近 Apple 換電池費用；只有回收價較高的大容量新款，或有 AppleCare+ 可免費更換時，才較值得。"
+    },
+    {
+      "q": "在外面換電池會影響回收價嗎？",
+      "a": "會。非原廠電池一般會在「零件與維修記錄」顯示「未知」，電池健康度資料亦可能不正確，回收時通常扣價較多。"
+    },
+    {
+      "q": "香港可以用 Apple 自助維修自己換電池嗎？",
+      "a": "不可以。2026 年 11 月 26 日查閱時，Apple 自助維修沒有列出香港，香港用戶需經 Apple Store 或 Apple 授權維修中心更換原廠電池。"
+    }
+  ],
+  "body": "**Apple 香港為過了保養期的 iPhone 換電池，官方預計收費由 HK$549（iPhone SE）至 HK$999（iPhone 18 Pro 系列，iPhone Duo 另計）；有 AppleCare+ 而電池容量跌至 80% 以下則是 HK$0。** 以上是 2026 年 11 月 26 日在 Apple 香港支援網站查到的預計費用，最終收費以 Apple 檢查裝置後為準，費用亦會調整，換電池前請再到 Apple 官方「iPhone 電池的 Apple 服務與維修」頁面核對。如果你換電池是為了賣機，先計一計：以 {{date}} 參考價計，大部分型號由電池 80% 以下回到 90% 以上，回收價的差額都未必追得上換電池費用。各型號整體價錢可看 [iPhone 回收價 2026 指南](/guides/iphone-recycle-price-trend/)。\n\n## Apple 香港 iPhone 換電池價錢一覽（2026 年 11 月）\n\n**Apple 官方換電池費用按型號分為幾個級別，新款 Pro 型號最貴，iPhone SE 最便宜。** 下表是 Apple 直接提供的已過保養期電池維修預計費用，於 2026 年 11 月 26 日查閱。\n\n| 型號 | Apple 換電池預計費用 |\n|---|---|\n| iPhone 18 Pro、iPhone 18 Pro Max | HK$999 |\n| iPhone 17 Pro、17 Pro Max、iPhone Air、iPhone 16 Pro、16 Pro Max | HK$928 |\n| iPhone 17、17e、iPhone 16、16 Plus、16e、iPhone 15 全系列、iPhone 14 全系列 | HK$779 |\n| iPhone 13 全系列、iPhone 12 全系列、iPhone 11 | HK$709 |\n| iPhone SE（第 2 代、第 3 代） | HK$549 |\n| iPhone Duo | HK$1,749 |\n\n### 收費要留意的地方\n\n- **只是預計費用**：Apple 表示會先檢查裝置，再確定最終維修費用。\n- **可能另加運費**：如果 Apple 需要運送你的裝置，費用或會追加運費。\n- **授權維修中心可自訂收費**：Apple 授權維修中心可以自行訂立服務費用及向你估價，與 Apple Store 的價錢未必相同。\n- **費用會變**：上表只代表查閱當日的資料，請以 Apple 官方頁面為準。\n\n同一部手機的回收價亦會隨時間下跌，想知道你的型號現在大約值多少，可先看 [iPhone 回收價 2026 指南](/guides/iphone-recycle-price-trend/) 或 [iPhone 回收價格表](/iphone/)。\n\n## AppleCare+ 包不包換電池？\n\n**有 AppleCare+ 的 iPhone，如果電池容量降至 80% 以下，Apple 會免費更換電池；沒有 AppleCare+ 的話，一般保養不包括正常耗損的電池。** Apple 有限保養為購買日期起計一年內的製造問題提供保障，但不涵蓋意外損壞，或因正常使用而耗損的電池。\n\n| 情況 | 換電池收費 |\n|---|---|\n| 有 AppleCare+，電池容量低於 80% | HK$0 |\n| 有 AppleCare+，電池容量仍在 80% 或以上 | 一般不符合免費更換條件，可向 Apple 查詢 |\n| 沒有 AppleCare+，已過保養期 | 按上表官方預計費用 |\n| 保養期內，電池屬製造問題 | 由 Apple 檢查後決定是否受保養涵蓋 |\n\n電池容量即「電池健康度」頁面的「最大容量」百分比。iPhone 15 及之後型號（iOS 17.4 或之後）在「設定」>「電池」>「電池健康度」查看，iPhone 11 至 14 則在「設定」>「電池」>「電池健康與充電」。點樣解讀這個百分比及提示訊息，可看 [iPhone 電池健康度回收扣價指南](/guides/iphone-battery-health-recycle-price/)。\n\n### 點樣知道 AppleCare+ 是否仍然有效？\n\nApple 支援網站設有保養狀態查詢，亦可以用 Apple 帳户登入，查看該部 iPhone 的保養和計劃權益。AppleCare+ 有期限，到期後再換電池便要按官方費用收費，所以電池接近 80% 而計劃快將到期，應盡早安排。\n\n如果你的 AppleCare+ 仍然有效，而電池已跌穿 80%，賣機前先免費換電池通常最划算，因為你只需付出時間，而回收價可以由 80% 以下的級別回到 90% 以上。\n\n## 在香港去邊度換電池？預約步驟及需時\n\n**在香港可以到 Apple Store（Genius Bar）或 Apple 授權維修中心親身換電池；Apple 香港亦有寄送維修的說明，但並非所有地區都提供，以預約時顯示的選項為準。**\n\n| 渠道 | 特點 |\n|---|---|\n| Apple Store（Genius Bar） | Apple 直接維修，使用 Apple 原廠零件，收費按官方預計費用 |\n| Apple 授權維修中心 | 同樣提供 Apple 認證維修，但可自行訂立服務費用 |\n| 寄送維修 | 由 Apple 安排運送，適合不方便親身前往；Apple 註明並非所有國家或地區均提供 |\n\n### 預約步驟\n\n1. 先在 iPhone 查看電池健康度，並備份資料（iCloud 或電腦）。\n2. 到 Apple 支援網站的 iPhone 電池服務頁面，按「開始取得支援」，選擇電池問題。\n3. 選擇親身前往 Apple Store、Apple 授權維修中心，或系統提供的寄送方式，然後預約時間。\n4. 如選擇寄送，Apple 建議先將電池放電至 25% 或以下再關機；如電池膨脹令外殼分離，或有氣體、異常氣味，便不應寄送，應聯絡 Apple 支援或親身前往。\n5. 維修期間可以用 Apple 帳户（前稱 Apple ID）登入「我的支援」或「Apple 支援」app 查看進度。\n\n### 換電池要多久？\n\n**Apple 沒有公布固定的換電池時間，視乎零件存貨、店舖安排及是否寄送而定。** 親身預約一般較快，寄送維修則要加上來回運送的時間。打算換電池後才賣機的話，記得把這段時間計算在內，因為回收價每隔一段時間就會調整。Apple 的維修服務及替換零件享有 90 天保障，或 Apple 保養的剩餘期限，以較長者為準。\n\n## 原廠電池與第三方電池有何分別？\n\n**原廠電池可以正常顯示電池健康度；第三方電池在 iPhone 的「零件與維修記錄」一般會顯示「未知」，電池健康度資料亦可能不正確。** Apple 指出，原廠電池專為配合 iOS 設計，可以報告電池電量及電池健康度；鋰離子電池是敏感元件，應只交由經培訓的技術人員更換。\n\n### 「未知」零件訊息\n\n在 iPhone XR、XS 及之後型號，可在「設定」>「一般」>「關於本機」>「零件與維修記錄」查看電池紀錄：\n\n- **原廠**：維修使用 Apple 原廠零件及程序。\n- **已使用**：iPhone 15 及之後型號（iOS 18）如裝上曾用於另一部 iPhone 的原廠電池，會顯示此標籤。\n- **未知**：電池並非 Apple 原廠零件、無法正常運作、維修後尚未經驗證及連結，或經過修改、無法驗證。\n\nApple 明確表示「未知」的零件可能影響裝置的換購價值。回收時亦一樣，驗機會查看這個頁面，所以如果換電池是為了賣得更好價，換第三方電池往往得不償失。\n\n### 香港有沒有 Apple 自助維修？\n\n**Apple 自助維修（Self Service Repair）在 2026 年 11 月 26 日查閱時並沒有列出香港。** Apple 自助維修頁面的地區選單只有美國、加拿大、英國、印度及多個歐洲國家或地區，所以在香港不能透過這個計劃購買原廠零件及租用工具自行更換電池。在香港想用原廠電池，主要仍是 Apple Store 或 Apple 授權維修中心；即使日後計劃擴展，自行拆機亦有損壞屏幕或電池的風險。 如果屏幕亦有損壞，可一併參考 [iPhone 爆mon 點算](/guides/iphone-cracked-screen-sell-or-repair/)。\n\n## 賣機前應否先換電池？用回收價計一計\n\n**以 {{date}} 的參考價計，大部分 iPhone 由電池 80% 以下換到新電池，回收價多收的金額都接近或低於 Apple 換電池費用，一般不值得專程換。** 按本網站報價表格的估算，電池 90% 或以上不扣價，85%–89% 約扣 5%，80%–84% 約扣 10%，80% 以下約扣 15%。換新電池後，最多就是收回這個扣價。\n\n| 型號 | 電池 90% 以上 | 電池 80% 以下 | 換電池後最多多收 | Apple 換電池費用 |\n|---|---|---|---|---|\n| [iPhone 17 Pro Max](/iphone/iphone-17-pro-max/) 256GB | {{price:iphone/iphone-17-pro-max/256GB}} | {{price:iphone/iphone-17-pro-max/256GB*0.85}} | 約 {{price:iphone/iphone-17-pro-max/256GB*0.15}} | HK$928 |\n| [iPhone 16 Pro Max](/iphone/iphone-16-pro-max/) 256GB | {{price:iphone/iphone-16-pro-max/256GB}} | {{price:iphone/iphone-16-pro-max/256GB*0.85}} | 約 {{price:iphone/iphone-16-pro-max/256GB*0.15}} | HK$928 |\n| [iPhone 15 Pro Max](/iphone/iphone-15-pro-max/) 256GB | {{price:iphone/iphone-15-pro-max/256GB}} | {{price:iphone/iphone-15-pro-max/256GB*0.85}} | 約 {{price:iphone/iphone-15-pro-max/256GB*0.15}} | HK$779 |\n| [iPhone 13](/iphone/iphone-13/) 128GB | {{price:iphone/iphone-13/128GB}} | {{price:iphone/iphone-13/128GB*0.85}} | 約 {{price:iphone/iphone-13/128GB*0.15}} | HK$709 |\n\n*{{date}} 估算，假設外觀良好、功能正常，價錢四捨五入至百位。實際價錢以驗機為準。*\n\n### 例子解讀\n\n- **iPhone 13 128GB**：換電池後最多多收約 {{price:iphone/iphone-13/128GB*0.15}}，遠低於 HK$709 的官方費用，直接賣最實際。\n- **iPhone 15 Pro Max 256GB**：多收約 {{price:iphone/iphone-15-pro-max/256GB*0.15}}，仍低於 HK$779，換電池反而蝕錢。\n- **iPhone 16 Pro Max 256GB**：多收約 {{price:iphone/iphone-16-pro-max/256GB*0.15}}，同樣未及 HK$928。\n- **iPhone 17 Pro Max 256GB**：多收約 {{price:iphone/iphone-17-pro-max/256GB*0.15}}，與 HK$928 相差不遠，扣除時間及交通後大約打和。容量較大的版本，例如 2TB 由 {{price:iphone/iphone-17-pro-max/2TB}} 跌至約 {{price:iphone/iphone-17-pro-max/2TB*0.85}}，差額約 {{price:iphone/iphone-17-pro-max/2TB*0.15}}，才有機會略高於費用。\n\n如果電池在 80%–84% 之間，扣價只是約 10%，例如 iPhone 15 Pro Max 256GB 只差約 {{price:iphone/iphone-15-pro-max/256GB*0.1}}；85%–89% 只差約 5%，就更不值得換。\n\n### 自己計算的步驟\n\n1. 在型號頁查看 90% 以上的參考價。\n2. 用報價表格選擇目前的電池級別，看估算價。\n3. 兩者相減，就是換電池後最多可以多收的金額。\n4. 對照上表的 Apple 官方費用，並加上來回時間。\n5. 差額明顯高於費用才換；有 AppleCare+ 而電池低於 80%，則先免費換。\n\n如果你打算繼續用這部手機一段時間，換電池是為了自己用得舒服，那就是另一個考慮。只為賣機，大多直接出售更划算。\n\n## 換電池前後要注意甚麼？\n\n**換電池前要先備份，換完後檢查「零件與維修記錄」顯示「原廠」，並保留維修單據，日後賣機時可以證明是 Apple 原廠維修。**\n\n- **備份**：Apple 在寄送維修的準備步驟中，第一步就是備份 iPhone，並確認 iCloud 已完成同步。\n- **檢查零件紀錄**：取機後到「零件與維修記錄」，確認電池顯示「原廠」。\n- **再看電池健康度**：新電池的「最大容量」應回到接近 100%。\n- **保留單據**：回收報價時在備註註明「Apple 換電池，有單據」，驗機時一併出示。\n\n換完電池後準備出售，可按 [回收前準備清單](/guides/before-selling-phone-checklist/) 登出帳户及清除資料；想比較 Apple 官方換購，可看 [Apple Trade In 香港流程及比較](/guides/apple-trade-in-hong-kong/)。電池以外，型號、容量及新機發佈時間對價錢影響更大，詳見 [iPhone 回收價 2026 指南](/guides/iphone-recycle-price-trend/)。\n\n想知道你的 iPhone 現在值多少？到 [首頁查價](/) 或 [iPhone 回收價格表](/iphone/)，選擇電池健康度看估算，然後 [提交報價](/contact/)，交收及驗機步驟可看 [回收流程](/process/)。\n"
+}

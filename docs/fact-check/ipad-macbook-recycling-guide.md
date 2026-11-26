@@ -42,3 +42,10 @@ Checked 2026-11-25, `updatedAt` set to 2026-11-26. Price figures come from the o
 | 36 | Coordinator zh-HK wording check: erase 「設定」>「一般」>「轉移或重設 iPad」>「清除所有內容和設定」; battery 「設定」>「電池」>「電池健康度」; sign-out 「設定」> [你的姓名] >「登出」; macOS 「系統設定」>「一般」>「轉移或重設」>「清除所有內容和設定」 | correct: all paths in the post match. Parts history (「零件與維修記錄」) is not mentioned in this post | https://support.apple.com/zh-hk/109511 ; https://support.apple.com/zh-hk/101575 ; https://support.apple.com/zh-hk/102664 |
 
 Claims checked: 36. Not externally verified, so worded generally: the HK Chinese name of the Startup Security Utility (described rather than named), and "Apple Pencil compatibility affects buyer acceptance" (general).
+
+
+## Correction (main session, 2026-11-26)
+
+| Claim | Verdict | Source |
+|---|---|---|
+| Setup screen after erase / unlocked device is 「你好」 | corrected → 「哈囉」 (Apple zh-HK: 「當你看到「哈囉」畫面，即表示裝置可供你使用。」) | https://support.apple.com/zh-hk/108794 |

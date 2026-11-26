@@ -36,3 +36,10 @@
 | 32 | WhatsApp 「已連結的裝置」 check | correct (general) | — | — |
 | 33 | Inspection 5–10 min, accept the price before the deal, FPS | owner | Kept | src/components/Steps.astro ; src/pages/process.astro |
 | 34 | Sign-out wording | corrected | 「設定」>「你的姓名」> 向下捲動並點一下「登出」 (Apple HK wording) | https://support.apple.com/zh-hk/109511 |
+
+
+## Correction (main session, 2026-11-26)
+
+| Claim | Verdict | Source |
+|---|---|---|
+| Setup screen after erase / unlocked device is 「你好」 | corrected → 「哈囉」 (Apple zh-HK: 「當你看到「哈囉」畫面，即表示裝置可供你使用。」) | https://support.apple.com/zh-hk/108794 |

@@ -41,8 +41,11 @@ for (const slug of slugs) {
     else if (v.price == null) errs.push(`placeholder has no price (null): ${m[0]}`);
   }
   if (/\{\{(?!price:|date\}\})/.test(text)) errs.push('unknown {{...}} placeholder');
-  const typed = text.replace(/\{\{[^}]+\}\}/g, '').match(/\$\s?\d[\d,]{2,}/g);
-  if (typed) errs.push(`typed prices found (use placeholders): ${[...new Set(typed)].slice(0, 5).join(' ')}`);
+  // Our own recycling prices must be placeholders. Official third-party fees (e.g. Apple repair fees)
+  // may be typed only in the form HK$1,234 and must be sourced in docs/fact-check/<slug>.md.
+  const typed = text.replace(/\{\{[^}]+\}\}/g, '').replace(/HK\$\s?\d[\d,]*/g, '').match(/\$\s?\d[\d,]{2,}/g);
+  if (/HK\$\s?\d/.test(text) && !existsSync(new URL(`docs/fact-check/${slug}.md`, root))) errs.push('HK$ fees need a source log in docs/fact-check/<slug>.md');
+  if (typed) errs.push(`typed prices found (use placeholders; official third-party fees must be written HK$…): ${[...new Set(typed)].slice(0, 5).join(' ')}`);
   for (const m of g.body.matchAll(/\]\((\/[^)\s#]*)\)/g)) if (!validPaths.has(m[1])) errs.push(`broken link ${m[1]}`);
   if (/https?:\/\//.test(g.body)) errs.push('external links are not allowed');
   if (/收機王|OK Store|okhk/i.test(text + g.title)) errs.push('competitor brand name used');
