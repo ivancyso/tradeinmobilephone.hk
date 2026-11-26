@@ -193,3 +193,7 @@ table.prices tr:last-child td { border-bottom: 0; }
 .toc li { margin-bottom: 2px; }
 .topic-list ul { margin: 8px 0 0; padding-left: 1.2em; }
 .prose h2[id] { scroll-margin-top: 80px; }
+
+/* Let grid columns shrink below their widest table so wide tables scroll inside .prose instead of widening the page. */
+.two-col > * { min-width: 0; }
+.prose { overflow-wrap: anywhere; }
