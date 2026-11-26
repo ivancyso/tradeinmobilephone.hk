@@ -39,3 +39,10 @@ Checked 2026-11-25. Prices come from `src/data/prices.json` and were not checked
 | Claim | Verdict | Source |
 |---|---|---|
 | Setup screen after erase / unlocked device is 「你好」 | corrected → 「哈囉」 (Apple zh-HK: 「當你看到「哈囉」畫面，即表示裝置可供你使用。」) | https://support.apple.com/zh-hk/108794 |
+
+
+## Update (main session, 2026-11-26)
+
+| Claim | Verdict | Source |
+|---|---|---|
+| Whether AppleCare+ passes to a second owner left to Apple's terms | corrected → one-time permanent transfer allowed under HK terms; seller hands over proof of purchase and plan confirmation and notifies AppleCare Administration in writing | https://www.apple.com/legal/sales-support/applecare/applecareplus/2610/261028_applecareplus_hk.pdf (v1.8) |
