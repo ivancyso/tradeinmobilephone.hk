@@ -1,0 +1,36 @@
+{
+  "title": "Android 轉 iPhone：WhatsApp 及資料轉移教學",
+  "description": "Android 轉 iPhone 教學：用 Apple「轉移至 iOS」app 轉移通訊錄、相片及 WhatsApp 對話的條件與步驟，哪些內容不會轉移，八達通及 eSIM 怎樣處理，以及舊 Android 手機登出帳戶及出售方法。",
+  "keyword": "android 轉 iphone",
+  "topic": "switching",
+  "role": "cluster",
+  "category": "iphone",
+  "publishedAt": "2026-11-26",
+  "updatedAt": "2026-11-26",
+  "summary": [
+    "Android 轉 iPhone 可在新 iPhone 設定期間，用 Apple 的「轉移至 iOS」app 一次過轉移通訊錄、訊息、相片、日曆及 WhatsApp 對話。",
+    "新 iPhone 必須未完成設定或已清除；兩部手機要插上電源，Android 要開啟 Wi‑Fi。",
+    "付費 app、音樂、書籍及 PDF 不會自動轉移，要另外處理。",
+    "WhatsApp 轉移要求 Android 5 或以上、iPhone iOS 15.5 或以上及相同電話號碼；通話記錄不能轉移。",
+    "Android 手機內的八達通不能轉移至 Apple Pay，要先在舊機處理，再在 iPhone 發出新八達通。"
+  ],
+  "faqs": [
+    {
+      "q": "iPhone 已經設定好，還可以用「轉移至 iOS」嗎？",
+      "a": "不可以直接使用。Apple 指出已完成設定的 iPhone 要先清除再重新開始；不想清除的話，可改為手動轉移，例如在 iPhone 加入 Google 帳戶同步通訊錄和日曆。"
+    },
+    {
+      "q": "WhatsApp 對話可以在 iPhone 設定完成後才轉移嗎？",
+      "a": "不可以。WhatsApp 表示只可以在新裝置啟用 WhatsApp 前還原對話，iPhone 需為全新或已恢復原廠設定，並在設定期間用「轉移至 iOS」選擇 WhatsApp。"
+    },
+    {
+      "q": "Samsung 手機上的八達通可以轉到 iPhone 嗎？",
+      "a": "不可以。八達通官方指明非 Apple 裝置內的八達通不能轉移至 Apple Pay，要先在舊機按指示刪除並申請退款，再在 iPhone 的銀包或八達通 App 發出新八達通。"
+    },
+    {
+      "q": "賣舊 Android 手機前一定要移除 Google 帳戶嗎？",
+      "a": "一定要。先移除 Google 及三星帳戶，再在「設定」內做原廠資料重設，可避免「原廠重設保護」把手機鎖住，回收時亦不會因帳戶未登出而無法收購。"
+    }
+  ],
+  "body": "**Android 轉 iPhone 最簡單的方法，是在新 iPhone 設定期間用 Apple 的「轉移至 iOS」app 轉移：通訊錄、訊息、相片、日曆，甚至 WhatsApp 對話都可以一次過搬到 iPhone。** 關鍵條件是 **新 iPhone 必須未完成設定（或已清除）**，兩部手機要插上電源並開啟 Wi‑Fi；付費 app、音樂、書籍及 PDF 則不會自動轉移。\n\n以下按次序講解轉移前準備、步驟、會轉移和不會轉移的內容、WhatsApp、八達通及 eSIM，最後是舊 Android 手機登出帳戶及出售的做法。想先看換機全流程，可參考 [換手機全攻略](/guides/switching-phones-guide/)。\n\n## 轉移前準備：條件一覽\n\n**開始前要確認四件事：Android 版本、新 iPhone 仍在設定畫面、Wi‑Fi 及電源、iPhone 有足夠儲存空間。** 任何一項未準備好，轉移都可能中途停止。\n\n| 項目 | 要求 | 備註 |\n|---|---|---|\n| Android 版本 | Apple 提供的「轉移至 iOS」安裝程式適用於 Android 6.0 或之後版本 | 更舊的 Android 有舊版 app；執行相容 Android 17 的支援裝置可不用 app 轉移 |\n| 新 iPhone | 未完成設定 | 已設定好的話，要清除 iPhone 重新開始，或改為手動轉移 |\n| 網絡 | Android 開啟 Wi‑Fi | iPhone 會建立臨時 Wi‑Fi 網絡供兩機連接 |\n| 電源 | 兩部裝置都插上電源 | 亦可用 USB-C 連接線直接連接兩部手機，轉移會較快 |\n| 儲存空間 | Android 內容不可超出 iPhone 可用空間 | 包括外置 MicroSD 卡內要轉移的內容 |\n| Chrome 書籤 | 先把 Android 的 Chrome 更新至最新版本 | 需要轉移書籤才需處理 |\n\nApple 沒有在轉移說明中另列 iOS 版本要求；如要一併轉移 WhatsApp，WhatsApp 要求 iPhone 使用 iOS 15.5 或以上，近年的新 iPhone 出廠版本都已符合。整個換機次序（先轉移、確認新機正常，後清除舊機）可參考 [換手機全攻略](/guides/switching-phones-guide/)。\n\n## 「轉移至 iOS」轉移步驟\n\n**轉移的做法是：iPhone 選「來自 Android」，Android 開啟「轉移至 iOS」app 輸入代碼，再選擇內容等待完成。** 以下步驟按 Apple 香港支援頁面的字眼整理：\n\n1. 開啟新 iPhone，放近 Android 手機，按畫面指示設定。\n2. 在「快速開始」畫面點一下「不使用其他 [Apple] 裝置進行設定」，系統或會要求你啟用 eSIM。\n3. 在「轉移 App 與資料」畫面點一下「來自 Android」，再點一下「透過 App 轉移」。\n4. 在 Android 開啟「轉移至 iOS」app，點一下「繼續」，閱讀並「同意」條款，按需要開啟「位置」及「通知」權限。未安裝 app 的話，可用 Android 鏡頭掃描 iPhone 上的二維碼前往 Google Play 商店。\n5. iPhone 在「從 Android 轉移」畫面點一下「繼續」，等候十位數或六位數代碼出現，然後在 Android 輸入。\n6. 系統要求時，在 Android 點一下「連線」加入 iPhone 建立的臨時 Wi‑Fi 網絡。\n7. 在 Android 選擇要轉移的內容（例如通訊錄、訊息、通話記錄、WhatsApp），點一下「繼續」。\n8. 即使 Android 顯示已完成，也要等 iPhone 的載入列完成；之後在 Android 點一下「完成」，在 iPhone 點一下「繼續」完成設定，並登入 Apple 帳户（前稱 Apple ID）。\n\n轉移期間 Android 畫面要一直停在「轉移至 iOS」app。Apple 指出，如中途使用其他 app 或接聽電話，內容將無法轉移。所需時間視乎內容量，相片和影片多的話要預留較長時間。\n\n### 轉移失敗或中途停止怎麼辦？\n\nApple 建議先關閉 Android 上可能影響 Wi‑Fi 的設定（例如 Smart Network Switch），並在 Wi‑Fi 設定中忘記已儲存的網絡；亦可重新啟動兩部裝置，或關閉 Android 的流動數據再試。如果只轉移了部分內容而 iPhone 空間已滿，就要清除 iPhone 再重新轉移。\n\n## 會轉移和不會轉移的內容\n\n**「轉移至 iOS」會轉移通訊錄、訊息、相片影片、日曆、WhatsApp 等個人資料，但 app 本身、付費 app、音樂、書籍及 PDF 都不會自動轉移。**\n\n| 會轉移 | 不會自動轉移／要另外處理 |\n|---|---|\n| 通訊錄、訊息記錄、SMS 訊息 | 付費 app（要在 App Store 另行購買或下載 iOS 版） |\n| 相機相片和影片、相簿 | 音樂、書籍及 PDF（要手動轉移） |\n| 檔案和資料夾 | 大部分 app 內的資料（視乎各 app 自己的帳戶或備份） |\n| 輔助使用設定、顯示設定 | 電話號碼、SIM 卡或 eSIM（要在 iPhone 啟用，或需電訊商協助） |\n| 網頁書籤、郵件帳户 | 八達通及電子錢包內的卡（見下文） |\n| WhatsApp 訊息和媒體、錄音、通話記錄、日曆 | 銀行 app 等登記（按各 app 指示在 iPhone 重新登記） |\n\nApple 指出，如 app 同時在 Google Play 和 App Store 上提供並支援轉移，部分**免費** app 會一併轉移，之後可從 App Store 下載。Apple 只提及免費 app，付費 app 應假設要重新處理。\n\n### 不用「轉移至 iOS」的其他做法\n\n如果已經設定好 iPhone、不想清除，可以改用帳戶同步：\n\n- **通訊錄、日曆及郵件**：Apple 指 iPhone 可配合 Google 等電郵服務運作，在 iPhone 加入你的 Google 帳戶，就可保留現有電郵、通訊錄和日曆。\n- **相片**：如相片已備份在 Google 相簿，可在 iPhone 安裝 Google 相簿 app 登入查看；亦可按 Apple 建議，把 Android「DCIM」資料夾的相片複製到電腦，再同步到 iPhone。\n- **音樂及文件**：用串流音樂 app 或雲端儲存 app（例如 Google Drive）登入即可取用。\n\n## WhatsApp 對話由 Android 轉 iPhone\n\n**WhatsApp 由 Android 轉 iPhone，要在新 iPhone 設定期間用「轉移至 iOS」轉移，並在轉移的內容中選擇 WhatsApp；iPhone 一旦已設定並使用，就無法用這個方法。** 以下條件來自 WhatsApp 幫助中心：\n\n| 條件 | 要求 |\n|---|---|\n| Android | Android 5 或以上 |\n| iPhone | iOS 15.5 或以上，全新出廠或已恢復原廠設定 |\n| App | Android 安裝「轉移至 iOS」；兩機都用最新版 WhatsApp |\n| 電話號碼 | 新 iPhone 使用與舊手機相同的電話號碼 |\n| 電源及網絡 | 兩部裝置均連接電源，並連接同一 Wi‑Fi，或 Android 連接 iPhone 的熱點 |\n\n### 轉移步驟\n\n1. 在 Android 開啟「轉移至 iOS」，輸入 iPhone 顯示的代碼。\n2. 在「轉移資料」畫面選擇 WhatsApp，點一下「開始」，等候 WhatsApp 準備匯出資料；準備好後，Android 上的 WhatsApp 會自動登出。\n3. 回到「轉移至 iOS」繼續轉移，等候完成。\n4. 在 iPhone 從 App Store 安裝最新版 WhatsApp，以相同電話號碼登入，按指示完成設定，即可看到對話記錄。\n\n### 要留意的限制\n\n- WhatsApp 指出，**通話記錄、顯示名稱、透過頻道收到的媒體及 P2P 付款訊息不能轉移**。\n- 目前無法在 **WhatsApp Business** 應用程式上把對話由 Android 轉到 iPhone。\n- 只可以在新裝置**啟用 WhatsApp 前**還原對話；啟用後才想搬舊對話，就要清除 iPhone 重新轉移，新舊記錄亦不能合併。\n- WhatsApp 不支援其他第三方資料轉移 app，並表示這類 app 會導致轉移問題。\n- 轉移過程不會把資料傳送到雲端；要在 WhatsApp 內建立 iCloud 備份後，對話才有雲端副本。\n\n## 八達通、eSIM 及其他要另外處理的項目\n\n**手機內的八達通不能直接由 Android 搬到 iPhone：八達通官方指明，非 Apple 裝置內的八達通不能轉移至 Apple Pay，只有實體八達通可以轉移。** 換機前要先安排好舊手機上的八達通。\n\n| 項目 | 舊 Android 要做甚麼 | 新 iPhone 怎樣設定 |\n|---|---|---|\n| Samsung 手機上的 Smart Octopus | Samsung 的說明是在 Samsung Pay 的「八達通」選擇「刪除」，再選擇「刪除與還款」申請退款；重設手機會刪除 Smart Octopus | 在 Apple 銀包或八達通 App 發出新的八達通 |\n| Google 錢包等其他手機八達通 | 按八達通官方指示處理餘額，不可轉移至 Apple Pay | 同上 |\n| 實體八達通 | 不需處理 | 可轉移至 Apple Pay，轉移後實體卡會被停用 |\n| eSIM／SIM 卡 | 確認新機能收短訊前不要刪除 | 設定期間按指示啟用，或聯絡電訊商 |\n\n八達通官方指出，在 Apple 銀包或八達通 App 發出新八達通時，要支付 HK$100 最低儲值額及 HK$50 按金，發卡不另收費用；收費以八達通官方網站最新公布為準。Smart Octopus 退款或收手續費，詳情及最新收費請查看 Samsung 及八達通官方網站。\n\n### eSIM 及電話號碼\n\nApple 指出，由 Android 轉移時可在 iPhone 啟用手機號碼和 SIM 卡或 eSIM，系統可能會把你導向網絡供應商網站確定啟用。如使用實體 SIM 卡，直接把卡放入 iPhone 即可。建議確認 iPhone 能正常收短訊（尤其是銀行一次性密碼）後，才清除舊 Android 手機。\n\n## 舊 Android 手機：登出帳戶、重設及出售\n\n**賣舊 Android 手機前，一定要先移除 Google 帳戶及三星帳戶，再在「設定」內做原廠資料重設；否則「原廠重設保護」可能會要求驗證原帳戶，手機等同被鎖。** 以 Samsung One UI 為例：\n\n1. 確認 iPhone 上的通訊錄、相片及 WhatsApp 都已齊全。\n2. 處理 Smart Octopus 及電子錢包內的卡。\n3. 移除帳戶：「設定」>「帳戶與備份」>「管理帳戶」，選擇 Google 帳戶 >「移除帳戶」；三星帳戶在「設定」最頂的帳戶頁面登出（字眼因 One UI 版本略有不同）。\n4. 原廠資料重設：「設定」>「一般管理」>「重設」>「原廠資料重設」。\n5. 取出 SIM 卡及記憶卡，記憶卡內的相片不會因重設而刪除。\n\n重設後開機，如果連接 Wi‑Fi 後沒有要求輸入原本的 Google 帳戶，就代表原廠重設保護已解除。完整清單見 [賣機前清單](/guides/before-selling-phone-checklist/)。\n\n### 舊 Samsung 值多少？\n\n換了 iPhone 之後，舊 Samsung 越早出售，一般價錢越好。以下是本網站現時的參考回收價（{{date}} 更新），實際報價視乎成色及配件：\n\n| 型號 | 參考回收價 |\n|---|---|\n| [Galaxy S24 Ultra](/samsung/galaxy-s24-ultra/) 256GB | {{price:samsung/galaxy-s24-ultra/256GB}} |\n| [Galaxy S23 Ultra](/samsung/galaxy-s23-ultra/) 256GB | {{price:samsung/galaxy-s23-ultra/256GB}} |\n| [Galaxy Z Flip6](/samsung/galaxy-z-flip6/) 256GB | {{price:samsung/galaxy-z-flip6/256GB}} |\n\n其他型號可在 [Samsung 回收價格表](/samsung/) 查看。想比較 Samsung 官方換購與直接回收，可看 [Samsung Trade In 與回收比較](/guides/samsung-trade-in-vs-recycling/)。新 iPhone 日後要換機時，亦可在 [iPhone 回收價格表](/iphone/) 查價。日後由 iPhone 換到另一部 iPhone，可看 [舊 iPhone 轉新 iPhone 教學](/guides/iphone-to-iphone-transfer/)；備份方法見 [iCloud 備份教學](/guides/iphone-icloud-backup/)。換機的其他步驟，例如備份及 eSIM，可回到 [換手機全攻略](/guides/switching-phones-guide/)。\n\n---\n\n舊 Android 準備好之後，到 [首頁](/) 搜尋型號查價，或 [聯絡我們](/contact/) 取得報價；交收及驗機安排見 [回收流程](/process/)。\n"
+}

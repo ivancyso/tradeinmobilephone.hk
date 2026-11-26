@@ -1,0 +1,36 @@
+{
+  "title": "iCloud 備份教學：iPhone 備份方法、空間及收費",
+  "description": "iCloud 備份教學：iPhone 手動及自動備份步驟、5GB 免費空間與 iCloud+ 香港收費、備份包括及不包括甚麼、電腦加密備份、備份保留多久，以及 WhatsApp 對話備份和賣機前的備份次序。",
+  "keyword": "icloud 備份",
+  "topic": "switching",
+  "role": "cluster",
+  "category": "iphone",
+  "publishedAt": "2026-11-26",
+  "updatedAt": "2026-11-26",
+  "summary": [
+    "iCloud 備份路徑：「設定」> [你的姓名] >「iCloud」>「iCloud 備份」>「立即備份」，「立即備份」下會顯示上次備份時間。",
+    "每個 Apple 帳户有 5GB 免費 iCloud 空間；香港 iCloud+ 每月由 HK$8（50GB）起，以 Apple 最新價格為準。",
+    "已同步到 iCloud 的相片、訊息和備忘錄不在備份內；Apple Pay 及 Face ID 設定亦不會備份。",
+    "電腦加密備份才會包括儲存的密碼、「健康」資料及通話記錄。",
+    "WhatsApp 對話要在 WhatsApp 內另外備份，每個 iCloud 帳户只保留一個 WhatsApp 備份。"
+  ],
+  "faqs": [
+    {
+      "q": "iCloud 免費空間有多少？",
+      "a": "每個 Apple 帳户有 5GB 免費 iCloud 空間，相片、iCloud 雲碟及備份共用。不夠用可升級 iCloud+，香港 50GB 計劃每月 HK$8，價格以 Apple 最新公布為準。"
+    },
+    {
+      "q": "iCloud 備份會保留多久？",
+      "a": "Apple 的 iCloud 條款指明，裝置連續 180 日沒有備份到 iCloud，Apple 有權刪除該裝置的備份；關閉 iCloud 備份後，現有備份亦會在 180 天後刪除。"
+    },
+    {
+      "q": "iCloud 備份包括 WhatsApp 對話嗎？",
+      "a": "不應依賴 iPhone 備份。WhatsApp 表示要恢復或轉移對話，只能透過 WhatsApp 內建立的 iCloud 備份或 WhatsApp 雲端儲存空間，所以要在 WhatsApp「對話備份」另外備份。"
+    },
+    {
+      "q": "電腦備份和 iCloud 備份有甚麼分別？",
+      "a": "電腦備份容量只受電腦空間限制，而且幾乎包括所有資料；選擇加密後還會備份密碼、「健康」資料及通話記錄。iCloud 備份可透過 Wi‑Fi 自動進行，並一律加密，但受 iCloud 空間限制。"
+    }
+  ],
+  "body": "**iCloud 備份的做法是：「設定」> [你的姓名] >「iCloud」>「iCloud 備份」>「立即備份」，連接 Wi‑Fi 等候完成即可。** 每個 Apple 帳户（前稱 Apple ID）有 **5GB 免費 iCloud 空間**，備份放不下的話要升級 iCloud+，或改用電腦備份。\n\n以下講解 iPhone 備份的兩種方法、iCloud+ 香港收費、備份包括甚麼和不包括甚麼、加密電腦備份、備份會保留多久，以及 WhatsApp 對話為何要另外備份。換機的整個流程可參考 [換手機全攻略](/guides/switching-phones-guide/)。\n\n## iCloud 備份步驟：手動及自動\n\n**手動備份只需在「iCloud 備份」頁點一下「立即備份」；開啟「備份此 [裝置]」後，iPhone 會在接上電源、連接 Wi‑Fi 及螢幕鎖定時自動備份。** 以下路徑按 Apple 香港支援頁面整理。\n\n### 手動備份\n\n1. 將 iPhone 連接到 Wi‑Fi 網絡。\n2. 開啟「設定」app，點一下你的名字，然後點一下「iCloud」。\n3. 點一下「iCloud 備份」。\n4. 點一下「立即備份」，程序完成前保持 Wi‑Fi 連線。\n5. 完成後，「立即備份」下會顯示上次備份的日期和時間。\n\n### 自動備份\n\n1. 「設定」> 你的姓名 >「iCloud」>「iCloud 備份」，確認已啟用「備份此 [裝置]」。\n2. 將 iPhone 接上電源。\n3. 連接 Wi‑Fi 網絡。\n4. 確保螢幕已鎖定，例如晚上睡覺時充電。\n\n如系統提示 iCloud 儲存空間不足而無法完成備份，可按畫面步驟購買更多空間，或改用下文的電腦備份。準備換新 iPhone 的話，備份應放在換機流程的第一步，詳見 [換手機全攻略](/guides/switching-phones-guide/)。\n\n## iCloud 免費空間及 iCloud+ 香港收費\n\n**iCloud 提供 5GB 免費儲存空間，相片、iCloud 雲碟及備份共用這 5GB；不夠用可升級 iCloud+，香港最平的 50GB 計劃每月 HK$8。** 以下是 Apple 支援頁面列出的香港每月價格（2026 年 11 月 26 日查核）：\n\n| iCloud+ 計劃 | 香港每月價格 |\n|---|---|\n| 50GB | HK$8 |\n| 200GB | HK$23 |\n| 2TB | HK$78 |\n| 6TB | HK$238 |\n| 12TB | HK$468 |\n\n所有 iCloud+ 計劃都可與最多五名其他家庭成員共享，並包括「iCloud 私密轉送」及「隱藏我的電郵」等功能。價格可能調整，訂閱前請以 iPhone「設定」內或 Apple 官方網站顯示的價格為準。\n\n### 不想付費：先減少備份大小\n\nApple 建議，要減少 iCloud 備份的大小，可以停止備份不再使用的 app，或刪除舊 iCloud 備份。例如已經不用的舊 iPad 或舊 iPhone 備份，往往佔用不少空間。另一個做法是開啟「iCloud 相片」：相片會同步到 iCloud 而不再放進備份，但相片本身同樣會佔用 iCloud 空間，相片多的話始終要升級計劃，或改用電腦備份。\n\n### 換新機時可借用臨時空間\n\n如果你購買新 iPhone，但 iCloud 空間不足以備份目前的 iPhone，Apple 會提供**臨時 iCloud 儲存空間**：\n\n1. 在舊 iPhone 開啟「設定」>「一般」>「轉移或重設 iPhone」。\n2. 在「為新 iPhone 做好準備」下方點一下「開始使用」。\n3. 如看到符合資格免費獲得額外 iCloud 空間的訊息，點一下「繼續」，等候備份完成。\n\n臨時備份有 **21 天** 時間還原到新 iPhone，未收到新機可在「設定」點一下「延長我的備份保留時間」多取 21 天。Apple 提醒，在臨時備份還原到新裝置前，切勿清除目前的 iPhone。\n\n## iCloud 備份包括甚麼？不包括甚麼？\n\n**iCloud 備份包括 iPhone 上所有「尚未同步到 iCloud」的資料和設定；已同步到 iCloud 的相片、訊息及備忘錄不會重複放入備份。** 這亦是很多人的備份比想像中小的原因。\n\n| 包括在 iCloud 備份 | 不包括在 iCloud 備份 |\n|---|---|\n| 裝置設定、主畫面佈局及 app 整理方式 | 已同步至 iCloud 的備忘錄 |\n| 已下載 app 的資料（包括第三方社交媒體、遊戲及訊息 app） | 相片（已開啟「iCloud 相片」時） |\n| iMessage、SMS 及 MMS（未開啟 iCloud 雲端「訊息」時） | 訊息（已同步至 iCloud 時） |\n| 相片和影片（未開啟「iCloud 相片」時） | Gmail、Exchange 等其他雲端服務的資料 |\n| Apple Watch 備份 | Apple Mail 資料 |\n| 已購買的鈴聲、Visual Voicemail 密碼 | Apple Pay 資料及設定 |\n| — | Face ID 或 Touch ID 設定 |\n| — | iCloud 音樂資料庫和 App Store 內容、離線地圖 |\n\nApple 亦指出，如 app 使用「iCloud 雲碟」儲存資料，資料會儲存在 iCloud 而非 iCloud 備份。換句話說，**iCloud 相片和 iCloud 雲碟本身已在雲端**，只要用同一個 Apple 帳户登入新 iPhone 就會同步回來。Apple Pay 的卡及 Face ID 則要在新機重新設定。\n\n## 用電腦備份 iPhone 及加密備份\n\n**電腦備份幾乎包括 iPhone 上所有資料，容量只受電腦可用空間限制；但「健康」、「健身記錄」及「鑰匙圈」資料必須選擇「替本機備份加密」才會備份。** 適合 iCloud 空間不夠又不想付費的用家。\n\n| 電腦 | 使用的軟件 |\n|---|---|\n| Mac（macOS Catalina 10.15 或之後） | Finder |\n| Mac（macOS Mojave 或之前） | iTunes |\n| Windows PC | Apple Devices app；沒有此 app 的 PC 用 iTunes |\n\n### Mac 備份步驟（Finder）\n\n1. 用連接線把 iPhone 連接到 Mac，如系統詢問，按一下「允許」配件連接。\n2. 開啟 Finder，在側邊欄選擇你的 iPhone，按一下「信任」並在 iPhone 輸入密碼。\n3. 如要儲存「健康」和「健身記錄」資料，選擇「替本機備份加密」並設定密碼。\n4. 按一下「立即備份」，完成後畫面會顯示上次備份的日期和時間。\n\nWindows 用家在 Apple Devices app 選擇裝置，同樣可選「替本機備份加密」及「立即備份」，完成後按「管理備份」查看備份檔案。\n\n### 加密備份多了甚麼？\n\nApple 指出，加密備份可包含未加密備份沒有的資料：**你儲存的密碼、Wi‑Fi 設定、網站記錄、「健康」資料及通話記錄**；但加密備份亦不包含 Face ID、Touch ID 或裝置密碼資料。記住加密密碼非常重要，沒有此密碼便無法還原備份。iCloud 備份則一律加密。\n\n## 備份會保留多久？怎樣檢查上次備份時間？\n\n**舊備份不會永久保留：Apple 的 iCloud 條款指明，裝置連續 180 日沒有備份到 iCloud，Apple 有權刪除該裝置的備份；如你關閉裝置的 iCloud 備份，現有備份亦只會保留 180 天。** 舊 iPhone 賣掉後停止備份，舊備份遲早會被刪除，不應當作長期存檔。\n\n| 情況 | 保留時間 |\n|---|---|\n| 關閉裝置的 iCloud 備份 | 保留 180 天後刪除 |\n| 裝置連續 180 日沒有備份 | Apple 有權刪除該裝置的備份 |\n| 換新機用的臨時 iCloud 備份 | 21 天（可延長 21 天）；還原後再保留 7 天 |\n| 電腦備份 | 保留在電腦上，直至你自行刪除 |\n\n檢查方法很簡單：「設定」> 你的姓名 >「iCloud」>「iCloud 備份」，「立即備份」下方會顯示上次備份的日期和時間。電腦備份則在完成後顯示於 Finder 或 Apple Devices app。賣機前看到的時間應該是今天，而不是幾個月前。\n\n## WhatsApp 對話要另外備份\n\n**WhatsApp 對話要在 WhatsApp 內另外備份：WhatsApp 表示，要恢復 WhatsApp 備份或轉到另一部 iPhone，只能透過 WhatsApp 的 iCloud 備份或 WhatsApp 雲端儲存空間。** 只做 iPhone 的 iCloud 備份並不等於 WhatsApp 對話已妥善備份。\n\n1. 在 iPhone 開啟「設定」> 你的姓名 >「iCloud」>「iCloud 雲碟」，開啟「同步此 iPhone」，並確保 WhatsApp 已開啟同步。\n2. 在 WhatsApp 點一下「設定」（或個人頭像）>「對話」>「對話備份」>「立即備份」。\n3. 需要時開啟「自動備份」，選擇每日、每週或每月；亦可選擇是否在備份中加入影片。\n\n### WhatsApp 備份的限制\n\n- 每個 iCloud 帳户只能儲存一個 WhatsApp 備份，新備份會取代舊備份。\n- 備份和還原必須使用相同電話號碼及 iCloud 帳户。\n- WhatsApp 指出，最近備份如已建立超過 120 天，可能無法還原。\n- 可開啟端對端加密備份，但必須記住密碼或 64 位數加密金鑰。\n- 新版 WhatsApp 亦可選擇把備份存放在 WhatsApp 雲端儲存空間；選了這個方式就不能同時建立 iCloud 備份。\n\n## 賣機或清除 iPhone 前必須先備份\n\n**清除所有內容和設定後，iPhone 上的資料一般無法還原，所以賣機或送修前必須先完成備份，並確認上次備份時間是最新的。** 建議次序：\n\n1. 完成 iCloud 備份或加密電腦備份，確認上次備份時間。\n2. 在 WhatsApp 內完成對話備份。\n3. 新 iPhone 從備份還原並確認資料齊全。\n4. 處理 eSIM、八達通及 Apple Watch，登出 Apple 帳户。\n5. 「設定」>「一般」>「轉移或重設 iPhone」>「清除所有內容和設定」，直至出現「哈囉」畫面。\n\n### 新 iPhone 從 iCloud 備份還原\n\n新 iPhone 設定時，在「App 與資料」畫面點一下「從 iCloud 備份還原」，用同一個 Apple 帳户登入，再選擇最新的備份，靜候還原完成即可。還原後要留意幾點：\n\n- **保持 Wi‑Fi 連線**：備份內的相片和影片會在背景下載，所需時間視乎備份大小及 Wi‑Fi 速度。\n- **輸入 Apple 帳户密碼**：部分 app 和服務（例如 App Store）需要密碼才能還原已購內容；曾用多個 Apple 帳户購買的話，要逐一輸入。\n- **檢查還原進度**：在「設定」> 你的姓名 >「iCloud」>「iCloud 備份」，如見到「此 [裝置] 現時正在還原中，完成後會自動備份。」即代表仍在進行。\n- **跨裝置類型還原**：用 iPad 備份設定 iPhone（或相反）時，相片（除非使用「iCloud 相片」）、未同步至 iCloud 的訊息、錄音機及不相容的 app 不會轉移。\n\n確認新機的相片、訊息、WhatsApp 及銀行 app 都正常後，才清除舊機。萬一還原後發現資料缺失，舊機仍保留完整資料，可以重新備份再試。\n\n登出及清除的完整步驟見 [賣機前清單](/guides/before-selling-phone-checklist/)。舊機準備好之後，可在 [iPhone 回收價格表](/iphone/) 查價，例如 [iPhone 16 Pro](/iphone/iphone-16-pro/) 256GB 現時參考價約 {{price:iphone/iphone-16-pro/256GB}}，[iPhone 15 Pro Max](/iphone/iphone-15-pro-max/) 256GB 約 {{price:iphone/iphone-15-pro-max/256GB}}（{{date}} 更新，實際視乎成色）。由舊 iPhone 直接轉到新 iPhone 的方法見 [舊 iPhone 轉新 iPhone 教學](/guides/iphone-to-iphone-transfer/)，由 Android 轉過來則看 [Android 轉 iPhone 教學](/guides/android-to-iphone/)。換機的其他步驟，可回到 [換手機全攻略](/guides/switching-phones-guide/)。\n\n---\n\n備份好、清除好之後，到 [首頁](/) 搜尋型號查價，或 [聯絡我們](/contact/) 取得報價；交收及驗機安排見 [回收流程](/process/)。\n"
+}
