@@ -1,0 +1,40 @@
+{
+  "title": "iPhone 爆mon 點算？Apple 換 mon 價錢及應否先修",
+  "description": "iPhone 爆mon 要先修定直接賣？整理 Apple 香港各型號官方換屏幕費用、AppleCare+ HK$228 服務費、第三方屏幕風險、爆mon 備份及安全須知，並用回收價計算是否值得先維修。",
+  "keyword": "iphone 爆mon",
+  "topic": "iphone-price",
+  "role": "cluster",
+  "category": "iphone",
+  "publishedAt": "2026-11-26",
+  "updatedAt": "2026-11-26",
+  "summary": [
+    "Apple 香港過了保養期的 iPhone 換 mon 預計費用由 HK$1,029（iPhone SE）至 HK$3,249（Pro Max 型號），2026 年 11 月 26 日查閱，費用以 Apple 官方頁面為準。",
+    "有 AppleCare+ 的 iPhone 爆mon，服務費為 HK$228，意外損壞維修次數不限。",
+    "非原廠屏幕一般會在「零件與維修記錄」顯示「未知」，亦可能出現觸控、原色調及亮度問題。",
+    "按本網站估算，爆mon iPhone 約為正常參考價的一半，例如 iPhone 16 Pro 256GB 約 {{price:iphone/iphone-16-pro/256GB*0.5}}，最終以驗機為準。",
+    "沒有 AppleCare+ 的話，多數型號換 mon 費用高於修好後多收的回收價，直接當損壞機賣通常較划算。"
+  ],
+  "faqs": [
+    {
+      "q": "Apple 香港 iPhone 換 mon 要幾錢？",
+      "a": "2026 年 11 月 26 日查閱時，過了保養期的預計費用由 HK$1,029（iPhone SE）至 HK$3,249（Pro Max 型號），例如 iPhone 16 Pro 為 HK$2,579、iPhone 15 為 HK$2,139。費用會調整，請以 Apple 官方頁面為準。"
+    },
+    {
+      "q": "有 AppleCare+ 爆mon 要付幾多？",
+      "a": "Apple 香港的 AppleCare+ 螢幕損壞服務費為 HK$228，背面玻璃損壞亦是 HK$228，其他意外損壞為 HK$788。"
+    },
+    {
+      "q": "爆mon iPhone 回收價大約幾多？",
+      "a": "按本網站估算，「有損壞／爆屏」約為正常參考價的一半，例如 iPhone 16 Pro 256GB 約 {{price:iphone/iphone-16-pro/256GB*0.5}}。實際價錢視乎屏幕能否顯示及觸控、其他功能及驗機結果。"
+    },
+    {
+      "q": "爆mon 要先修好再賣嗎？",
+      "a": "沒有 AppleCare+ 的話多數不值得，因為換 mon 費用通常高於修好後多收的回收價；有 AppleCare+ 只需 HK$228，先修再賣一般更划算。"
+    },
+    {
+      "q": "iPhone 開不到機還可以回收嗎？",
+      "a": "完全無法開機的手機無法驗證功能及清除資料，一般難以報價，可考慮環保回收。"
+    }
+  ],
+  "body": "**iPhone 爆mon 在 Apple 香港換屏幕，過了保養期的預計費用由 HK$1,029（iPhone SE）至 HK$3,249（Pro Max 型號）；有 AppleCare+ 只需 HK$228。** 以上是 2026 年 11 月 26 日在 Apple 香港支援網站查到的預計費用，最終收費以 Apple 檢查後為準，費用亦會調整，請在維修前再到 Apple 官方「iPhone 螢幕的 Apple 服務與維修」頁面核對。如果你本來就打算換機，可以直接把爆mon iPhone 當損壞機回收：按本網站估算，「有損壞／爆屏」約為正常參考價的一半，例如 [iPhone 16 Pro](/iphone/iphone-16-pro/) 256GB 正常約 {{price:iphone/iphone-16-pro/256GB}}，爆mon 約 {{price:iphone/iphone-16-pro/256GB*0.5}}，最終以驗機為準。各型號價錢走勢可看 [iPhone 回收價 2026 指南](/guides/iphone-recycle-price-trend/)。\n\n## Apple 香港 iPhone 換 mon 價錢一覽（2026 年 11 月）\n\n**Apple 官方換屏幕費用主要按屏幕尺寸及型號分級，Pro Max 最貴，iPhone SE 最便宜。** 下表是 Apple 直接提供的已過保養期「螢幕損壞」維修預計費用，於 2026 年 11 月 26 日查閱。\n\n| 型號 | Apple 換 mon 預計費用 |\n|---|---|\n| iPhone 18 Pro Max、17 Pro Max、16 Pro Max、15 Pro Max、14 Pro Max | HK$3,249 |\n| iPhone 18 Pro、17 Pro、iPhone Air、iPhone 17、16 Pro、16 Plus、15 Pro、15 Plus、14 Pro、14 Plus、13 Pro Max、12 Pro Max | HK$2,579 |\n| iPhone 16、iPhone 15、iPhone 14、13 Pro、iPhone 13、12 Pro、iPhone 12 | HK$2,139 |\n| iPhone 17e、iPhone 16e | HK$1,789 |\n| iPhone 13 mini、iPhone 12 mini | HK$1,769 |\n| iPhone 11 | HK$1,569 |\n| iPhone SE（第 2 代、第 3 代） | HK$1,029 |\n| iPhone Duo | 外螢幕 HK$3,249；內顯示器 HK$8,749 |\n\n### 收費要留意的地方\n\n- **屏幕連背面玻璃一齊爛，收費更高**：例如 iPhone 17 Pro Max「螢幕和背面玻璃損壞」預計 HK$3,949。\n- **只是預計費用**：Apple 會先檢查裝置，再確定最終費用；如需運送裝置，或會追加運費。\n- **授權維修中心可自訂收費**：Apple 授權維修中心可自行訂立服務費用及估價。\n- **費用會變**：上表只代表查閱當日的資料，請以 Apple 官方頁面為準。\n\n### 背面玻璃爛了收費多少？\n\n**iPhone 15 至 18 系列的背面玻璃損壞，Apple 香港預計費用為 HK$1,249；較舊型號要高得多。** 舊款背面玻璃維修費差異很大，例如 iPhone 14 Pro Max 為 HK$4,649、iPhone 14 Pro 為 HK$4,399、iPhone 13 為 HK$3,049，而 iPhone 14 及 14 Plus 則是 HK$1,249。屏幕和背面玻璃一齊損壞的話，Apple 有合併收費，一般比分開維修便宜，但仍然不低。\n\nApple 的維修服務及替換零件享有 90 天保障，或 Apple 保養的剩餘期限，以較長者為準，維修使用 Apple 原廠零件，修好後「零件與維修記錄」會顯示為原廠維修。\n\n換 mon 前不妨先比較維修費與手機現時的回收價，各型號價錢可看 [iPhone 回收價 2026 指南](/guides/iphone-recycle-price-trend/) 或 [iPhone 回收價格表](/iphone/)。\n\n## AppleCare+ 爆mon 要幾錢？\n\n**有 AppleCare+ 的 iPhone 爆mon，Apple 香港的服務費為 HK$228，背面玻璃損壞同樣是 HK$228，其他意外損壞為 HK$788。** AppleCare+ 涵蓋摔落和液體潑濺等意外損壞，而且維修次數不限。\n\n| 損壞類型 | AppleCare+ 服務費 | 沒有 AppleCare+（以 iPhone 16 Pro 為例） |\n|---|---|---|\n| 螢幕損壞 | HK$228 | HK$2,579 |\n| 背面玻璃損壞 | HK$228 | HK$1,249 |\n| 其他意外損壞 | HK$788 | HK$5,899 |\n\n*2026 年 11 月 26 日查閱 Apple 香港支援網站。iPhone Duo 的內顯示器損壞為 HK$788。*\n\nApple 一般的有限保養不涵蓋意外損壞，所以沒有 AppleCare+ 的話，爆mon 要按已過保養期的費用收費。Apple 註明，AppleCare 計劃涵蓋的維修，Apple 及所有 Apple 授權維修中心會收取相同的維修費。\n\n## 第三方換 mon 有甚麼風險？\n\n**在非 Apple 渠道換上非原廠屏幕，iPhone 一般會在「零件與維修記錄」顯示「未知」，亦可能出現觸控、原色調及亮度問題，回收時通常扣價較多。** 這個紀錄適用於 iPhone 11 及之後型號（不包括 iPhone SE 第 2 代及第 3 代），位置在「設定」>「一般」>「關於本機」>「零件與維修記錄」。\n\n### Apple 列出的非原廠屏幕問題\n\n- 「多點觸控」在部分區域沒有反應、不靈敏，或在錯誤位置偵測到觸控。\n- 通話期間顯示器可能無法關閉，或誤觸邊緣被當作觸控。\n- 「原色調」顯示可能無法正常運作，環境光度感應器可能失效，令屏幕異常調暗或調光。\n- 顏色可能偏黃或偏藍，亮度不一致，最高亮度較低，亦可能多耗電。\n\n### Face ID 與「未知」紀錄\n\nApple 表示，如果維修涉及需要校正的零件，在校正程序完成前無法用 Face ID 或 Touch ID 解鎖裝置或登入 app。非原廠維修未必能完成這些程序，所以換 mon 後要逐項測試 Face ID、前鏡頭及觸控。Apple 亦明確指出「未知」的零件可能影響裝置的換購價值。驗機時我們會查看零件紀錄及測試 Face ID，詳見 [回收流程](/process/)。\n\n## 爆mon 手機的安全及備份\n\n**Apple 提醒不要使用帶有破裂玻璃的 iPhone，因為可能會造成傷害；如懷疑電池損壞，亦應停止使用。** 爆mon 後不要徒手撥走裂開的玻璃碎，Apple 提醒在沒有保護的情況下不應嘗試移除碎裂玻璃；亦不要自行拆機，然後盡快備份資料。\n\n### 留意電池膨脹\n\n如果屏幕被頂起、機身翹起或縫隙變大，有可能是電池膨脹。Apple 指出 iPhone 電池只應由經訓練的技術人員維修，以避免過熱、火災或傷害。Apple 亦列明，如裝置釋出氣體、有異常氣味，或電池膨脹令外殼分離，便不應寄送，應聯絡 Apple 支援或親身前往 Apple Store 或 Apple 授權維修中心。\n\n### 屏幕壞了點樣備份？\n\n1. **觸控仍可用**：在「設定」> [你的姓名] >「iCloud」>「iCloud 備份」，按「立即備份」。\n2. **觸控失靈但手機已開啟 iCloud 備份**：把 iPhone 接上電源、連接 Wi-Fi 並保持鎖定，系統會自動備份。\n3. **用電腦備份**：Mac 用 Finder，Windows 用「Apple 裝置」app 或 iTunes。首次連接時 iPhone 會詢問是否「信任這部電腦」並要求輸入密碼，屏幕完全無法操作便很難完成，所以以前信任過的電腦最有用。\n4. **無法再操作手機**：可在其他裝置登入 iCloud.com 的「尋找裝置」，選擇「清除此裝置」，再把它從帳户移除，然後才交出手機。\n\n出售前其他步驟，例如登出 Apple 帳户（前稱 Apple ID）及取出 SIM 卡，可看 [回收前準備清單](/guides/before-selling-phone-checklist/)。\n\n## 先維修定直接賣？用回收價計一計\n\n**以 {{date}} 的參考價計，沒有 AppleCare+ 的話，大部分型號換 mon 的費用都高於或接近修好後多收的回收價，直接當損壞機賣通常較划算；有 AppleCare+ 則幾乎一定值得先修。** 按本網站報價表格，「有損壞／爆屏」按參考價約 50% 估算，修好後最多就是收回這一半。\n\n| 型號 | 正常參考價 | 爆mon 估算 | 修好後最多多收 | Apple 換 mon 費用 |\n|---|---|---|---|---|\n| [iPhone 17 Pro Max](/iphone/iphone-17-pro-max/) 256GB | {{price:iphone/iphone-17-pro-max/256GB}} | {{price:iphone/iphone-17-pro-max/256GB*0.5}} | 約 {{price:iphone/iphone-17-pro-max/256GB*0.5}} | HK$3,249 |\n| [iPhone 16 Pro](/iphone/iphone-16-pro/) 256GB | {{price:iphone/iphone-16-pro/256GB}} | {{price:iphone/iphone-16-pro/256GB*0.5}} | 約 {{price:iphone/iphone-16-pro/256GB*0.5}} | HK$2,579 |\n| [iPhone 15](/iphone/iphone-15/) 128GB | {{price:iphone/iphone-15/128GB}} | {{price:iphone/iphone-15/128GB*0.5}} | 約 {{price:iphone/iphone-15/128GB*0.5}} | HK$2,139 |\n| [iPhone 13](/iphone/iphone-13/) 128GB | {{price:iphone/iphone-13/128GB}} | {{price:iphone/iphone-13/128GB*0.5}} | 約 {{price:iphone/iphone-13/128GB*0.5}} | HK$2,139 |\n\n*{{date}} 估算，假設電池 90% 以上、其他功能正常，價錢四捨五入至百位。實際價錢以驗機為準。*\n\n### 例子解讀\n\n- **iPhone 13 及 iPhone 15**：修好後多收的金額遠低於 HK$2,139，直接賣最實際。\n- **iPhone 16 Pro 256GB**：多收約 {{price:iphone/iphone-16-pro/256GB*0.5}}，仍低於 HK$2,579，修了反而蝕錢。\n- **iPhone 17 Pro Max 256GB**：多收約 {{price:iphone/iphone-17-pro-max/256GB*0.5}}，與 HK$3,249 相差不遠，扣除時間後大約打和；2TB 版本正常約 {{price:iphone/iphone-17-pro-max/2TB}}，爆mon 約 {{price:iphone/iphone-17-pro-max/2TB*0.5}}，差額才較明顯高於維修費。\n- **有 AppleCare+**：以 iPhone 16 Pro 256GB 為例，HK$228 換 mon 可以收回約 {{price:iphone/iphone-16-pro/256GB*0.5}}，絕對值得先修。\n\n### 自己計算的步驟\n\n1. 在型號頁查看正常參考價。\n2. 用報價表格選「有損壞／爆屏」，看估算價。\n3. 兩者相減，就是修好後最多可以多收的金額。\n4. 對照上表的 Apple 官方費用，有 AppleCare+ 則用 HK$228。\n5. 差額明顯高於費用，而且你願意等維修，才先修後賣。\n\n## 爆mon iPhone 回收：點樣報價？開不到機還收不收？\n\n**爆mon iPhone 可以照樣回收，報價時在外觀成色選「有損壞／爆屏」，最終價錢按驗機結果決定；完全開不到機的手機一般無法報價。** 「有損壞／爆屏」一般適用於屏幕玻璃碎裂、背面玻璃破裂或機身有明顯損壞的情況，電池健康度仍會另外計算。\n\n### 驗機時會看甚麼？\n\n- 屏幕顯示及觸控是否正常，有沒有壓痕或烙印。\n- Face ID、前後鏡頭、喇叭、充電及網絡是否正常。\n- 「零件與維修記錄」有沒有「未知」零件。\n- 機身有沒有彎曲、凹陷或電池膨脹跡象。\n\n只是玻璃裂而顯示及觸控正常，與屏幕已經黑屏或觸控失靈，價錢會有分別，所以報價時請在備註描述清楚，例如「屏幕右上角裂，顯示及觸控正常」或「背面玻璃裂」，交收時的落差便會較小。如果手機曾經在外面換過屏幕，亦請一併註明。\n\n### 開不到機點算？\n\n完全無法開機的手機，無法驗證功能及清除資料，一般難以報價。這類手機可考慮環保回收，詳見 [舊手機回收及處理方法](/guides/old-phone-disposal-hong-kong/)。\n\n想比較 Apple 官方換購，可看 [Apple Trade In 香港流程及比較](/guides/apple-trade-in-hong-kong/)；型號及新機發佈時間對價錢的影響，見 [iPhone 回收價 2026 指南](/guides/iphone-recycle-price-trend/)。\n\n爆mon 但仍開到機？到 [首頁查價](/) 或 [iPhone 回收價格表](/iphone/)，選「有損壞／爆屏」看估算，然後 [提交報價](/contact/)。\n"
+}
