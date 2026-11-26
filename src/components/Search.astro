@@ -1,0 +1,60 @@
+---
+import { flatIndex } from '../lib/prices';
+// Compact index for client-side search: [name, path, brand, series, "label:price|..."]
+const index = flatIndex().map((m) => [
+  m.name,
+  m.path,
+  m.brand,
+  m.series,
+  m.variants.map((v) => `${v.label}:${v.price ?? ''}`).join('|'),
+]);
+interface Props { placeholder?: string }
+const { placeholder = '輸入型號，例如：iPhone 17 Pro Max 256GB' } = Astro.props;
+---
+<div class="search" role="search">
+  <label class="sr-only" for="q">搜尋手機回收價</label>
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+  <input id="q" type="search" autocomplete="off" placeholder={placeholder} aria-controls="q-results" aria-expanded="false" />
+  <div id="q-results" class="search-results" role="listbox"></div>
+  <script type="application/json" id="q-index" set:html={JSON.stringify(index)} />
+</div>
+
+<script>
+  type Row = [string, string, string, string, string];
+  const input = document.getElementById('q') as HTMLInputElement;
+  const box = document.getElementById('q-results') as HTMLDivElement;
+  const index: Row[] = JSON.parse(document.getElementById('q-index')!.textContent || '[]');
+  const norm = (s: string) => s.toLowerCase().replace(/[\s"'()（）+]/g, '').replace(/三星/g, 'samsung').replace(/蘋果/g, '').replace(/(\d)pm/g, '$1promax').replace(/(\d)p(?!ro|lus)/g, '$1pro');
+  const items = index.flatMap(([name, path, brand, , vs]) =>
+    vs.split('|').map((v) => {
+      const [label, price] = v.split(':');
+      return { name, path, label, price: price ? Number(price) : null, key: norm(`${brand}${name}${label}`) };
+    }),
+  );
+  let active = -1;
+  function render() {
+    const q = norm(input.value);
+    if (!q) { box.classList.remove('open'); input.setAttribute('aria-expanded', 'false'); return; }
+    // Each space-separated word must appear in the model key (brand + name + capacity).
+    const terms = input.value.split(/\s+/).map(norm).filter(Boolean);
+    // Shorter model names first, so "iphone x" shows iPhone X before iPhone XS.
+    const hits = items
+      .filter((it) => terms.every((t) => it.key.includes(t)))
+      .sort((a, b) => a.name.length - b.name.length)
+      .slice(0, 12);
+    box.innerHTML = hits.length
+      ? hits.map((h, i) => `<a role="option" href="${h.path}" class="${i === active ? 'active' : ''}"><span>${h.name} <span class="muted">${h.label}</span></span><span class="price">${h.price ? '$' + h.price.toLocaleString('en-US') : '查詢報價'}</span></a>`).join('')
+      : `<div class="empty">找不到「${input.value.replace(/</g, '&lt;')}」，<a href="/contact/">直接查詢報價 →</a></div>`;
+    box.classList.add('open');
+    input.setAttribute('aria-expanded', 'true');
+  }
+  input.addEventListener('input', () => { active = -1; render(); });
+  input.addEventListener('keydown', (e) => {
+    const links = box.querySelectorAll('a[role=option]');
+    if (e.key === 'ArrowDown') { active = Math.min(active + 1, links.length - 1); render(); e.preventDefault(); }
+    if (e.key === 'ArrowUp') { active = Math.max(active - 1, 0); render(); e.preventDefault(); }
+    if (e.key === 'Enter' && links.length) { (links[Math.max(active, 0)] as HTMLAnchorElement).click(); e.preventDefault(); }
+    if (e.key === 'Escape') { box.classList.remove('open'); }
+  });
+  document.addEventListener('click', (e) => { if (!(e.target as HTMLElement).closest('.search')) box.classList.remove('open'); });
+</script>

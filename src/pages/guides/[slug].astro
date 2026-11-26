@@ -1,0 +1,130 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import { marked } from 'marked';
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import Faq from '../../components/Faq.astro';
+import site from '../../data/site.json';
+import topics from '../../data/topics.json';
+import { formatDateZh, getCategory, fmt, maxPrice, modelUrl, fillPrices } from '../../lib/prices';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  return guides.map((g) => ({ params: { slug: g.id }, props: { guide: g, all: guides } }));
+}
+const { guide, all } = Astro.props as { guide: CollectionEntry<'guides'>; all: CollectionEntry<'guides'>[] };
+const raw = guide.data;
+// Price placeholders in guide text are filled from prices.json at build time.
+const d = {
+  ...raw,
+  summary: raw.summary.map(fillPrices),
+  faqs: raw.faqs.map((f) => ({ q: f.q, a: fillPrices(f.a) })),
+};
+// Give each H2 an id so the table of contents can link to it.
+const toc: { id: string; text: string }[] = [];
+const html = (await marked.parse(fillPrices(raw.body))).replace(/<h2>(.*?)<\/h2>/g, (_m, inner: string) => {
+  const id = `s${toc.length + 1}`;
+  toc.push({ id, text: inner.replace(/<[^>]+>/g, '') });
+  return `<h2 id="${id}">${inner}</h2>`;
+});
+
+// Pillar / cluster structure (src/data/topics.json).
+const topic = topics.find((t) => t.id === d.topic)!;
+const pillar = all.find((g) => g.id === topic.pillar);
+const isPillar = d.role === 'pillar';
+const clusters = all.filter((g) => g.data.topic === d.topic && g.data.role === 'cluster');
+const siblings = clusters.filter((g) => g.id !== guide.id);
+const otherPillars = topics
+  .filter((t) => t.id !== d.topic)
+  .map((t) => all.find((g) => g.id === t.pillar))
+  .filter((g): g is CollectionEntry<'guides'> => Boolean(g));
+const cat = d.category !== 'general' ? getCategory(d.category) : getCategory('iphone');
+const topModels = (cat?.models ?? []).filter((m) => maxPrice(m) != null).slice(0, 5);
+const url = `${site.url}/guides/${guide.id}/`;
+const crumbs = [{ name: '首頁', href: '/' }, { name: '回收指南', href: '/guides/' }, { name: d.title, href: `/guides/${guide.id}/` }];
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: d.title,
+    description: d.description,
+    datePublished: d.publishedAt,
+    dateModified: d.updatedAt,
+    inLanguage: 'zh-HK',
+    mainEntityOfPage: url,
+    author: { '@id': `${site.url}/#org` },
+    publisher: { '@id': `${site.url}/#org` },
+    about: d.keyword,
+    articleSection: topic.name,
+    ...(isPillar
+      ? { hasPart: clusters.map((g) => ({ '@type': 'Article', headline: g.data.title, url: `${site.url}/guides/${g.id}/` })) }
+      : pillar
+        ? { isPartOf: { '@type': 'Article', headline: pillar.data.title, url: `${site.url}/guides/${pillar.id}/` } }
+        : {}),
+  },
+  { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: `${site.url}${c.href}` })) },
+  ...(d.faqs.length
+    ? [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: d.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }]
+    : []),
+];
+---
+<Base title={`${d.title}｜${site.shortName}`} description={d.description} jsonLd={jsonLd} ogType="article">
+  <div class="container">
+    <Breadcrumbs items={crumbs} />
+    <div class="two-col" style="margin-top:14px">
+      <article class="prose">
+        <h1>{d.title}</h1>
+        <p class="muted small">{topic.name}{isPillar ? ' 專題總覽' : ''} ・ 發佈：{formatDateZh(d.publishedAt)} ・ 更新：{formatDateZh(d.updatedAt)}</p>
+        {!isPillar && pillar && (
+          <p class="topic-note">本文屬於「<a href={`/guides/${pillar.id}/`}>{topic.name}</a>」專題。完整概覽請看：<a href={`/guides/${pillar.id}/`}>{pillar.data.title}</a></p>
+        )}
+        {d.summary.length > 0 && (
+          <div class="answer-box">
+            <p><strong>重點摘要</strong></p>
+            <ul>{d.summary.map((s) => <li>{s}</li>)}</ul>
+          </div>
+        )}
+        {toc.length > 2 && (
+          <nav class="toc card pad" aria-label="目錄">
+            <strong>目錄</strong>
+            <ol>{toc.map((t) => <li><a href={`#${t.id}`}>{t.text}</a></li>)}</ol>
+          </nav>
+        )}
+        {isPillar && clusters.length > 0 && (
+          <div class="card pad topic-list">
+            <strong>本專題文章</strong>
+            <ul>{clusters.map((g) => <li><a href={`/guides/${g.id}/`}>{g.data.title}</a></li>)}</ul>
+          </div>
+        )}
+        <Fragment set:html={html} />
+        {d.faqs.length > 0 && (<><h2>常見問題</h2><Faq faqs={d.faqs} /></>)}
+        {!isPillar && (pillar || siblings.length > 0) && (
+          <div class="card pad topic-list" style="margin-top:24px">
+            <strong>「{topic.name}」專題其他文章</strong>
+            <ul>
+              {pillar && <li><a href={`/guides/${pillar.id}/`}>{pillar.data.title}</a>（專題總覽）</li>}
+              {siblings.map((g) => <li><a href={`/guides/${g.id}/`}>{g.data.title}</a></li>)}
+            </ul>
+          </div>
+        )}
+      </article>
+      <aside class="sticky grid">
+        {cat && (
+          <div class="card pad">
+            <h2 style="margin-top:0;font-size:1.1rem">{cat.label}（最高）</h2>
+            <ul style="list-style:none;padding:0;margin:0;display:grid;gap:8px">
+              {topModels.map((m) => <li style="display:flex;justify-content:space-between;gap:8px"><a href={modelUrl(cat.slug, m)}>{m.name}</a><strong>{fmt(maxPrice(m))}</strong></li>)}
+            </ul>
+            <p style="margin:12px 0 0"><a class="btn btn-primary" style="width:100%" href={`/${cat.slug}/`}>查看完整價格表</a></p>
+          </div>
+        )}
+        {otherPillars.length > 0 && (
+          <div class="card pad">
+            <h2 style="margin-top:0;font-size:1.1rem">其他專題</h2>
+            <ul style="padding-left:1.1em;margin:0">{otherPillars.map((g) => <li><a href={`/guides/${g.id}/`}>{g.data.title}</a></li>)}</ul>
+          </div>
+        )}
+      </aside>
+    </div>
+  </div>
+</Base>

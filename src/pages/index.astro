@@ -1,0 +1,127 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Search from '../components/Search.astro';
+import PriceList from '../components/PriceList.astro';
+import Steps from '../components/Steps.astro';
+import Faq from '../components/Faq.astro';
+import site from '../data/site.json';
+import topics from '../data/topics.json';
+import { categories, updatedAt, formatDateZh, fmt, maxPrice, minPrice, modelUrl, getCategory, fillPrices } from '../lib/prices';
+import { homeFaqs as rawFaqs } from '../lib/faq';
+
+const iphone = getCategory('iphone')!;
+const homeFaqs = rawFaqs.map((f) => ({ q: f.q, a: fillPrices(f.a) }));
+const year = updatedAt.slice(0, 4);
+const title = `iPhone 回收價 ${year}｜手機回收價格表・收機價 每日更新｜${site.shortName}`;
+const description = `最新 iPhone 回收價及手機回收價格表（${formatDateZh(updatedAt)}更新）：iPhone 17 Pro Max 最高 ${fmt(maxPrice(iphone.models.find((m) => m.slug === 'iphone-17-pro-max')!))}。即時搜尋 iPhone、Samsung、iPad、MacBook 二手回收價，香港交收即場付款。`;
+const popular = categories.flatMap((c) => c.models.filter((m) => m.tags?.includes('熱門')).map((m) => ({ c, m })));
+// Topic pillars, in the order of src/data/topics.json.
+const allGuides = await getCollection('guides');
+const guides = topics.map((t) => allGuides.find((g) => g.id === t.pillar)).filter((g) => g !== undefined);
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: homeFaqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `iPhone 回收價格表 ${year}`,
+    itemListElement: iphone.models.map((m, i) => ({ '@type': 'ListItem', position: i + 1, name: `${m.name} 回收價`, url: `${site.url}${modelUrl('iphone', m)}` })),
+  },
+];
+---
+<Base title={title} description={description} jsonLd={jsonLd}>
+  <section class="hero">
+    <div class="container">
+      <span class="updated"><span class="dot"></span>價格更新：{formatDateZh(updatedAt)}</span>
+      <h1>iPhone 回收價 {year}｜手機回收價格表</h1>
+      <p>一頁看清 iPhone、Samsung、iPad 及 MacBook 最新二手回收價（收機價）。輸入型號即時查價，提交報價後約定交收，驗機後即場付款。</p>
+      <Search />
+      <div class="chips">
+        {popular.map(({ c, m }) => <a class="chip" href={modelUrl(c.slug, m)}>{m.name}</a>)}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="answer-box">
+        <p><strong>{formatDateZh(updatedAt)} iPhone 回收價重點（按容量由低至高）：</strong></p>
+        <ul>
+          {iphone.models.filter((m) => maxPrice(m) != null).slice(0, 6).map((m) => (
+            <li><a href={modelUrl('iphone', m)}>{m.name}</a>：{fmt(minPrice(m))}{minPrice(m) !== maxPrice(m) ? ` – ${fmt(maxPrice(m))}` : ''}</li>
+          ))}
+        </ul>
+      </div>
+
+      <h2 id="prices">手機回收價格表</h2>
+      <div class="tabs" role="tablist" aria-label="品牌">
+        {categories.map((c, i) => <button class="tab" role="tab" type="button" aria-selected={i === 0 ? 'true' : 'false'} aria-controls={`panel-${c.slug}`} data-tab={c.slug}>{c.label}</button>)}
+      </div>
+      {categories.map((c, i) => (
+        <div id={`panel-${c.slug}`} role="tabpanel" data-panel={c.slug} hidden={i !== 0}>
+          <PriceList cat={c.slug} models={c.models} />
+          <p style="margin-top:14px"><a class="btn btn-ghost" href={`/${c.slug}/`}>查看全部 {c.label} →</a></p>
+        </div>
+      ))}
+      <p class="small muted">價格以港幣計，假設功能正常、外觀良好及電池健康度 90% 以上。「查詢報價」型號請提交資料，我們會按當日市價報價。</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>回收流程：4 步完成</h2>
+      <Steps />
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>影響回收價的 5 大因素</h2>
+      <div class="grid grid-3">
+        <div class="card pad"><h3>型號及年份</h3><p class="muted">越新的型號回收價越高，同一代中 Pro Max 最高。每年 9 月新 iPhone 發佈後，舊款回收價通常會下調。</p></div>
+        <div class="card pad"><h3>儲存容量</h3><p class="muted" set:html={fillPrices('容量越大回收價越高，但每級差距不一。例如 iPhone 17 Pro Max 256GB 約 {{price:iphone/iphone-17-pro-max/256GB}}，512GB 約 {{price:iphone/iphone-17-pro-max/512GB}}。')} /></div>
+        <div class="card pad"><h3>外觀成色</h3><p class="muted">屏幕及機身無花痕可取最高價；輕微使用痕跡約扣一成內，明顯花痕或凹痕約扣兩成，最終以驗機為準。</p></div>
+        <div class="card pad"><h3>電池健康度</h3><p class="muted">90% 以上可取全數；低於 90% 開始按比例扣價，顯示「維修」訊息扣價較多。</p></div>
+        <div class="card pad"><h3>行貨／水貨及維修紀錄</h3><p class="muted">香港行貨較高；曾換屏或非原廠零件會影響報價。</p></div>
+      </div>
+    </div>
+  </section>
+
+  {guides.length > 0 && (
+    <section>
+      <div class="container">
+        <h2>回收指南</h2>
+        <div class="grid grid-3">
+          {guides.map((g) => (
+            <a class="card pad" href={`/guides/${g.id}/`} style="color:inherit">
+              <h3>{g.data.title}</h3>
+              <p class="muted small">{g.data.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section>
+    <div class="container narrow">
+      <h2>常見問題</h2>
+      <Faq faqs={homeFaqs} open />
+    </div>
+  </section>
+</Base>
+
+<script>
+  const tabs = document.querySelectorAll<HTMLButtonElement>('[data-tab]');
+  tabs.forEach((t) =>
+    t.addEventListener('click', () => {
+      tabs.forEach((x) => x.setAttribute('aria-selected', String(x === t)));
+      document.querySelectorAll<HTMLElement>('[data-panel]').forEach((p) => (p.hidden = p.dataset.panel !== t.dataset.tab));
+    }),
+  );
+</script>

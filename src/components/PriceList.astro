@@ -1,0 +1,35 @@
+---
+import { groupBySeries, fmt, priceChange, modelUrl, type Model } from '../lib/prices';
+interface Props { cat: string; models: Model[]; headingLevel?: 'h2' | 'h3' }
+const { cat, models, headingLevel = 'h3' } = Astro.props;
+const H = headingLevel;
+const groups = groupBySeries(models);
+---
+{groups.map((g) => (
+  <div>
+    <H class="series-title">{g.series}回收價</H>
+    <ul class="price-list card">
+      {g.models.map((m) => (
+        <li class="price-row">
+          <a class="model" href={modelUrl(cat, m)}>
+            {m.name}{m.tags?.map((t) => <span class="tag">{t}</span>)}
+            <small>{m.year} 年推出</small>
+          </a>
+          <div class="pills">
+            {m.variants.map((v) => {
+              const chg = priceChange(cat, m.slug, v);
+              return (
+                <span class:list={['pill', { ask: v.price == null }]} title={v.note}>
+                  <span class="cap">{v.label}</span>
+                  <span class="amt">{fmt(v.price)}</span>
+                  {chg ? <span class:list={['chg', chg > 0 ? 'up' : 'down']}>{chg > 0 ? '▲' : '▼'}${Math.abs(chg)}</span> : null}
+                </span>
+              );
+            })}
+          </div>
+          <a class="row-link" href={modelUrl(cat, m)} aria-label={`${m.name} 回收價詳情`}>詳情 →</a>
+        </li>
+      ))}
+    </ul>
+  </div>
+))}
